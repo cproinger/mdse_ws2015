@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/DVML12/src" modelPluginID="DVML12" modelName="DVML"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>DVML.ecore</foreignModel>
+  <genPackages prefix="DVML" disposableProviderFactory="true" ecorePackage="DVML.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DVML.ecore#//ConditionType">
+      <genEnumLiterals ecoreEnumLiteral="DVML.ecore#//ConditionType/Hidden"/>
+      <genEnumLiterals ecoreEnumLiteral="DVML.ecore#//ConditionType/Shown"/>
+      <genEnumLiterals ecoreEnumLiteral="DVML.ecore#//ConditionType/Enabled"/>
+      <genEnumLiterals ecoreEnumLiteral="DVML.ecore#//ConditionType/Disabled"/>
+      <genEnumLiterals ecoreEnumLiteral="DVML.ecore#//ConditionType/None"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DVML.ecore#//CompositeConditionsType">
+      <genEnumLiterals ecoreEnumLiteral="DVML.ecore#//CompositeConditionsType/And"/>
+      <genEnumLiterals ecoreEnumLiteral="DVML.ecore#//CompositeConditionsType/Or"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DVML.ecore#//Layout">
+      <genEnumLiterals ecoreEnumLiteral="DVML.ecore#//Layout/Horizontal"/>
+      <genEnumLiterals ecoreEnumLiteral="DVML.ecore#//Layout/Vertical"/>
+    </genEnums>
+    <genClasses ecoreClass="DVML.ecore#//DomainModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//DomainModel/modelDomainElements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DVML.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//Class">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//Class/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//Class/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//Class/associations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//Class/superType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DVML.ecore#//ModelDomainElementType"/>
+    <genClasses ecoreClass="DVML.ecore#//Enumeration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//Enumeration/literals"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//Property/multiplicityLowerBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//Property/multiplicityUpperBound"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//Property/type"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//Association">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//Association/associationEnds"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//AssociationEnd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//AssociationEnd/isNavigable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//AssociationEnd/IsComposite"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//Literal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//Literal/ConstantValue"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//ViewModels">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//ViewModels/viewGroups"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DVML.ecore#//View">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//View/header"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//View/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//View/startView"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//View/class"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//ViewGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//ViewGroup/views"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//ViewGroup/welcomeViewGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//ViewGroup/layout"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//ClassIndexView"/>
+    <genClasses ecoreClass="DVML.ecore#//ClassOperationView">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//ClassOperationView/elementGroups"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DVML.ecore#//ViewElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//ViewElement/lable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//ViewElement/elementID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//ViewElement/conditionalElements"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//ElementGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//ElementGroup/viewelements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//ElementGroup/header"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//ElementGroup/conditionalElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//ElementGroup/layout"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DVML.ecore#//PropertyElements">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//PropertyElements/propertyView"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DVML.ecore#//AssociationElements">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//AssociationElements/associationView"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DVML.ecore#//TEXT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//TEXT/format"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//DateTimePicker">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//DateTimePicker/format"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//Selection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//Selection/selectionItems"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//longText"/>
+    <genClasses ecoreClass="DVML.ecore#//ShortText"/>
+    <genClasses ecoreClass="DVML.ecore#//List"/>
+    <genClasses ecoreClass="DVML.ecore#//Table">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//Table/columns"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//Column"/>
+    <genClasses image="false" ecoreClass="DVML.ecore#//ConditionalElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//ConditionalElement/conditionID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//ConditionalElement/type"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//ComparisonCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//ComparisonCondition/comparisonValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//ComparisonCondition/property"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//CompositeCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//CompositeCondition/compositionType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//CompositeCondition/compositeConditions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DVML.ecore#//LinkingElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//LinkingElement/links"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//Link/label"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//Link/linkToViewGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="DVML.ecore#//DataType"/>
+    <genClasses ecoreClass="DVML.ecore#//SelectionItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//SelectionItem/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//SelectionItem/selectableValue"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
