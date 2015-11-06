@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DVML:DomainModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DVML="http://www.example.org/DVML">
+  <modelDomainElements xsi:type="DVML:Class" name="Child1" id="//@modelDomainElements.0/@properties.0" superType="//@modelDomainElements.0">
+    <properties name="name" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+  </modelDomainElements>
+  <modelDomainElements xsi:type="DVML:Class" name="Child2" id="//@modelDomainElements.1/@properties.0" superType="//@modelDomainElements.2">
+    <properties name="name" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+  </modelDomainElements>
+  <modelDomainElements xsi:type="DVML:Class" name="Parent" id="//@modelDomainElements.2/@properties.0">
+    <properties name="name" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+  </modelDomainElements>
+</DVML:DomainModel>

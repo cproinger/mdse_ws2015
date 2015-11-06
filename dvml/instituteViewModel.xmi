@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DVML:ViewModels
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:DVML="http://www.example.org/DVML"
+    xsi:schemaLocation="http://www.example.org/DVML model/DVML.ecore">
+  <viewGroups
+      name="Institute"
+      welcomeViewGroup="true"
+      layout="Vertical">
+    <views xsi:type="DVML:ClassOperationView"
+        name="CreateInstitute"
+        header="Institute"
+        description="This is a form for creating institutes."
+        startView="true">
+      <class
+          href="instituteDomainModel.xmi#//@modelDomainElements.5"/>
+      <elementGroups
+          header="Institute Details"
+          layout="Vertical">
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="number:"
+            format="^[0-9]+$">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.5/@properties.0"/>
+        </viewelements>
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="name:"
+            format="^[a-zA-Z -]+$">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.5/@properties.1"/>
+        </viewelements>
+        <viewelements
+            xsi:type="DVML:List"
+            lable="Professors">
+          <links
+              label="Update"
+              linkToViewGroup="//@viewGroups.0/@views.1"/>
+          <links
+              label="Add"
+              linkToViewGroup="//@viewGroups.0/@views.2"/>
+          <associationView
+              href="instituteDomainModel.xmi#//@modelDomainElements.5/@associations.0"/>
+        </viewelements>
+        <viewelements
+            xsi:type="DVML:Table"
+            lable="Courses">
+          <links
+              label="Delete"
+              linkToViewGroup="//@viewGroups.0/@views.3"/>
+          <links
+              label="Add"
+              linkToViewGroup="//@viewGroups.0/@views.4"/>
+          <associationView
+              href="instituteDomainModel.xmi#//@modelDomainElements.5/@associations.1"/>
+          <columns
+              lable="Type">
+            <propertyView
+                href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.1"/>
+          </columns>
+          <columns
+              lable="Title">
+            <propertyView
+                href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.0"/>
+          </columns>
+          <columns
+              lable="Credits">
+            <propertyView
+                href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.2"/>
+          </columns>
+        </viewelements>
+      </elementGroups>
+    </views>
+    <views xsi:type="DVML:ClassOperationView"
+        name="Update Professor"
+        header="Update Professor">
+      <class
+          href="instituteDomainModel.xmi#//@modelDomainElements.6"/>
+      <elementGroups
+          header="Update E-Mail Address"
+          layout="Vertical">
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="Update E-Mail Address">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.7/@properties.0"/>
+        </viewelements>
+      </elementGroups>
+    </views>
+    <views xsi:type="DVML:ClassOperationView"
+        name="Create Professor"
+        header="Professor">
+      <class
+          href="instituteDomainModel.xmi#//@modelDomainElements.6"/>
+      <elementGroups
+          header="Personal Details"
+          layout="Vertical">
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="First name:"
+            format="">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.7/@properties.1"/>
+        </viewelements>
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="Last name:"
+            format="">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.7/@properties.2"/>
+        </viewelements>
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="E-Mail:">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.7/@properties.0"/>
+        </viewelements>
+      </elementGroups>
+      <elementGroups
+          header="Status"
+          layout="Vertical">
+        <viewelements
+            xsi:type="DVML:Selection"
+            lable="VisitingProf:">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.6/@properties.0"/>
+          <selectionItems
+              value="True"/>
+          <selectionItems
+              value="False"/>
+        </viewelements>
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="HomeUni:">
+          <conditionalElements
+              xsi:type="DVML:ComparisonCondition"
+              comparisonValue="False"
+              property="//@viewGroups.0/@views.2/@elementGroups.1/@viewelements.0"/>
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.6/@properties.1"/>
+        </viewelements>
+      </elementGroups>
+    </views>
+    <views xsi:type="DVML:ClassOperationView"
+        name="Delete Course"
+        header="Course"
+        description="Do you really want to delete this course?">
+      <class
+          href="instituteDomainModel.xmi#//@modelDomainElements.8"/>
+      <elementGroups
+          header="Deleted Course"
+          layout="Vertical">
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="Title:">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.0"/>
+        </viewelements>
+      </elementGroups>
+    </views>
+    <views xsi:type="DVML:ClassOperationView"
+        name="Create Course"
+        header="Course">
+      <class
+          href="instituteDomainModel.xmi#//@modelDomainElements.8"/>
+      <elementGroups
+          header="Course Details"
+          layout="Vertical">
+        <viewelements
+            xsi:type="DVML:Selection"
+            lable="Type:">
+          <conditionalElements
+              xsi:type="DVML:CompositeCondition"
+              type="Disabled"
+              compositionType="Or">
+            <compositeConditions
+                xsi:type="DVML:ComparisonCondition"
+                type="Disabled"
+                comparisonValue="greater than 30."
+                property="//@viewGroups.1/@views.1/@elementGroups.0/@viewelements.2"/>
+            <compositeConditions
+                xsi:type="DVML:ComparisonCondition"
+                type="Disabled"
+                comparisonValue="less than 1"
+                property="//@viewGroups.0/@views.4/@elementGroups.0/@viewelements.2"/>
+          </conditionalElements>
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.1"/>
+          <selectionItems>
+            <selectableValue
+                href="instituteDomainModel.xmi#//@modelDomainElements.9/@literals.0"/>
+          </selectionItems>
+          <selectionItems>
+            <selectableValue
+                href="instituteDomainModel.xmi#//@modelDomainElements.9/@literals.1"/>
+          </selectionItems>
+        </viewelements>
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="Title:"
+            format="^[a-zA-Z -]+$">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.0"/>
+        </viewelements>
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="Credits:"
+            format="^[0-9]+\.[0-9]$">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.2"/>
+        </viewelements>
+        <viewelements
+            xsi:type="DVML:longText"
+            lable="Description:"
+            format="">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.3"/>
+        </viewelements>
+      </elementGroups>
+      <elementGroups
+          header="First Meeting"
+          layout="Vertical">
+        <viewelements
+            xsi:type="DVML:DateTimePicker"
+            lable="Date:"
+            format="dddd, MMMM Do YYYY">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.4"/>
+        </viewelements>
+        <viewelements
+            xsi:type="DVML:DateTimePicker"
+            lable="Time:"
+            format="h:mm A">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.5"/>
+        </viewelements>
+      </elementGroups>
+      <elementGroups
+          header="Lecture"
+          layout="Vertical">
+        <viewelements
+            xsi:type="DVML:longText"
+            lable="Topic:">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.6"/>
+        </viewelements>
+        <conditionalElements
+            xsi:type="DVML:ComparisonCondition"
+            type="Shown"
+            comparisonValue="Lecture"
+            property="//@viewGroups.0/@views.4/@elementGroups.0/@viewelements.0"/>
+      </elementGroups>
+      <elementGroups
+          header="Thesis"
+          layout="Vertical">
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="Keywords:">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.7"/>
+        </viewelements>
+        <conditionalElements
+            xsi:type="DVML:ComparisonCondition"
+            type="Shown"
+            comparisonValue="Thesis"
+            property="//@viewGroups.0/@views.4/@elementGroups.0/@viewelements.0"/>
+      </elementGroups>
+    </views>
+  </viewGroups>
+  <viewGroups
+      name="Course"
+      layout="Vertical">
+    <views xsi:type="DVML:ClassIndexView"
+        name="Course Index"
+        header="Courses"
+        description="List of all courses"
+        startView="true">
+      <class
+          href="instituteDomainModel.xmi#//@modelDomainElements.8"/>
+      <links
+          label="Show"
+          linkToViewGroup="//@viewGroups.1/@views.1"/>
+    </views>
+    <views xsi:type="DVML:ClassOperationView"
+        name="Show Course"
+        header="Course"
+        description="">
+      <class
+          href="instituteDomainModel.xmi#//@modelDomainElements.8"/>
+      <elementGroups
+          header="Course Details"
+          layout="Vertical">
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="Type:">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.1"/>
+        </viewelements>
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="Title:">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.0"/>
+        </viewelements>
+        <viewelements
+            xsi:type="DVML:ShortText"
+            lable="Credits:">
+          <propertyView
+              href="instituteDomainModel.xmi#//@modelDomainElements.8/@properties.2"/>
+        </viewelements>
+      </elementGroups>
+    </views>
+  </viewGroups>
+</DVML:ViewModels>

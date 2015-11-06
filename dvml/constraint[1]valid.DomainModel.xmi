@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DVML:DomainModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DVML="http://www.example.org/DVML">
+  <modelDomainElements xsi:type="DVML:Class" name="Course" id="//@modelDomainElements.0/@properties.1">
+    <properties name="type" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+    <properties name="title" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+  </modelDomainElements>
+  <modelDomainElements xsi:type="DVML:Class" name="Staff" id="//@modelDomainElements.1/@properties.0">
+    <properties name="email" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+    <properties name="name" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+  </modelDomainElements>
+  <modelDomainElements xsi:type="DVML:Class" name="Professor" id="//@modelDomainElements.1/@properties.0"/>
+  <modelDomainElements xsi:type="DVML:Class" name="Institute" id="//@modelDomainElements.3/@properties.0">
+    <properties name="number" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+    <properties name="name" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+    <associations name="courses">
+      <associationEnds name="courses" isNavigable="true"/>
+      <associationEnds name="institut" IsComposite="true"/>
+    </associations>
+  </modelDomainElements>
+  <modelDomainElements xsi:type="DVML:Enumeration" name="TeachingType">
+    <literals name="Lecture" ConstantValue="LE"/>
+    <literals name="Thesis" ConstantValue="TH"/>
+  </modelDomainElements>
+  <modelDomainElements xsi:type="DVML:Class" name="Example" id="//@modelDomainElements.3/@properties.1"/>
+</DVML:DomainModel>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DVML:DomainModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:DVML="http://www.example.org/DVML">
+  <modelDomainElements
+      xsi:type="DVML:Class"
+      name="A"
+      id="//@modelDomainElements.0/@properties.0">
+    <properties
+        name="P1"
+        multiplicityLowerBound="1"
+        multiplicityUpperBound="1"/>
+  </modelDomainElements>
+  <modelDomainElements
+      xsi:type="DVML:Class"
+      name="B"
+      id="//@modelDomainElements.1/@properties.0">
+    <properties
+        name="P2"
+        multiplicityLowerBound="1"
+        multiplicityUpperBound="1"/>
+  </modelDomainElements>
+</DVML:DomainModel>

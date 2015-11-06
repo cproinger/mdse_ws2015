@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DVML:ViewModels
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:DVML="http://www.example.org/DVML"
+    xsi:schemaLocation="http://www.example.org/DVML model/DVML.ecore">
+  <viewGroups
+      name="A"
+      welcomeViewGroup="true">
+    <views xsi:type="DVML:ClassOperationView"
+        name="A1"
+        header=""
+        description=""
+        startView="true">
+      <class
+          href="constraint%5B2%5Dvalid.xmi#//@modelDomainElements.1"/>
+      <elementGroups
+          header="AA">
+        <conditionalElements
+            xsi:type="DVML:CompositeCondition">
+          <compositeConditions
+              xsi:type="DVML:CompositeCondition"
+              type="Shown"/>
+          <compositeConditions
+              xsi:type="DVML:CompositeCondition"/>
+        </conditionalElements>
+      </elementGroups>
+    </views>
+  </viewGroups>
+</DVML:ViewModels>

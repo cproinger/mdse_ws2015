@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DVML:ViewModels
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:DVML="http://www.example.org/DVML"
+    xsi:schemaLocation="http://www.example.org/DVML model/DVML.ecore">
+  <viewGroups
+      name="A"
+      welcomeViewGroup="true"/>
+  <viewGroups
+      name="B"/>
+  <viewGroups
+      name="C"/>
+  <viewGroups
+      name="D"/>
+</DVML:ViewModels>

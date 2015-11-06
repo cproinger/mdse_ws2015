@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DVML:DomainModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DVML="http://www.example.org/DVML">
+  <modelDomainElements xsi:type="DVML:Class" name="Institute" id="//@modelDomainElements.0/@properties.0">
+    <properties name="number" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+    <properties name="name" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+    <associations name="cources">
+      <associationEnds name="institute" IsComposite="true"/>
+      <associationEnds name="courses" isNavigable="true"/>
+    </associations>
+    <associations name="professors">
+      <associationEnds name="institute"/>
+      <associationEnds name="professors" isNavigable="true"/>
+    </associations>
+  </modelDomainElements>
+  <modelDomainElements xsi:type="DVML:Class" name="Course" id="//@modelDomainElements.1/@properties.1">
+    <properties name="type" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+    <properties name="title" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+    <properties name="credits" multiplicityUpperBound="1"/>
+    <properties name="description" multiplicityUpperBound="1"/>
+    <properties name="date" multiplicityUpperBound="1"/>
+    <properties name="time" multiplicityUpperBound="1"/>
+    <properties name="topic" multiplicityUpperBound="1"/>
+    <properties name="keywords" multiplicityUpperBound="1"/>
+  </modelDomainElements>
+  <modelDomainElements xsi:type="DVML:Class" name="Professor" id="//@modelDomainElements.3/@properties.2" superType="//@modelDomainElements.3">
+    <properties name="visitingProfessor" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+    <properties name="homeUniversity" multiplicityUpperBound="1"/>
+  </modelDomainElements>
+  <modelDomainElements xsi:type="DVML:Class" name="Staff" id="//@modelDomainElements.3/@properties.2">
+    <properties name="firstname" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+    <properties name="lastname" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+    <properties name="email" multiplicityLowerBound="1" multiplicityUpperBound="1"/>
+  </modelDomainElements>
+  <modelDomainElements xsi:type="DVML:Enumeration" name="TeachingType">
+    <literals name="Lecture" ConstantValue="LE"/>
+    <literals name="Thesis" ConstantValue="TH"/>
+  </modelDomainElements>
+</DVML:DomainModel>
