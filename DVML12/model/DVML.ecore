@@ -54,7 +54,8 @@
       <details key="MultiplicityOfAssociatioEndPropertyIsValid" value="self.multiplicityLowerBound >= 0 &#xA;&#x9;&#x9;          and (self.multiplicityUpperBound >= multiplicityLowerBound or self.multiplicityUpperBound = -1)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isNavigable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Class"
+        changeable="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Literal" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ConstantValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
