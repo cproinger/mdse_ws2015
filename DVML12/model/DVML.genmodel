@@ -37,9 +37,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//Enumeration/literals"/>
     </genClasses>
     <genClasses ecoreClass="DVML.ecore#//Property">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//AbstractProperty/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//AbstractProperty/multiplicityLowerBound"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//AbstractProperty/multiplicityUpperBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//Property/multiplicityUpperBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//Property/multiplicityLowerBound"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//Property/type"/>
     </genClasses>
     <genClasses ecoreClass="DVML.ecore#//Association">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//Association/associationEnds"/>
@@ -47,6 +47,7 @@
     <genClasses ecoreClass="DVML.ecore#//AssociationEnd">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//AssociationEnd/isNavigable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//AssociationEnd/IsComposite"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DVML.ecore#//AssociationEnd/property"/>
     </genClasses>
     <genClasses ecoreClass="DVML.ecore#//Literal">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//Literal/ConstantValue"/>
@@ -125,11 +126,6 @@
     <genClasses ecoreClass="DVML.ecore#//SelectionItem">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//SelectionItem/value"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//SelectionItem/selectableValue"/>
-    </genClasses>
-    <genClasses ecoreClass="DVML.ecore#//AbstractProperty">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//AbstractProperty/multiplicityUpperBound"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DVML.ecore#//AbstractProperty/multiplicityLowerBound"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DVML.ecore#//AbstractProperty/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
