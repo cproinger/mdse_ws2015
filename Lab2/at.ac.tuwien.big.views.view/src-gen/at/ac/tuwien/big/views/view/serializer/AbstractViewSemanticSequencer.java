@@ -17,6 +17,7 @@ import at.ac.tuwien.big.views.Link;
 import at.ac.tuwien.big.views.List;
 import at.ac.tuwien.big.views.ReadView;
 import at.ac.tuwien.big.views.Selection;
+import at.ac.tuwien.big.views.SelectionItem;
 import at.ac.tuwien.big.views.Table;
 import at.ac.tuwien.big.views.Text;
 import at.ac.tuwien.big.views.UpdateView;
@@ -90,15 +91,8 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 				sequence_ElementGroup(context, (ElementGroup) semanticObject); 
 				return; 
 			case ViewsPackage.ENUMERATION_LITERAL_ITEM:
-				if(context == grammarAccess.getEnumerationLiteralItemRule()) {
-					sequence_EnumerationLiteralItem(context, (EnumerationLiteralItem) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getSelectionItemRule()) {
-					sequence_EnumerationLiteralItem_SelectionItem(context, (EnumerationLiteralItem) semanticObject); 
-					return; 
-				}
-				else break;
+				sequence_EnumerationLiteralItem(context, (EnumerationLiteralItem) semanticObject); 
+				return; 
 			case ViewsPackage.LAYOUT:
 				sequence_Layout(context, (Layout) semanticObject); 
 				return; 
@@ -136,6 +130,9 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 					return; 
 				}
 				else break;
+			case ViewsPackage.SELECTION_ITEM:
+				sequence_SelectionItem(context, (SelectionItem) semanticObject); 
+				return; 
 			case ViewsPackage.TABLE:
 				if(context == grammarAccess.getConditionalElementRule()) {
 					sequence_ConditionalElement_Table(context, (Table) semanticObject); 
@@ -289,8 +286,7 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 	 *         elementID=ID 
 	 *         label=STRING 
 	 *         association=[Association|QualifiedName] 
-	 *         (link+=Link link+=Link? (columns+=Column columns+=Column*)?)? 
-	 *         (columns+=Column columns+=Column*)? 
+	 *         ((link+=Link link+=Link*) | (link+=Link+ columns+=Column columns+=Column*) | (columns+=Column columns+=Column*)?) 
 	 *         condition=Condition?
 	 *     )
 	 */
@@ -388,15 +384,6 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 	
 	/**
 	 * Constraint:
-	 *     (value=STRING enumerationLiteral=[EnumerationLiteral|QualifiedName] value=STRING?)
-	 */
-	protected void sequence_EnumerationLiteralItem_SelectionItem(EObject context, EnumerationLiteralItem semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     alignment=LayoutStyle
 	 */
 	protected void sequence_Layout(EObject context, Layout semanticObject) {
@@ -445,8 +432,7 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 	 *         elementID=ID 
 	 *         label=STRING 
 	 *         association=[Association|QualifiedName] 
-	 *         (link+=Link link+=Link? (columns+=Column columns+=Column*)?)? 
-	 *         (columns+=Column columns+=Column*)? 
+	 *         ((link+=Link link+=Link*) | (link+=Link+ columns+=Column columns+=Column*) | (columns+=Column columns+=Column*)?) 
 	 *         link+=Link
 	 *     )
 	 */
@@ -483,6 +469,22 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 	
 	/**
 	 * Constraint:
+	 *     value=STRING
+	 */
+	protected void sequence_SelectionItem(EObject context, SelectionItem semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ViewsPackage.Literals.SELECTION_ITEM__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ViewsPackage.Literals.SELECTION_ITEM__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getSelectionItemAccess().getValueSTRINGTerminalRuleCall_1_1_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (elementID=ID label=STRING property=[Property|QualifiedName] (selectionItems+=SelectionItem selectionItems+=SelectionItem*)?)
 	 */
 	protected void sequence_Selection(EObject context, Selection semanticObject) {
@@ -496,8 +498,7 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 	 *         elementID=ID 
 	 *         label=STRING 
 	 *         association=[Association|QualifiedName] 
-	 *         (link+=Link link+=Link? (columns+=Column columns+=Column*)?)? 
-	 *         (columns+=Column columns+=Column*)?
+	 *         ((link+=Link link+=Link*) | (link+=Link+ columns+=Column columns+=Column*) | (columns+=Column columns+=Column*)?)
 	 *     )
 	 */
 	protected void sequence_Table(EObject context, Table semanticObject) {

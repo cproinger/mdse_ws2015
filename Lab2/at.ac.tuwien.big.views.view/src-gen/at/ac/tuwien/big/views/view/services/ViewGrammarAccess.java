@@ -26,8 +26,8 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cViewGroupsAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cViewGroupsViewGroupParserRuleCall_1_0 = (RuleCall)cViewGroupsAssignment_1.eContents().get(0);
 		
-		//// Our grammar is implemented as following 
-		// ViewModel:
+		//// Our grammar is implemented as follows
+		//ViewModel:
 		//	(viewGroups+=ViewGroup viewGroups+=ViewGroup*)?;
 		@Override public ParserRule getRule() { return rule; }
 
@@ -1010,36 +1010,42 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cAssociationAssociationCrossReference_4_0 = (CrossReference)cAssociationAssignment_4.eContents().get(0);
 		private final RuleCall cAssociationAssociationQualifiedNameParserRuleCall_4_0_1 = (RuleCall)cAssociationAssociationCrossReference_4_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Assignment cLinkAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
-		private final RuleCall cLinkLinkParserRuleCall_6_0_0 = (RuleCall)cLinkAssignment_6_0.eContents().get(0);
-		private final Group cGroup_6_1 = (Group)cGroup_6.eContents().get(1);
-		private final Keyword cCommaKeyword_6_1_0 = (Keyword)cGroup_6_1.eContents().get(0);
-		private final Assignment cLinkAssignment_6_1_1 = (Assignment)cGroup_6_1.eContents().get(1);
-		private final RuleCall cLinkLinkParserRuleCall_6_1_1_0 = (RuleCall)cLinkAssignment_6_1_1.eContents().get(0);
-		private final Group cGroup_6_2 = (Group)cGroup_6.eContents().get(2);
+		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
+		private final Group cGroup_6_0 = (Group)cAlternatives_6.eContents().get(0);
+		private final Assignment cLinkAssignment_6_0_0 = (Assignment)cGroup_6_0.eContents().get(0);
+		private final RuleCall cLinkLinkParserRuleCall_6_0_0_0 = (RuleCall)cLinkAssignment_6_0_0.eContents().get(0);
+		private final Group cGroup_6_0_1 = (Group)cGroup_6_0.eContents().get(1);
+		private final Keyword cCommaKeyword_6_0_1_0 = (Keyword)cGroup_6_0_1.eContents().get(0);
+		private final Assignment cLinkAssignment_6_0_1_1 = (Assignment)cGroup_6_0_1.eContents().get(1);
+		private final RuleCall cLinkLinkParserRuleCall_6_0_1_1_0 = (RuleCall)cLinkAssignment_6_0_1_1.eContents().get(0);
+		private final Group cGroup_6_1 = (Group)cAlternatives_6.eContents().get(1);
+		private final Group cGroup_6_1_0 = (Group)cGroup_6_1.eContents().get(0);
+		private final Assignment cLinkAssignment_6_1_0_0 = (Assignment)cGroup_6_1_0.eContents().get(0);
+		private final RuleCall cLinkLinkParserRuleCall_6_1_0_0_0 = (RuleCall)cLinkAssignment_6_1_0_0.eContents().get(0);
+		private final Keyword cCommaKeyword_6_1_0_1 = (Keyword)cGroup_6_1_0.eContents().get(1);
+		private final Group cGroup_6_1_1 = (Group)cGroup_6_1.eContents().get(1);
+		private final Assignment cColumnsAssignment_6_1_1_0 = (Assignment)cGroup_6_1_1.eContents().get(0);
+		private final RuleCall cColumnsColumnParserRuleCall_6_1_1_0_0 = (RuleCall)cColumnsAssignment_6_1_1_0.eContents().get(0);
+		private final Group cGroup_6_1_1_1 = (Group)cGroup_6_1_1.eContents().get(1);
+		private final Keyword cCommaKeyword_6_1_1_1_0 = (Keyword)cGroup_6_1_1_1.eContents().get(0);
+		private final Assignment cColumnsAssignment_6_1_1_1_1 = (Assignment)cGroup_6_1_1_1.eContents().get(1);
+		private final RuleCall cColumnsColumnParserRuleCall_6_1_1_1_1_0 = (RuleCall)cColumnsAssignment_6_1_1_1_1.eContents().get(0);
+		private final Group cGroup_6_2 = (Group)cAlternatives_6.eContents().get(2);
 		private final Assignment cColumnsAssignment_6_2_0 = (Assignment)cGroup_6_2.eContents().get(0);
 		private final RuleCall cColumnsColumnParserRuleCall_6_2_0_0 = (RuleCall)cColumnsAssignment_6_2_0.eContents().get(0);
 		private final Group cGroup_6_2_1 = (Group)cGroup_6_2.eContents().get(1);
 		private final Keyword cCommaKeyword_6_2_1_0 = (Keyword)cGroup_6_2_1.eContents().get(0);
 		private final Assignment cColumnsAssignment_6_2_1_1 = (Assignment)cGroup_6_2_1.eContents().get(1);
 		private final RuleCall cColumnsColumnParserRuleCall_6_2_1_1_0 = (RuleCall)cColumnsAssignment_6_2_1_1.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Assignment cColumnsAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
-		private final RuleCall cColumnsColumnParserRuleCall_7_0_0 = (RuleCall)cColumnsAssignment_7_0.eContents().get(0);
-		private final Group cGroup_7_1 = (Group)cGroup_7.eContents().get(1);
-		private final Keyword cCommaKeyword_7_1_0 = (Keyword)cGroup_7_1.eContents().get(0);
-		private final Assignment cColumnsAssignment_7_1_1 = (Assignment)cGroup_7_1.eContents().get(1);
-		private final RuleCall cColumnsColumnParserRuleCall_7_1_1_0 = (RuleCall)cColumnsAssignment_7_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Table:
-		//	"table" elementID=ID label=STRING "handles" association=[Association|QualifiedName] "{" (link+=Link ("," link+=Link)?
-		//	(columns+=Column ("," columns+=Column)*)?)? (columns+=Column ("," columns+=Column)*)? "}";
+		//	"table" elementID=ID label=STRING "handles" association=[Association|QualifiedName] "{" (link+=Link ("," link+=Link)*
+		//	| (link+=Link ",")+ (columns+=Column ("," columns+=Column)*) | (columns+=Column ("," columns+=Column)*)?) "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"table" elementID=ID label=STRING "handles" association=[Association|QualifiedName] "{" (link+=Link ("," link+=Link)?
-		//(columns+=Column ("," columns+=Column)*)?)? (columns+=Column ("," columns+=Column)*)? "}"
+		//"table" elementID=ID label=STRING "handles" association=[Association|QualifiedName] "{" (link+=Link ("," link+=Link)* |
+		//(link+=Link ",")+ (columns+=Column ("," columns+=Column)*) | (columns+=Column ("," columns+=Column)*)?) "}"
 		public Group getGroup() { return cGroup; }
 
 		//"table"
@@ -1072,26 +1078,66 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
 
-		//(link+=Link ("," link+=Link)? (columns+=Column ("," columns+=Column)*)?)?
-		public Group getGroup_6() { return cGroup_6; }
+		//link+=Link ("," link+=Link)* | (link+=Link ",")+ (columns+=Column ("," columns+=Column)*) | (columns+=Column (","
+		//columns+=Column)*)?
+		public Alternatives getAlternatives_6() { return cAlternatives_6; }
+
+		//link+=Link ("," link+=Link)*
+		public Group getGroup_6_0() { return cGroup_6_0; }
 
 		//link+=Link
-		public Assignment getLinkAssignment_6_0() { return cLinkAssignment_6_0; }
+		public Assignment getLinkAssignment_6_0_0() { return cLinkAssignment_6_0_0; }
 
 		//Link
-		public RuleCall getLinkLinkParserRuleCall_6_0_0() { return cLinkLinkParserRuleCall_6_0_0; }
+		public RuleCall getLinkLinkParserRuleCall_6_0_0_0() { return cLinkLinkParserRuleCall_6_0_0_0; }
 
-		//("," link+=Link)?
-		public Group getGroup_6_1() { return cGroup_6_1; }
+		//("," link+=Link)*
+		public Group getGroup_6_0_1() { return cGroup_6_0_1; }
 
 		//","
-		public Keyword getCommaKeyword_6_1_0() { return cCommaKeyword_6_1_0; }
+		public Keyword getCommaKeyword_6_0_1_0() { return cCommaKeyword_6_0_1_0; }
 
 		//link+=Link
-		public Assignment getLinkAssignment_6_1_1() { return cLinkAssignment_6_1_1; }
+		public Assignment getLinkAssignment_6_0_1_1() { return cLinkAssignment_6_0_1_1; }
 
 		//Link
-		public RuleCall getLinkLinkParserRuleCall_6_1_1_0() { return cLinkLinkParserRuleCall_6_1_1_0; }
+		public RuleCall getLinkLinkParserRuleCall_6_0_1_1_0() { return cLinkLinkParserRuleCall_6_0_1_1_0; }
+
+		//(link+=Link ",")+ (columns+=Column ("," columns+=Column)*)
+		public Group getGroup_6_1() { return cGroup_6_1; }
+
+		//(link+=Link ",")+
+		public Group getGroup_6_1_0() { return cGroup_6_1_0; }
+
+		//link+=Link
+		public Assignment getLinkAssignment_6_1_0_0() { return cLinkAssignment_6_1_0_0; }
+
+		//Link
+		public RuleCall getLinkLinkParserRuleCall_6_1_0_0_0() { return cLinkLinkParserRuleCall_6_1_0_0_0; }
+
+		//","
+		public Keyword getCommaKeyword_6_1_0_1() { return cCommaKeyword_6_1_0_1; }
+
+		//columns+=Column ("," columns+=Column)*
+		public Group getGroup_6_1_1() { return cGroup_6_1_1; }
+
+		//columns+=Column
+		public Assignment getColumnsAssignment_6_1_1_0() { return cColumnsAssignment_6_1_1_0; }
+
+		//Column
+		public RuleCall getColumnsColumnParserRuleCall_6_1_1_0_0() { return cColumnsColumnParserRuleCall_6_1_1_0_0; }
+
+		//("," columns+=Column)*
+		public Group getGroup_6_1_1_1() { return cGroup_6_1_1_1; }
+
+		//","
+		public Keyword getCommaKeyword_6_1_1_1_0() { return cCommaKeyword_6_1_1_1_0; }
+
+		//columns+=Column
+		public Assignment getColumnsAssignment_6_1_1_1_1() { return cColumnsAssignment_6_1_1_1_1; }
+
+		//Column
+		public RuleCall getColumnsColumnParserRuleCall_6_1_1_1_1_0() { return cColumnsColumnParserRuleCall_6_1_1_1_1_0; }
 
 		//(columns+=Column ("," columns+=Column)*)?
 		public Group getGroup_6_2() { return cGroup_6_2; }
@@ -1114,29 +1160,8 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		//Column
 		public RuleCall getColumnsColumnParserRuleCall_6_2_1_1_0() { return cColumnsColumnParserRuleCall_6_2_1_1_0; }
 
-		//(columns+=Column ("," columns+=Column)*)?
-		public Group getGroup_7() { return cGroup_7; }
-
-		//columns+=Column
-		public Assignment getColumnsAssignment_7_0() { return cColumnsAssignment_7_0; }
-
-		//Column
-		public RuleCall getColumnsColumnParserRuleCall_7_0_0() { return cColumnsColumnParserRuleCall_7_0_0; }
-
-		//("," columns+=Column)*
-		public Group getGroup_7_1() { return cGroup_7_1; }
-
-		//","
-		public Keyword getCommaKeyword_7_1_0() { return cCommaKeyword_7_1_0; }
-
-		//columns+=Column
-		public Assignment getColumnsAssignment_7_1_1() { return cColumnsAssignment_7_1_1; }
-
-		//Column
-		public RuleCall getColumnsColumnParserRuleCall_7_1_1_0() { return cColumnsColumnParserRuleCall_7_1_1_0; }
-
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class PropertyElementElements extends AbstractParserRuleElementFinder {
@@ -1431,24 +1456,24 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class SelectionItemElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SelectionItem");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cEnumerationLiteralItemParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cEnumerationLiteralItemParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Keyword cSelectionItemKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cValueAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cValueSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cValueAssignment_1_1.eContents().get(0);
 		
 		//SelectionItem:
-		//	EnumerationLiteralItem ("selection-item" value=STRING)?;
+		//	EnumerationLiteralItem | "selection-item" value=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//EnumerationLiteralItem ("selection-item" value=STRING)?
-		public Group getGroup() { return cGroup; }
+		//EnumerationLiteralItem | "selection-item" value=STRING
+		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//EnumerationLiteralItem
 		public RuleCall getEnumerationLiteralItemParserRuleCall_0() { return cEnumerationLiteralItemParserRuleCall_0; }
 
-		//("selection-item" value=STRING)?
+		//"selection-item" value=STRING
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"selection-item"
@@ -2104,8 +2129,8 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//// Our grammar is implemented as following 
-	// ViewModel:
+	//// Our grammar is implemented as follows
+	//ViewModel:
 	//	(viewGroups+=ViewGroup viewGroups+=ViewGroup*)?;
 	public ViewModelElements getViewModelAccess() {
 		return pViewModel;
@@ -2253,8 +2278,8 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Table:
-	//	"table" elementID=ID label=STRING "handles" association=[Association|QualifiedName] "{" (link+=Link ("," link+=Link)?
-	//	(columns+=Column ("," columns+=Column)*)?)? (columns+=Column ("," columns+=Column)*)? "}";
+	//	"table" elementID=ID label=STRING "handles" association=[Association|QualifiedName] "{" (link+=Link ("," link+=Link)*
+	//	| (link+=Link ",")+ (columns+=Column ("," columns+=Column)*) | (columns+=Column ("," columns+=Column)*)?) "}";
 	public TableElements getTableAccess() {
 		return pTable;
 	}
@@ -2315,7 +2340,7 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SelectionItem:
-	//	EnumerationLiteralItem ("selection-item" value=STRING)?;
+	//	EnumerationLiteralItem | "selection-item" value=STRING;
 	public SelectionItemElements getSelectionItemAccess() {
 		return pSelectionItem;
 	}

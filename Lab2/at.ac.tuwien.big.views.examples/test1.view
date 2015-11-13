@@ -75,7 +75,7 @@ welcome viewgroup Institute {
 viewgroup Courses {
    start index-view CourseIndex "Courses" handles Course {
       view-description "List of all current courses."
-      link "Show" handles ShowCourse 
+      link "Show" handles ShowCourse
    },
    vertical read-view ShowCourse "Course" handles Course {
       vertical elementgroup "Course Details" {

@@ -1019,10 +1019,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9501:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9501:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9574:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9574:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9501:11: ( '^' )?
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9574:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1031,7 +1031,7 @@ public class InternalViewLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9501:11: '^'
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9574:11: '^'
                     {
                     match('^'); 
 
@@ -1049,7 +1049,7 @@ public class InternalViewLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9501:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9574:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -1098,10 +1098,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9503:10: ( ( '0' .. '9' )+ )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9503:12: ( '0' .. '9' )+
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9576:10: ( ( '0' .. '9' )+ )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9576:12: ( '0' .. '9' )+
             {
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9503:12: ( '0' .. '9' )+
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9576:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -1115,7 +1115,7 @@ public class InternalViewLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9503:13: '0' .. '9'
+            	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9576:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1147,10 +1147,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9505:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9505:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9505:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1168,10 +1168,10 @@ public class InternalViewLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9505:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9505:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1187,7 +1187,7 @@ public class InternalViewLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9505:21: '\\\\' .
+                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1195,7 +1195,7 @@ public class InternalViewLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9505:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1220,10 +1220,10 @@ public class InternalViewLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9505:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9505:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1239,7 +1239,7 @@ public class InternalViewLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9505:54: '\\\\' .
+                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1247,7 +1247,7 @@ public class InternalViewLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9505:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1290,12 +1290,12 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9507:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9507:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9580:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9580:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9507:24: ( options {greedy=false; } : . )*
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9580:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1320,7 +1320,7 @@ public class InternalViewLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9507:52: .
+            	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9580:52: .
             	    {
             	    matchAny(); 
 
@@ -1350,12 +1350,12 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9509:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9509:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9509:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1368,7 +1368,7 @@ public class InternalViewLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9509:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1388,7 +1388,7 @@ public class InternalViewLexer extends Lexer {
                 }
             } while (true);
 
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9509:40: ( ( '\\r' )? '\\n' )?
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1397,9 +1397,9 @@ public class InternalViewLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9509:41: ( '\\r' )? '\\n'
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:41: ( '\\r' )? '\\n'
                     {
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9509:41: ( '\\r' )?
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1408,7 +1408,7 @@ public class InternalViewLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9509:41: '\\r'
+                            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1440,10 +1440,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9511:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9511:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9584:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9584:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9511:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9584:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1497,8 +1497,8 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9513:16: ( . )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9513:18: .
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9586:16: ( . )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9586:18: .
             {
             matchAny(); 
 

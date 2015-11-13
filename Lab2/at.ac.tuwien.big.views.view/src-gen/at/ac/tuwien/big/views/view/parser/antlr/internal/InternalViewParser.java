@@ -1241,6 +1241,11 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
+                case 21:
+                    {
+                    alt11=2;
+                    }
+                    break;
                 case 20:
                     {
                     alt11=1;
@@ -1254,11 +1259,6 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                 case 22:
                     {
                     alt11=3;
-                    }
-                    break;
-                case 21:
-                    {
-                    alt11=2;
                     }
                     break;
                 default:
@@ -1305,6 +1305,11 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
+                case 22:
+                    {
+                    alt11=3;
+                    }
+                    break;
                 case 21:
                     {
                     alt11=2;
@@ -1318,11 +1323,6 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                 case 23:
                     {
                     alt11=4;
-                    }
-                    break;
-                case 22:
-                    {
-                    alt11=3;
                     }
                     break;
                 default:
@@ -4257,7 +4257,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTable"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1578:1: ruleTable returns [EObject current=null] : (otherlv_0= 'table' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )? ( ( (lv_columns_9_0= ruleColumn ) ) (otherlv_10= ',' ( (lv_columns_11_0= ruleColumn ) ) )* )? )? ( ( (lv_columns_12_0= ruleColumn ) ) (otherlv_13= ',' ( (lv_columns_14_0= ruleColumn ) ) )* )? otherlv_15= '}' ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1578:1: ruleTable returns [EObject current=null] : (otherlv_0= 'table' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )* ) | ( ( ( (lv_link_9_0= ruleLink ) ) otherlv_10= ',' )+ ( ( (lv_columns_11_0= ruleColumn ) ) (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )* ) ) | ( ( (lv_columns_14_0= ruleColumn ) ) (otherlv_15= ',' ( (lv_columns_16_0= ruleColumn ) ) )* )? ) otherlv_17= '}' ) ;
     public final EObject ruleTable() throws RecognitionException {
         EObject current = null;
 
@@ -4268,29 +4268,32 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
         Token otherlv_5=null;
         Token otherlv_7=null;
         Token otherlv_10=null;
-        Token otherlv_13=null;
+        Token otherlv_12=null;
         Token otherlv_15=null;
+        Token otherlv_17=null;
         EObject lv_link_6_0 = null;
 
         EObject lv_link_8_0 = null;
 
-        EObject lv_columns_9_0 = null;
+        EObject lv_link_9_0 = null;
 
         EObject lv_columns_11_0 = null;
 
-        EObject lv_columns_12_0 = null;
+        EObject lv_columns_13_0 = null;
 
         EObject lv_columns_14_0 = null;
+
+        EObject lv_columns_16_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1581:28: ( (otherlv_0= 'table' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )? ( ( (lv_columns_9_0= ruleColumn ) ) (otherlv_10= ',' ( (lv_columns_11_0= ruleColumn ) ) )* )? )? ( ( (lv_columns_12_0= ruleColumn ) ) (otherlv_13= ',' ( (lv_columns_14_0= ruleColumn ) ) )* )? otherlv_15= '}' ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1582:1: (otherlv_0= 'table' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )? ( ( (lv_columns_9_0= ruleColumn ) ) (otherlv_10= ',' ( (lv_columns_11_0= ruleColumn ) ) )* )? )? ( ( (lv_columns_12_0= ruleColumn ) ) (otherlv_13= ',' ( (lv_columns_14_0= ruleColumn ) ) )* )? otherlv_15= '}' )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1581:28: ( (otherlv_0= 'table' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )* ) | ( ( ( (lv_link_9_0= ruleLink ) ) otherlv_10= ',' )+ ( ( (lv_columns_11_0= ruleColumn ) ) (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )* ) ) | ( ( (lv_columns_14_0= ruleColumn ) ) (otherlv_15= ',' ( (lv_columns_16_0= ruleColumn ) ) )* )? ) otherlv_17= '}' ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1582:1: (otherlv_0= 'table' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )* ) | ( ( ( (lv_link_9_0= ruleLink ) ) otherlv_10= ',' )+ ( ( (lv_columns_11_0= ruleColumn ) ) (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )* ) ) | ( ( (lv_columns_14_0= ruleColumn ) ) (otherlv_15= ',' ( (lv_columns_16_0= ruleColumn ) ) )* )? ) otherlv_17= '}' )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1582:1: (otherlv_0= 'table' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )? ( ( (lv_columns_9_0= ruleColumn ) ) (otherlv_10= ',' ( (lv_columns_11_0= ruleColumn ) ) )* )? )? ( ( (lv_columns_12_0= ruleColumn ) ) (otherlv_13= ',' ( (lv_columns_14_0= ruleColumn ) ) )* )? otherlv_15= '}' )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1582:3: otherlv_0= 'table' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )? ( ( (lv_columns_9_0= ruleColumn ) ) (otherlv_10= ',' ( (lv_columns_11_0= ruleColumn ) ) )* )? )? ( ( (lv_columns_12_0= ruleColumn ) ) (otherlv_13= ',' ( (lv_columns_14_0= ruleColumn ) ) )* )? otherlv_15= '}'
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1582:1: (otherlv_0= 'table' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )* ) | ( ( ( (lv_link_9_0= ruleLink ) ) otherlv_10= ',' )+ ( ( (lv_columns_11_0= ruleColumn ) ) (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )* ) ) | ( ( (lv_columns_14_0= ruleColumn ) ) (otherlv_15= ',' ( (lv_columns_16_0= ruleColumn ) ) )* )? ) otherlv_17= '}' )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1582:3: otherlv_0= 'table' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )* ) | ( ( ( (lv_link_9_0= ruleLink ) ) otherlv_10= ',' )+ ( ( (lv_columns_11_0= ruleColumn ) ) (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )* ) ) | ( ( (lv_columns_14_0= ruleColumn ) ) (otherlv_15= ',' ( (lv_columns_16_0= ruleColumn ) ) )* )? ) otherlv_17= '}'
             {
             otherlv_0=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleTable3141); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4404,18 +4407,17 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_5, grammarAccess.getTableAccess().getLeftCurlyBracketKeyword_5());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1645:1: ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )? ( ( (lv_columns_9_0= ruleColumn ) ) (otherlv_10= ',' ( (lv_columns_11_0= ruleColumn ) ) )* )? )?
-            int alt38=2;
-            int LA38_0 = input.LA(1);
-
-            if ( (LA38_0==36) ) {
-                alt38=1;
-            }
-            switch (alt38) {
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1645:1: ( ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )* ) | ( ( ( (lv_link_9_0= ruleLink ) ) otherlv_10= ',' )+ ( ( (lv_columns_11_0= ruleColumn ) ) (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )* ) ) | ( ( (lv_columns_14_0= ruleColumn ) ) (otherlv_15= ',' ( (lv_columns_16_0= ruleColumn ) ) )* )? )
+            int alt40=3;
+            alt40 = dfa40.predict(input);
+            switch (alt40) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1645:2: ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )? ( ( (lv_columns_9_0= ruleColumn ) ) (otherlv_10= ',' ( (lv_columns_11_0= ruleColumn ) ) )* )?
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1645:2: ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )* )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1645:2: ( (lv_link_6_0= ruleLink ) )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1645:2: ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )* )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1645:3: ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )*
+                    {
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1645:3: ( (lv_link_6_0= ruleLink ) )
                     // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1646:1: (lv_link_6_0= ruleLink )
                     {
                     // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1646:1: (lv_link_6_0= ruleLink )
@@ -4423,10 +4425,10 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getTableAccess().getLinkLinkParserRuleCall_6_0_0()); 
+                      	        newCompositeNode(grammarAccess.getTableAccess().getLinkLinkParserRuleCall_6_0_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleLink_in_ruleTable3254);
+                    pushFollow(FollowSets000.FOLLOW_ruleLink_in_ruleTable3255);
                     lv_link_6_0=ruleLink();
 
                     state._fsp--;
@@ -4450,227 +4452,170 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1663:2: (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )?
-                    int alt35=2;
-                    int LA35_0 = input.LA(1);
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1663:2: (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )*
+                    loop35:
+                    do {
+                        int alt35=2;
+                        int LA35_0 = input.LA(1);
 
-                    if ( (LA35_0==14) ) {
-                        alt35=1;
-                    }
-                    switch (alt35) {
-                        case 1 :
-                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1663:4: otherlv_7= ',' ( (lv_link_8_0= ruleLink ) )
-                            {
-                            otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleTable3267); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                                  	newLeafNode(otherlv_7, grammarAccess.getTableAccess().getCommaKeyword_6_1_0());
-                                  
-                            }
-                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1667:1: ( (lv_link_8_0= ruleLink ) )
-                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1668:1: (lv_link_8_0= ruleLink )
-                            {
-                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1668:1: (lv_link_8_0= ruleLink )
-                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1669:3: lv_link_8_0= ruleLink
-                            {
-                            if ( state.backtracking==0 ) {
-                               
-                              	        newCompositeNode(grammarAccess.getTableAccess().getLinkLinkParserRuleCall_6_1_1_0()); 
-                              	    
-                            }
-                            pushFollow(FollowSets000.FOLLOW_ruleLink_in_ruleTable3288);
-                            lv_link_8_0=ruleLink();
-
-                            state._fsp--;
-                            if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                              	        if (current==null) {
-                              	            current = createModelElementForParent(grammarAccess.getTableRule());
-                              	        }
-                                     		add(
-                                     			current, 
-                                     			"link",
-                                      		lv_link_8_0, 
-                                      		"Link");
-                              	        afterParserOrEnumRuleCall();
-                              	    
-                            }
-
-                            }
-
-
-                            }
-
-
-                            }
-                            break;
-
-                    }
-
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1685:4: ( ( (lv_columns_9_0= ruleColumn ) ) (otherlv_10= ',' ( (lv_columns_11_0= ruleColumn ) ) )* )?
-                    int alt37=2;
-                    int LA37_0 = input.LA(1);
-
-                    if ( (LA37_0==28) ) {
-                        int LA37_1 = input.LA(2);
-
-                        if ( (LA37_1==RULE_ID) ) {
-                            int LA37_3 = input.LA(3);
-
-                            if ( (LA37_3==RULE_STRING) ) {
-                                int LA37_4 = input.LA(4);
-
-                                if ( (LA37_4==18) ) {
-                                    int LA37_5 = input.LA(5);
-
-                                    if ( (LA37_5==RULE_ID) ) {
-                                        alt37=1;
-                                    }
-                                }
-                            }
+                        if ( (LA35_0==14) ) {
+                            alt35=1;
                         }
-                    }
-                    switch (alt37) {
-                        case 1 :
-                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1685:5: ( (lv_columns_9_0= ruleColumn ) ) (otherlv_10= ',' ( (lv_columns_11_0= ruleColumn ) ) )*
-                            {
-                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1685:5: ( (lv_columns_9_0= ruleColumn ) )
-                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1686:1: (lv_columns_9_0= ruleColumn )
-                            {
-                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1686:1: (lv_columns_9_0= ruleColumn )
-                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1687:3: lv_columns_9_0= ruleColumn
-                            {
-                            if ( state.backtracking==0 ) {
-                               
-                              	        newCompositeNode(grammarAccess.getTableAccess().getColumnsColumnParserRuleCall_6_2_0_0()); 
-                              	    
-                            }
-                            pushFollow(FollowSets000.FOLLOW_ruleColumn_in_ruleTable3312);
-                            lv_columns_9_0=ruleColumn();
-
-                            state._fsp--;
-                            if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                              	        if (current==null) {
-                              	            current = createModelElementForParent(grammarAccess.getTableRule());
-                              	        }
-                                     		add(
-                                     			current, 
-                                     			"columns",
-                                      		lv_columns_9_0, 
-                                      		"Column");
-                              	        afterParserOrEnumRuleCall();
-                              	    
-                            }
-
-                            }
 
 
-                            }
+                        switch (alt35) {
+                    	case 1 :
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1663:4: otherlv_7= ',' ( (lv_link_8_0= ruleLink ) )
+                    	    {
+                    	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleTable3268); if (state.failed) return current;
+                    	    if ( state.backtracking==0 ) {
 
-                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1703:2: (otherlv_10= ',' ( (lv_columns_11_0= ruleColumn ) ) )*
-                            loop36:
-                            do {
-                                int alt36=2;
-                                int LA36_0 = input.LA(1);
+                    	          	newLeafNode(otherlv_7, grammarAccess.getTableAccess().getCommaKeyword_6_0_1_0());
+                    	          
+                    	    }
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1667:1: ( (lv_link_8_0= ruleLink ) )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1668:1: (lv_link_8_0= ruleLink )
+                    	    {
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1668:1: (lv_link_8_0= ruleLink )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1669:3: lv_link_8_0= ruleLink
+                    	    {
+                    	    if ( state.backtracking==0 ) {
+                    	       
+                    	      	        newCompositeNode(grammarAccess.getTableAccess().getLinkLinkParserRuleCall_6_0_1_1_0()); 
+                    	      	    
+                    	    }
+                    	    pushFollow(FollowSets000.FOLLOW_ruleLink_in_ruleTable3289);
+                    	    lv_link_8_0=ruleLink();
 
-                                if ( (LA36_0==14) ) {
-                                    alt36=1;
-                                }
+                    	    state._fsp--;
+                    	    if (state.failed) return current;
+                    	    if ( state.backtracking==0 ) {
 
+                    	      	        if (current==null) {
+                    	      	            current = createModelElementForParent(grammarAccess.getTableRule());
+                    	      	        }
+                    	             		add(
+                    	             			current, 
+                    	             			"link",
+                    	              		lv_link_8_0, 
+                    	              		"Link");
+                    	      	        afterParserOrEnumRuleCall();
+                    	      	    
+                    	    }
 
-                                switch (alt36) {
-                            	case 1 :
-                            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1703:4: otherlv_10= ',' ( (lv_columns_11_0= ruleColumn ) )
-                            	    {
-                            	    otherlv_10=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleTable3325); if (state.failed) return current;
-                            	    if ( state.backtracking==0 ) {
-
-                            	          	newLeafNode(otherlv_10, grammarAccess.getTableAccess().getCommaKeyword_6_2_1_0());
-                            	          
-                            	    }
-                            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1707:1: ( (lv_columns_11_0= ruleColumn ) )
-                            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1708:1: (lv_columns_11_0= ruleColumn )
-                            	    {
-                            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1708:1: (lv_columns_11_0= ruleColumn )
-                            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1709:3: lv_columns_11_0= ruleColumn
-                            	    {
-                            	    if ( state.backtracking==0 ) {
-                            	       
-                            	      	        newCompositeNode(grammarAccess.getTableAccess().getColumnsColumnParserRuleCall_6_2_1_1_0()); 
-                            	      	    
-                            	    }
-                            	    pushFollow(FollowSets000.FOLLOW_ruleColumn_in_ruleTable3346);
-                            	    lv_columns_11_0=ruleColumn();
-
-                            	    state._fsp--;
-                            	    if (state.failed) return current;
-                            	    if ( state.backtracking==0 ) {
-
-                            	      	        if (current==null) {
-                            	      	            current = createModelElementForParent(grammarAccess.getTableRule());
-                            	      	        }
-                            	             		add(
-                            	             			current, 
-                            	             			"columns",
-                            	              		lv_columns_11_0, 
-                            	              		"Column");
-                            	      	        afterParserOrEnumRuleCall();
-                            	      	    
-                            	    }
-
-                            	    }
+                    	    }
 
 
-                            	    }
+                    	    }
 
 
-                            	    }
-                            	    break;
+                    	    }
+                    	    break;
 
-                            	default :
-                            	    break loop36;
-                                }
-                            } while (true);
+                    	default :
+                    	    break loop35;
+                        }
+                    } while (true);
 
-
-                            }
-                            break;
 
                     }
 
 
                     }
                     break;
-
-            }
-
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1725:8: ( ( (lv_columns_12_0= ruleColumn ) ) (otherlv_13= ',' ( (lv_columns_14_0= ruleColumn ) ) )* )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
-
-            if ( (LA40_0==28) ) {
-                alt40=1;
-            }
-            switch (alt40) {
-                case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1725:9: ( (lv_columns_12_0= ruleColumn ) ) (otherlv_13= ',' ( (lv_columns_14_0= ruleColumn ) ) )*
+                case 2 :
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1686:6: ( ( ( (lv_link_9_0= ruleLink ) ) otherlv_10= ',' )+ ( ( (lv_columns_11_0= ruleColumn ) ) (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )* ) )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1725:9: ( (lv_columns_12_0= ruleColumn ) )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1726:1: (lv_columns_12_0= ruleColumn )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1686:6: ( ( ( (lv_link_9_0= ruleLink ) ) otherlv_10= ',' )+ ( ( (lv_columns_11_0= ruleColumn ) ) (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )* ) )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1686:7: ( ( (lv_link_9_0= ruleLink ) ) otherlv_10= ',' )+ ( ( (lv_columns_11_0= ruleColumn ) ) (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )* )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1726:1: (lv_columns_12_0= ruleColumn )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1727:3: lv_columns_12_0= ruleColumn
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1686:7: ( ( (lv_link_9_0= ruleLink ) ) otherlv_10= ',' )+
+                    int cnt36=0;
+                    loop36:
+                    do {
+                        int alt36=2;
+                        int LA36_0 = input.LA(1);
+
+                        if ( (LA36_0==36) ) {
+                            alt36=1;
+                        }
+
+
+                        switch (alt36) {
+                    	case 1 :
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1686:8: ( (lv_link_9_0= ruleLink ) ) otherlv_10= ','
+                    	    {
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1686:8: ( (lv_link_9_0= ruleLink ) )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1687:1: (lv_link_9_0= ruleLink )
+                    	    {
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1687:1: (lv_link_9_0= ruleLink )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1688:3: lv_link_9_0= ruleLink
+                    	    {
+                    	    if ( state.backtracking==0 ) {
+                    	       
+                    	      	        newCompositeNode(grammarAccess.getTableAccess().getLinkLinkParserRuleCall_6_1_0_0_0()); 
+                    	      	    
+                    	    }
+                    	    pushFollow(FollowSets000.FOLLOW_ruleLink_in_ruleTable3321);
+                    	    lv_link_9_0=ruleLink();
+
+                    	    state._fsp--;
+                    	    if (state.failed) return current;
+                    	    if ( state.backtracking==0 ) {
+
+                    	      	        if (current==null) {
+                    	      	            current = createModelElementForParent(grammarAccess.getTableRule());
+                    	      	        }
+                    	             		add(
+                    	             			current, 
+                    	             			"link",
+                    	              		lv_link_9_0, 
+                    	              		"Link");
+                    	      	        afterParserOrEnumRuleCall();
+                    	      	    
+                    	    }
+
+                    	    }
+
+
+                    	    }
+
+                    	    otherlv_10=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleTable3333); if (state.failed) return current;
+                    	    if ( state.backtracking==0 ) {
+
+                    	          	newLeafNode(otherlv_10, grammarAccess.getTableAccess().getCommaKeyword_6_1_0_1());
+                    	          
+                    	    }
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    if ( cnt36 >= 1 ) break loop36;
+                    	    if (state.backtracking>0) {state.failed=true; return current;}
+                                EarlyExitException eee =
+                                    new EarlyExitException(36, input);
+                                throw eee;
+                        }
+                        cnt36++;
+                    } while (true);
+
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1708:3: ( ( (lv_columns_11_0= ruleColumn ) ) (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )* )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1708:4: ( (lv_columns_11_0= ruleColumn ) ) (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )*
+                    {
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1708:4: ( (lv_columns_11_0= ruleColumn ) )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1709:1: (lv_columns_11_0= ruleColumn )
+                    {
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1709:1: (lv_columns_11_0= ruleColumn )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1710:3: lv_columns_11_0= ruleColumn
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getTableAccess().getColumnsColumnParserRuleCall_7_0_0()); 
+                      	        newCompositeNode(grammarAccess.getTableAccess().getColumnsColumnParserRuleCall_6_1_1_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleColumn_in_ruleTable3374);
-                    lv_columns_12_0=ruleColumn();
+                    pushFollow(FollowSets000.FOLLOW_ruleColumn_in_ruleTable3357);
+                    lv_columns_11_0=ruleColumn();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -4682,7 +4627,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                              		add(
                              			current, 
                              			"columns",
-                              		lv_columns_12_0, 
+                              		lv_columns_11_0, 
                               		"Column");
                       	        afterParserOrEnumRuleCall();
                       	    
@@ -4693,40 +4638,40 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1743:2: (otherlv_13= ',' ( (lv_columns_14_0= ruleColumn ) ) )*
-                    loop39:
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1726:2: (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )*
+                    loop37:
                     do {
-                        int alt39=2;
-                        int LA39_0 = input.LA(1);
+                        int alt37=2;
+                        int LA37_0 = input.LA(1);
 
-                        if ( (LA39_0==14) ) {
-                            alt39=1;
+                        if ( (LA37_0==14) ) {
+                            alt37=1;
                         }
 
 
-                        switch (alt39) {
+                        switch (alt37) {
                     	case 1 :
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1743:4: otherlv_13= ',' ( (lv_columns_14_0= ruleColumn ) )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1726:4: otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) )
                     	    {
-                    	    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleTable3387); if (state.failed) return current;
+                    	    otherlv_12=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleTable3370); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
-                    	          	newLeafNode(otherlv_13, grammarAccess.getTableAccess().getCommaKeyword_7_1_0());
+                    	          	newLeafNode(otherlv_12, grammarAccess.getTableAccess().getCommaKeyword_6_1_1_1_0());
                     	          
                     	    }
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1747:1: ( (lv_columns_14_0= ruleColumn ) )
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1748:1: (lv_columns_14_0= ruleColumn )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1730:1: ( (lv_columns_13_0= ruleColumn ) )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1731:1: (lv_columns_13_0= ruleColumn )
                     	    {
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1748:1: (lv_columns_14_0= ruleColumn )
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1749:3: lv_columns_14_0= ruleColumn
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1731:1: (lv_columns_13_0= ruleColumn )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1732:3: lv_columns_13_0= ruleColumn
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
-                    	      	        newCompositeNode(grammarAccess.getTableAccess().getColumnsColumnParserRuleCall_7_1_1_0()); 
+                    	      	        newCompositeNode(grammarAccess.getTableAccess().getColumnsColumnParserRuleCall_6_1_1_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FollowSets000.FOLLOW_ruleColumn_in_ruleTable3408);
-                    	    lv_columns_14_0=ruleColumn();
+                    	    pushFollow(FollowSets000.FOLLOW_ruleColumn_in_ruleTable3391);
+                    	    lv_columns_13_0=ruleColumn();
 
                     	    state._fsp--;
                     	    if (state.failed) return current;
@@ -4738,7 +4683,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     	             		add(
                     	             			current, 
                     	             			"columns",
-                    	              		lv_columns_14_0, 
+                    	              		lv_columns_13_0, 
                     	              		"Column");
                     	      	        afterParserOrEnumRuleCall();
                     	      	    
@@ -4754,9 +4699,138 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop39;
+                    	    break loop37;
                         }
                     } while (true);
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1749:6: ( ( (lv_columns_14_0= ruleColumn ) ) (otherlv_15= ',' ( (lv_columns_16_0= ruleColumn ) ) )* )?
+                    {
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1749:6: ( ( (lv_columns_14_0= ruleColumn ) ) (otherlv_15= ',' ( (lv_columns_16_0= ruleColumn ) ) )* )?
+                    int alt39=2;
+                    int LA39_0 = input.LA(1);
+
+                    if ( (LA39_0==28) ) {
+                        alt39=1;
+                    }
+                    switch (alt39) {
+                        case 1 :
+                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1749:7: ( (lv_columns_14_0= ruleColumn ) ) (otherlv_15= ',' ( (lv_columns_16_0= ruleColumn ) ) )*
+                            {
+                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1749:7: ( (lv_columns_14_0= ruleColumn ) )
+                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1750:1: (lv_columns_14_0= ruleColumn )
+                            {
+                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1750:1: (lv_columns_14_0= ruleColumn )
+                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1751:3: lv_columns_14_0= ruleColumn
+                            {
+                            if ( state.backtracking==0 ) {
+                               
+                              	        newCompositeNode(grammarAccess.getTableAccess().getColumnsColumnParserRuleCall_6_2_0_0()); 
+                              	    
+                            }
+                            pushFollow(FollowSets000.FOLLOW_ruleColumn_in_ruleTable3423);
+                            lv_columns_14_0=ruleColumn();
+
+                            state._fsp--;
+                            if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                              	        if (current==null) {
+                              	            current = createModelElementForParent(grammarAccess.getTableRule());
+                              	        }
+                                     		add(
+                                     			current, 
+                                     			"columns",
+                                      		lv_columns_14_0, 
+                                      		"Column");
+                              	        afterParserOrEnumRuleCall();
+                              	    
+                            }
+
+                            }
+
+
+                            }
+
+                            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1767:2: (otherlv_15= ',' ( (lv_columns_16_0= ruleColumn ) ) )*
+                            loop38:
+                            do {
+                                int alt38=2;
+                                int LA38_0 = input.LA(1);
+
+                                if ( (LA38_0==14) ) {
+                                    alt38=1;
+                                }
+
+
+                                switch (alt38) {
+                            	case 1 :
+                            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1767:4: otherlv_15= ',' ( (lv_columns_16_0= ruleColumn ) )
+                            	    {
+                            	    otherlv_15=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleTable3436); if (state.failed) return current;
+                            	    if ( state.backtracking==0 ) {
+
+                            	          	newLeafNode(otherlv_15, grammarAccess.getTableAccess().getCommaKeyword_6_2_1_0());
+                            	          
+                            	    }
+                            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1771:1: ( (lv_columns_16_0= ruleColumn ) )
+                            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1772:1: (lv_columns_16_0= ruleColumn )
+                            	    {
+                            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1772:1: (lv_columns_16_0= ruleColumn )
+                            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1773:3: lv_columns_16_0= ruleColumn
+                            	    {
+                            	    if ( state.backtracking==0 ) {
+                            	       
+                            	      	        newCompositeNode(grammarAccess.getTableAccess().getColumnsColumnParserRuleCall_6_2_1_1_0()); 
+                            	      	    
+                            	    }
+                            	    pushFollow(FollowSets000.FOLLOW_ruleColumn_in_ruleTable3457);
+                            	    lv_columns_16_0=ruleColumn();
+
+                            	    state._fsp--;
+                            	    if (state.failed) return current;
+                            	    if ( state.backtracking==0 ) {
+
+                            	      	        if (current==null) {
+                            	      	            current = createModelElementForParent(grammarAccess.getTableRule());
+                            	      	        }
+                            	             		add(
+                            	             			current, 
+                            	             			"columns",
+                            	              		lv_columns_16_0, 
+                            	              		"Column");
+                            	      	        afterParserOrEnumRuleCall();
+                            	      	    
+                            	    }
+
+                            	    }
+
+
+                            	    }
+
+
+                            	    }
+                            	    break;
+
+                            	default :
+                            	    break loop38;
+                                }
+                            } while (true);
+
+
+                            }
+                            break;
+
+                    }
 
 
                     }
@@ -4764,10 +4838,10 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_15=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleTable3424); if (state.failed) return current;
+            otherlv_17=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleTable3474); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-                  	newLeafNode(otherlv_15, grammarAccess.getTableAccess().getRightCurlyBracketKeyword_8());
+                  	newLeafNode(otherlv_17, grammarAccess.getTableAccess().getRightCurlyBracketKeyword_7());
                   
             }
 
@@ -4793,7 +4867,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePropertyElement"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1777:1: entryRulePropertyElement returns [EObject current=null] : iv_rulePropertyElement= rulePropertyElement EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1801:1: entryRulePropertyElement returns [EObject current=null] : iv_rulePropertyElement= rulePropertyElement EOF ;
     public final EObject entryRulePropertyElement() throws RecognitionException {
         EObject current = null;
 
@@ -4801,13 +4875,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1778:2: (iv_rulePropertyElement= rulePropertyElement EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1779:2: iv_rulePropertyElement= rulePropertyElement EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1802:2: (iv_rulePropertyElement= rulePropertyElement EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1803:2: iv_rulePropertyElement= rulePropertyElement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPropertyElementRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulePropertyElement_in_entryRulePropertyElement3460);
+            pushFollow(FollowSets000.FOLLOW_rulePropertyElement_in_entryRulePropertyElement3510);
             iv_rulePropertyElement=rulePropertyElement();
 
             state._fsp--;
@@ -4815,7 +4889,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulePropertyElement; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulePropertyElement3470); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulePropertyElement3520); if (state.failed) return current;
 
             }
 
@@ -4833,7 +4907,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePropertyElement"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1786:1: rulePropertyElement returns [EObject current=null] : (this_Column_0= ruleColumn | this_Text_1= ruleText | this_Selection_2= ruleSelection | this_DateTimePicker_3= ruleDateTimePicker ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1810:1: rulePropertyElement returns [EObject current=null] : (this_Column_0= ruleColumn | this_Text_1= ruleText | this_Selection_2= ruleSelection | this_DateTimePicker_3= ruleDateTimePicker ) ;
     public final EObject rulePropertyElement() throws RecognitionException {
         EObject current = null;
 
@@ -4849,10 +4923,10 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1789:28: ( (this_Column_0= ruleColumn | this_Text_1= ruleText | this_Selection_2= ruleSelection | this_DateTimePicker_3= ruleDateTimePicker ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1790:1: (this_Column_0= ruleColumn | this_Text_1= ruleText | this_Selection_2= ruleSelection | this_DateTimePicker_3= ruleDateTimePicker )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1813:28: ( (this_Column_0= ruleColumn | this_Text_1= ruleText | this_Selection_2= ruleSelection | this_DateTimePicker_3= ruleDateTimePicker ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1814:1: (this_Column_0= ruleColumn | this_Text_1= ruleText | this_Selection_2= ruleSelection | this_DateTimePicker_3= ruleDateTimePicker )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1790:1: (this_Column_0= ruleColumn | this_Text_1= ruleText | this_Selection_2= ruleSelection | this_DateTimePicker_3= ruleDateTimePicker )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1814:1: (this_Column_0= ruleColumn | this_Text_1= ruleText | this_Selection_2= ruleSelection | this_DateTimePicker_3= ruleDateTimePicker )
             int alt41=4;
             switch ( input.LA(1) ) {
             case 28:
@@ -4886,14 +4960,14 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             switch (alt41) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1791:5: this_Column_0= ruleColumn
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1815:5: this_Column_0= ruleColumn
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getPropertyElementAccess().getColumnParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleColumn_in_rulePropertyElement3517);
+                    pushFollow(FollowSets000.FOLLOW_ruleColumn_in_rulePropertyElement3567);
                     this_Column_0=ruleColumn();
 
                     state._fsp--;
@@ -4908,14 +4982,14 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1801:5: this_Text_1= ruleText
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1825:5: this_Text_1= ruleText
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getPropertyElementAccess().getTextParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleText_in_rulePropertyElement3544);
+                    pushFollow(FollowSets000.FOLLOW_ruleText_in_rulePropertyElement3594);
                     this_Text_1=ruleText();
 
                     state._fsp--;
@@ -4930,14 +5004,14 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1811:5: this_Selection_2= ruleSelection
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1835:5: this_Selection_2= ruleSelection
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getPropertyElementAccess().getSelectionParserRuleCall_2()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleSelection_in_rulePropertyElement3571);
+                    pushFollow(FollowSets000.FOLLOW_ruleSelection_in_rulePropertyElement3621);
                     this_Selection_2=ruleSelection();
 
                     state._fsp--;
@@ -4952,14 +5026,14 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1821:5: this_DateTimePicker_3= ruleDateTimePicker
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1845:5: this_DateTimePicker_3= ruleDateTimePicker
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getPropertyElementAccess().getDateTimePickerParserRuleCall_3()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleDateTimePicker_in_rulePropertyElement3598);
+                    pushFollow(FollowSets000.FOLLOW_ruleDateTimePicker_in_rulePropertyElement3648);
                     this_DateTimePicker_3=ruleDateTimePicker();
 
                     state._fsp--;
@@ -4996,7 +5070,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleColumn"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1837:1: entryRuleColumn returns [EObject current=null] : iv_ruleColumn= ruleColumn EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1861:1: entryRuleColumn returns [EObject current=null] : iv_ruleColumn= ruleColumn EOF ;
     public final EObject entryRuleColumn() throws RecognitionException {
         EObject current = null;
 
@@ -5004,13 +5078,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1838:2: (iv_ruleColumn= ruleColumn EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1839:2: iv_ruleColumn= ruleColumn EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1862:2: (iv_ruleColumn= ruleColumn EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1863:2: iv_ruleColumn= ruleColumn EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getColumnRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleColumn_in_entryRuleColumn3633);
+            pushFollow(FollowSets000.FOLLOW_ruleColumn_in_entryRuleColumn3683);
             iv_ruleColumn=ruleColumn();
 
             state._fsp--;
@@ -5018,7 +5092,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleColumn; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleColumn3643); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleColumn3693); if (state.failed) return current;
 
             }
 
@@ -5036,7 +5110,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleColumn"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1846:1: ruleColumn returns [EObject current=null] : (otherlv_0= 'column' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1870:1: ruleColumn returns [EObject current=null] : (otherlv_0= 'column' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) ) ;
     public final EObject ruleColumn() throws RecognitionException {
         EObject current = null;
 
@@ -5048,25 +5122,25 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1849:28: ( (otherlv_0= 'column' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1850:1: (otherlv_0= 'column' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1873:28: ( (otherlv_0= 'column' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1874:1: (otherlv_0= 'column' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1850:1: (otherlv_0= 'column' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1850:3: otherlv_0= 'column' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1874:1: (otherlv_0= 'column' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1874:3: otherlv_0= 'column' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) )
             {
-            otherlv_0=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleColumn3680); if (state.failed) return current;
+            otherlv_0=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleColumn3730); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getColumnAccess().getColumnKeyword_0());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1854:1: ( (lv_elementID_1_0= RULE_ID ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1855:1: (lv_elementID_1_0= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1878:1: ( (lv_elementID_1_0= RULE_ID ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1879:1: (lv_elementID_1_0= RULE_ID )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1855:1: (lv_elementID_1_0= RULE_ID )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1856:3: lv_elementID_1_0= RULE_ID
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1879:1: (lv_elementID_1_0= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1880:3: lv_elementID_1_0= RULE_ID
             {
-            lv_elementID_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleColumn3697); if (state.failed) return current;
+            lv_elementID_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleColumn3747); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_elementID_1_0, grammarAccess.getColumnAccess().getElementIDIDTerminalRuleCall_1_0()); 
@@ -5090,13 +5164,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1872:2: ( (lv_label_2_0= RULE_STRING ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1873:1: (lv_label_2_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1896:2: ( (lv_label_2_0= RULE_STRING ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1897:1: (lv_label_2_0= RULE_STRING )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1873:1: (lv_label_2_0= RULE_STRING )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1874:3: lv_label_2_0= RULE_STRING
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1897:1: (lv_label_2_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1898:3: lv_label_2_0= RULE_STRING
             {
-            lv_label_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleColumn3719); if (state.failed) return current;
+            lv_label_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleColumn3769); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_label_2_0, grammarAccess.getColumnAccess().getLabelSTRINGTerminalRuleCall_2_0()); 
@@ -5120,17 +5194,17 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleColumn3736); if (state.failed) return current;
+            otherlv_3=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleColumn3786); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getColumnAccess().getHandlesKeyword_3());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1894:1: ( ( ruleQualifiedName ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1895:1: ( ruleQualifiedName )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1918:1: ( ( ruleQualifiedName ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1919:1: ( ruleQualifiedName )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1895:1: ( ruleQualifiedName )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1896:3: ruleQualifiedName
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1919:1: ( ruleQualifiedName )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1920:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -5144,7 +5218,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getColumnAccess().getPropertyPropertyCrossReference_4_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleColumn3759);
+            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleColumn3809);
             ruleQualifiedName();
 
             state._fsp--;
@@ -5183,7 +5257,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDateTimePicker"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1917:1: entryRuleDateTimePicker returns [EObject current=null] : iv_ruleDateTimePicker= ruleDateTimePicker EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1941:1: entryRuleDateTimePicker returns [EObject current=null] : iv_ruleDateTimePicker= ruleDateTimePicker EOF ;
     public final EObject entryRuleDateTimePicker() throws RecognitionException {
         EObject current = null;
 
@@ -5191,13 +5265,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1918:2: (iv_ruleDateTimePicker= ruleDateTimePicker EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1919:2: iv_ruleDateTimePicker= ruleDateTimePicker EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1942:2: (iv_ruleDateTimePicker= ruleDateTimePicker EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1943:2: iv_ruleDateTimePicker= ruleDateTimePicker EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDateTimePickerRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleDateTimePicker_in_entryRuleDateTimePicker3795);
+            pushFollow(FollowSets000.FOLLOW_ruleDateTimePicker_in_entryRuleDateTimePicker3845);
             iv_ruleDateTimePicker=ruleDateTimePicker();
 
             state._fsp--;
@@ -5205,7 +5279,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleDateTimePicker; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDateTimePicker3805); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDateTimePicker3855); if (state.failed) return current;
 
             }
 
@@ -5223,7 +5297,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDateTimePicker"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1926:1: ruleDateTimePicker returns [EObject current=null] : (otherlv_0= 'date-time-picker' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) ( (lv_format_3_0= RULE_STRING ) ) otherlv_4= 'handles' ( ( ruleQualifiedName ) ) ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1950:1: ruleDateTimePicker returns [EObject current=null] : (otherlv_0= 'date-time-picker' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) ( (lv_format_3_0= RULE_STRING ) ) otherlv_4= 'handles' ( ( ruleQualifiedName ) ) ) ;
     public final EObject ruleDateTimePicker() throws RecognitionException {
         EObject current = null;
 
@@ -5236,25 +5310,25 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1929:28: ( (otherlv_0= 'date-time-picker' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) ( (lv_format_3_0= RULE_STRING ) ) otherlv_4= 'handles' ( ( ruleQualifiedName ) ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1930:1: (otherlv_0= 'date-time-picker' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) ( (lv_format_3_0= RULE_STRING ) ) otherlv_4= 'handles' ( ( ruleQualifiedName ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1953:28: ( (otherlv_0= 'date-time-picker' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) ( (lv_format_3_0= RULE_STRING ) ) otherlv_4= 'handles' ( ( ruleQualifiedName ) ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1954:1: (otherlv_0= 'date-time-picker' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) ( (lv_format_3_0= RULE_STRING ) ) otherlv_4= 'handles' ( ( ruleQualifiedName ) ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1930:1: (otherlv_0= 'date-time-picker' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) ( (lv_format_3_0= RULE_STRING ) ) otherlv_4= 'handles' ( ( ruleQualifiedName ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1930:3: otherlv_0= 'date-time-picker' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) ( (lv_format_3_0= RULE_STRING ) ) otherlv_4= 'handles' ( ( ruleQualifiedName ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1954:1: (otherlv_0= 'date-time-picker' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) ( (lv_format_3_0= RULE_STRING ) ) otherlv_4= 'handles' ( ( ruleQualifiedName ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1954:3: otherlv_0= 'date-time-picker' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) ( (lv_format_3_0= RULE_STRING ) ) otherlv_4= 'handles' ( ( ruleQualifiedName ) )
             {
-            otherlv_0=(Token)match(input,29,FollowSets000.FOLLOW_29_in_ruleDateTimePicker3842); if (state.failed) return current;
+            otherlv_0=(Token)match(input,29,FollowSets000.FOLLOW_29_in_ruleDateTimePicker3892); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getDateTimePickerAccess().getDateTimePickerKeyword_0());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1934:1: ( (lv_elementID_1_0= RULE_ID ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1935:1: (lv_elementID_1_0= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1958:1: ( (lv_elementID_1_0= RULE_ID ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1959:1: (lv_elementID_1_0= RULE_ID )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1935:1: (lv_elementID_1_0= RULE_ID )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1936:3: lv_elementID_1_0= RULE_ID
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1959:1: (lv_elementID_1_0= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1960:3: lv_elementID_1_0= RULE_ID
             {
-            lv_elementID_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleDateTimePicker3859); if (state.failed) return current;
+            lv_elementID_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleDateTimePicker3909); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_elementID_1_0, grammarAccess.getDateTimePickerAccess().getElementIDIDTerminalRuleCall_1_0()); 
@@ -5278,13 +5352,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1952:2: ( (lv_label_2_0= RULE_STRING ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1953:1: (lv_label_2_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1976:2: ( (lv_label_2_0= RULE_STRING ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1977:1: (lv_label_2_0= RULE_STRING )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1953:1: (lv_label_2_0= RULE_STRING )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1954:3: lv_label_2_0= RULE_STRING
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1977:1: (lv_label_2_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1978:3: lv_label_2_0= RULE_STRING
             {
-            lv_label_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleDateTimePicker3881); if (state.failed) return current;
+            lv_label_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleDateTimePicker3931); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_label_2_0, grammarAccess.getDateTimePickerAccess().getLabelSTRINGTerminalRuleCall_2_0()); 
@@ -5308,13 +5382,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1970:2: ( (lv_format_3_0= RULE_STRING ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1971:1: (lv_format_3_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1994:2: ( (lv_format_3_0= RULE_STRING ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1995:1: (lv_format_3_0= RULE_STRING )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1971:1: (lv_format_3_0= RULE_STRING )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1972:3: lv_format_3_0= RULE_STRING
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1995:1: (lv_format_3_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1996:3: lv_format_3_0= RULE_STRING
             {
-            lv_format_3_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleDateTimePicker3903); if (state.failed) return current;
+            lv_format_3_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleDateTimePicker3953); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_format_3_0, grammarAccess.getDateTimePickerAccess().getFormatSTRINGTerminalRuleCall_3_0()); 
@@ -5338,17 +5412,17 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleDateTimePicker3920); if (state.failed) return current;
+            otherlv_4=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleDateTimePicker3970); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getDateTimePickerAccess().getHandlesKeyword_4());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1992:1: ( ( ruleQualifiedName ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1993:1: ( ruleQualifiedName )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2016:1: ( ( ruleQualifiedName ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2017:1: ( ruleQualifiedName )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1993:1: ( ruleQualifiedName )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:1994:3: ruleQualifiedName
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2017:1: ( ruleQualifiedName )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2018:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -5362,7 +5436,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getDateTimePickerAccess().getPropertyPropertyCrossReference_5_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleDateTimePicker3943);
+            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleDateTimePicker3993);
             ruleQualifiedName();
 
             state._fsp--;
@@ -5401,7 +5475,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleText"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2015:1: entryRuleText returns [EObject current=null] : iv_ruleText= ruleText EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2039:1: entryRuleText returns [EObject current=null] : iv_ruleText= ruleText EOF ;
     public final EObject entryRuleText() throws RecognitionException {
         EObject current = null;
 
@@ -5409,13 +5483,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2016:2: (iv_ruleText= ruleText EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2017:2: iv_ruleText= ruleText EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2040:2: (iv_ruleText= ruleText EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2041:2: iv_ruleText= ruleText EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTextRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleText_in_entryRuleText3979);
+            pushFollow(FollowSets000.FOLLOW_ruleText_in_entryRuleText4029);
             iv_ruleText=ruleText();
 
             state._fsp--;
@@ -5423,7 +5497,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleText; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleText3989); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleText4039); if (state.failed) return current;
 
             }
 
@@ -5441,7 +5515,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleText"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2024:1: ruleText returns [EObject current=null] : ( ( (lv_long_0_0= 'long' ) )? otherlv_1= 'text' ( (lv_elementID_2_0= RULE_ID ) ) ( (lv_label_3_0= RULE_STRING ) ) (otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) ) )? otherlv_6= 'handles' ( ( ruleQualifiedName ) ) ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2048:1: ruleText returns [EObject current=null] : ( ( (lv_long_0_0= 'long' ) )? otherlv_1= 'text' ( (lv_elementID_2_0= RULE_ID ) ) ( (lv_label_3_0= RULE_STRING ) ) (otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) ) )? otherlv_6= 'handles' ( ( ruleQualifiedName ) ) ) ;
     public final EObject ruleText() throws RecognitionException {
         EObject current = null;
 
@@ -5456,13 +5530,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2027:28: ( ( ( (lv_long_0_0= 'long' ) )? otherlv_1= 'text' ( (lv_elementID_2_0= RULE_ID ) ) ( (lv_label_3_0= RULE_STRING ) ) (otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) ) )? otherlv_6= 'handles' ( ( ruleQualifiedName ) ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2028:1: ( ( (lv_long_0_0= 'long' ) )? otherlv_1= 'text' ( (lv_elementID_2_0= RULE_ID ) ) ( (lv_label_3_0= RULE_STRING ) ) (otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) ) )? otherlv_6= 'handles' ( ( ruleQualifiedName ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2051:28: ( ( ( (lv_long_0_0= 'long' ) )? otherlv_1= 'text' ( (lv_elementID_2_0= RULE_ID ) ) ( (lv_label_3_0= RULE_STRING ) ) (otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) ) )? otherlv_6= 'handles' ( ( ruleQualifiedName ) ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2052:1: ( ( (lv_long_0_0= 'long' ) )? otherlv_1= 'text' ( (lv_elementID_2_0= RULE_ID ) ) ( (lv_label_3_0= RULE_STRING ) ) (otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) ) )? otherlv_6= 'handles' ( ( ruleQualifiedName ) ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2028:1: ( ( (lv_long_0_0= 'long' ) )? otherlv_1= 'text' ( (lv_elementID_2_0= RULE_ID ) ) ( (lv_label_3_0= RULE_STRING ) ) (otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) ) )? otherlv_6= 'handles' ( ( ruleQualifiedName ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2028:2: ( (lv_long_0_0= 'long' ) )? otherlv_1= 'text' ( (lv_elementID_2_0= RULE_ID ) ) ( (lv_label_3_0= RULE_STRING ) ) (otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) ) )? otherlv_6= 'handles' ( ( ruleQualifiedName ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2052:1: ( ( (lv_long_0_0= 'long' ) )? otherlv_1= 'text' ( (lv_elementID_2_0= RULE_ID ) ) ( (lv_label_3_0= RULE_STRING ) ) (otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) ) )? otherlv_6= 'handles' ( ( ruleQualifiedName ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2052:2: ( (lv_long_0_0= 'long' ) )? otherlv_1= 'text' ( (lv_elementID_2_0= RULE_ID ) ) ( (lv_label_3_0= RULE_STRING ) ) (otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) ) )? otherlv_6= 'handles' ( ( ruleQualifiedName ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2028:2: ( (lv_long_0_0= 'long' ) )?
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2052:2: ( (lv_long_0_0= 'long' ) )?
             int alt42=2;
             int LA42_0 = input.LA(1);
 
@@ -5471,12 +5545,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             }
             switch (alt42) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2029:1: (lv_long_0_0= 'long' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2053:1: (lv_long_0_0= 'long' )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2029:1: (lv_long_0_0= 'long' )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2030:3: lv_long_0_0= 'long'
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2053:1: (lv_long_0_0= 'long' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2054:3: lv_long_0_0= 'long'
                     {
-                    lv_long_0_0=(Token)match(input,30,FollowSets000.FOLLOW_30_in_ruleText4032); if (state.failed) return current;
+                    lv_long_0_0=(Token)match(input,30,FollowSets000.FOLLOW_30_in_ruleText4082); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_long_0_0, grammarAccess.getTextAccess().getLongLongKeyword_0_0());
@@ -5499,19 +5573,19 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,31,FollowSets000.FOLLOW_31_in_ruleText4058); if (state.failed) return current;
+            otherlv_1=(Token)match(input,31,FollowSets000.FOLLOW_31_in_ruleText4108); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getTextAccess().getTextKeyword_1());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2047:1: ( (lv_elementID_2_0= RULE_ID ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2048:1: (lv_elementID_2_0= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2071:1: ( (lv_elementID_2_0= RULE_ID ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2072:1: (lv_elementID_2_0= RULE_ID )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2048:1: (lv_elementID_2_0= RULE_ID )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2049:3: lv_elementID_2_0= RULE_ID
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2072:1: (lv_elementID_2_0= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2073:3: lv_elementID_2_0= RULE_ID
             {
-            lv_elementID_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleText4075); if (state.failed) return current;
+            lv_elementID_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleText4125); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_elementID_2_0, grammarAccess.getTextAccess().getElementIDIDTerminalRuleCall_2_0()); 
@@ -5535,13 +5609,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2065:2: ( (lv_label_3_0= RULE_STRING ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2066:1: (lv_label_3_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2089:2: ( (lv_label_3_0= RULE_STRING ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2090:1: (lv_label_3_0= RULE_STRING )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2066:1: (lv_label_3_0= RULE_STRING )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2067:3: lv_label_3_0= RULE_STRING
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2090:1: (lv_label_3_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2091:3: lv_label_3_0= RULE_STRING
             {
-            lv_label_3_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleText4097); if (state.failed) return current;
+            lv_label_3_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleText4147); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_label_3_0, grammarAccess.getTextAccess().getLabelSTRINGTerminalRuleCall_3_0()); 
@@ -5565,7 +5639,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2083:2: (otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) ) )?
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2107:2: (otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) ) )?
             int alt43=2;
             int LA43_0 = input.LA(1);
 
@@ -5574,21 +5648,21 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             }
             switch (alt43) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2083:4: otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2107:4: otherlv_4= 'format' ( (lv_format_5_0= RULE_STRING ) )
                     {
-                    otherlv_4=(Token)match(input,32,FollowSets000.FOLLOW_32_in_ruleText4115); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,32,FollowSets000.FOLLOW_32_in_ruleText4165); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getTextAccess().getFormatKeyword_4_0());
                           
                     }
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2087:1: ( (lv_format_5_0= RULE_STRING ) )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2088:1: (lv_format_5_0= RULE_STRING )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2111:1: ( (lv_format_5_0= RULE_STRING ) )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2112:1: (lv_format_5_0= RULE_STRING )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2088:1: (lv_format_5_0= RULE_STRING )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2089:3: lv_format_5_0= RULE_STRING
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2112:1: (lv_format_5_0= RULE_STRING )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2113:3: lv_format_5_0= RULE_STRING
                     {
-                    lv_format_5_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleText4132); if (state.failed) return current;
+                    lv_format_5_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleText4182); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_format_5_0, grammarAccess.getTextAccess().getFormatSTRINGTerminalRuleCall_4_1_0()); 
@@ -5618,17 +5692,17 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleText4151); if (state.failed) return current;
+            otherlv_6=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleText4201); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getTextAccess().getHandlesKeyword_5());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2109:1: ( ( ruleQualifiedName ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2110:1: ( ruleQualifiedName )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2133:1: ( ( ruleQualifiedName ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2134:1: ( ruleQualifiedName )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2110:1: ( ruleQualifiedName )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2111:3: ruleQualifiedName
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2134:1: ( ruleQualifiedName )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2135:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -5642,7 +5716,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getTextAccess().getPropertyPropertyCrossReference_6_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleText4174);
+            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleText4224);
             ruleQualifiedName();
 
             state._fsp--;
@@ -5681,7 +5755,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSelection"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2132:1: entryRuleSelection returns [EObject current=null] : iv_ruleSelection= ruleSelection EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2156:1: entryRuleSelection returns [EObject current=null] : iv_ruleSelection= ruleSelection EOF ;
     public final EObject entryRuleSelection() throws RecognitionException {
         EObject current = null;
 
@@ -5689,13 +5763,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2133:2: (iv_ruleSelection= ruleSelection EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2134:2: iv_ruleSelection= ruleSelection EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2157:2: (iv_ruleSelection= ruleSelection EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2158:2: iv_ruleSelection= ruleSelection EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSelectionRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleSelection_in_entryRuleSelection4210);
+            pushFollow(FollowSets000.FOLLOW_ruleSelection_in_entryRuleSelection4260);
             iv_ruleSelection=ruleSelection();
 
             state._fsp--;
@@ -5703,7 +5777,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSelection; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSelection4220); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSelection4270); if (state.failed) return current;
 
             }
 
@@ -5721,7 +5795,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSelection"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2141:1: ruleSelection returns [EObject current=null] : (otherlv_0= 'selection' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )* )? otherlv_9= '}' ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2165:1: ruleSelection returns [EObject current=null] : (otherlv_0= 'selection' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )* )? otherlv_9= '}' ) ;
     public final EObject ruleSelection() throws RecognitionException {
         EObject current = null;
 
@@ -5740,25 +5814,25 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2144:28: ( (otherlv_0= 'selection' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )* )? otherlv_9= '}' ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2145:1: (otherlv_0= 'selection' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )* )? otherlv_9= '}' )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2168:28: ( (otherlv_0= 'selection' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )* )? otherlv_9= '}' ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2169:1: (otherlv_0= 'selection' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )* )? otherlv_9= '}' )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2145:1: (otherlv_0= 'selection' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )* )? otherlv_9= '}' )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2145:3: otherlv_0= 'selection' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )* )? otherlv_9= '}'
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2169:1: (otherlv_0= 'selection' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )* )? otherlv_9= '}' )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2169:3: otherlv_0= 'selection' ( (lv_elementID_1_0= RULE_ID ) ) ( (lv_label_2_0= RULE_STRING ) ) otherlv_3= 'handles' ( ( ruleQualifiedName ) ) otherlv_5= '{' ( ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )* )? otherlv_9= '}'
             {
-            otherlv_0=(Token)match(input,33,FollowSets000.FOLLOW_33_in_ruleSelection4257); if (state.failed) return current;
+            otherlv_0=(Token)match(input,33,FollowSets000.FOLLOW_33_in_ruleSelection4307); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getSelectionAccess().getSelectionKeyword_0());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2149:1: ( (lv_elementID_1_0= RULE_ID ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2150:1: (lv_elementID_1_0= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2173:1: ( (lv_elementID_1_0= RULE_ID ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2174:1: (lv_elementID_1_0= RULE_ID )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2150:1: (lv_elementID_1_0= RULE_ID )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2151:3: lv_elementID_1_0= RULE_ID
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2174:1: (lv_elementID_1_0= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2175:3: lv_elementID_1_0= RULE_ID
             {
-            lv_elementID_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleSelection4274); if (state.failed) return current;
+            lv_elementID_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleSelection4324); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_elementID_1_0, grammarAccess.getSelectionAccess().getElementIDIDTerminalRuleCall_1_0()); 
@@ -5782,13 +5856,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2167:2: ( (lv_label_2_0= RULE_STRING ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2168:1: (lv_label_2_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2191:2: ( (lv_label_2_0= RULE_STRING ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2192:1: (lv_label_2_0= RULE_STRING )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2168:1: (lv_label_2_0= RULE_STRING )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2169:3: lv_label_2_0= RULE_STRING
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2192:1: (lv_label_2_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2193:3: lv_label_2_0= RULE_STRING
             {
-            lv_label_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleSelection4296); if (state.failed) return current;
+            lv_label_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleSelection4346); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_label_2_0, grammarAccess.getSelectionAccess().getLabelSTRINGTerminalRuleCall_2_0()); 
@@ -5812,17 +5886,17 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleSelection4313); if (state.failed) return current;
+            otherlv_3=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleSelection4363); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getSelectionAccess().getHandlesKeyword_3());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2189:1: ( ( ruleQualifiedName ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2190:1: ( ruleQualifiedName )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2213:1: ( ( ruleQualifiedName ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2214:1: ( ruleQualifiedName )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2190:1: ( ruleQualifiedName )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2191:3: ruleQualifiedName
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2214:1: ( ruleQualifiedName )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2215:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -5836,7 +5910,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getSelectionAccess().getPropertyPropertyCrossReference_4_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleSelection4336);
+            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleSelection4386);
             ruleQualifiedName();
 
             state._fsp--;
@@ -5852,35 +5926,35 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleSelection4348); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleSelection4398); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_5, grammarAccess.getSelectionAccess().getLeftCurlyBracketKeyword_5());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2208:1: ( ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )* )?
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2232:1: ( ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )* )?
             int alt45=2;
             int LA45_0 = input.LA(1);
 
-            if ( (LA45_0==35) ) {
+            if ( ((LA45_0>=34 && LA45_0<=35)) ) {
                 alt45=1;
             }
             switch (alt45) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2208:2: ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )*
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2232:2: ( (lv_selectionItems_6_0= ruleSelectionItem ) ) (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )*
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2208:2: ( (lv_selectionItems_6_0= ruleSelectionItem ) )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2209:1: (lv_selectionItems_6_0= ruleSelectionItem )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2232:2: ( (lv_selectionItems_6_0= ruleSelectionItem ) )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2233:1: (lv_selectionItems_6_0= ruleSelectionItem )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2209:1: (lv_selectionItems_6_0= ruleSelectionItem )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2210:3: lv_selectionItems_6_0= ruleSelectionItem
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2233:1: (lv_selectionItems_6_0= ruleSelectionItem )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2234:3: lv_selectionItems_6_0= ruleSelectionItem
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getSelectionAccess().getSelectionItemsSelectionItemParserRuleCall_6_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleSelectionItem_in_ruleSelection4370);
+                    pushFollow(FollowSets000.FOLLOW_ruleSelectionItem_in_ruleSelection4420);
                     lv_selectionItems_6_0=ruleSelectionItem();
 
                     state._fsp--;
@@ -5904,7 +5978,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2226:2: (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )*
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2250:2: (otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) ) )*
                     loop44:
                     do {
                         int alt44=2;
@@ -5917,26 +5991,26 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
                         switch (alt44) {
                     	case 1 :
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2226:4: otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2250:4: otherlv_7= ',' ( (lv_selectionItems_8_0= ruleSelectionItem ) )
                     	    {
-                    	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleSelection4383); if (state.failed) return current;
+                    	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleSelection4433); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_7, grammarAccess.getSelectionAccess().getCommaKeyword_6_1_0());
                     	          
                     	    }
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2230:1: ( (lv_selectionItems_8_0= ruleSelectionItem ) )
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2231:1: (lv_selectionItems_8_0= ruleSelectionItem )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2254:1: ( (lv_selectionItems_8_0= ruleSelectionItem ) )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2255:1: (lv_selectionItems_8_0= ruleSelectionItem )
                     	    {
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2231:1: (lv_selectionItems_8_0= ruleSelectionItem )
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2232:3: lv_selectionItems_8_0= ruleSelectionItem
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2255:1: (lv_selectionItems_8_0= ruleSelectionItem )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2256:3: lv_selectionItems_8_0= ruleSelectionItem
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getSelectionAccess().getSelectionItemsSelectionItemParserRuleCall_6_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FollowSets000.FOLLOW_ruleSelectionItem_in_ruleSelection4404);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleSelectionItem_in_ruleSelection4454);
                     	    lv_selectionItems_8_0=ruleSelectionItem();
 
                     	    state._fsp--;
@@ -5975,7 +6049,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleSelection4420); if (state.failed) return current;
+            otherlv_9=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleSelection4470); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_9, grammarAccess.getSelectionAccess().getRightCurlyBracketKeyword_7());
@@ -6004,7 +6078,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSelectionItem"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2260:1: entryRuleSelectionItem returns [EObject current=null] : iv_ruleSelectionItem= ruleSelectionItem EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2284:1: entryRuleSelectionItem returns [EObject current=null] : iv_ruleSelectionItem= ruleSelectionItem EOF ;
     public final EObject entryRuleSelectionItem() throws RecognitionException {
         EObject current = null;
 
@@ -6012,13 +6086,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2261:2: (iv_ruleSelectionItem= ruleSelectionItem EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2262:2: iv_ruleSelectionItem= ruleSelectionItem EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2285:2: (iv_ruleSelectionItem= ruleSelectionItem EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2286:2: iv_ruleSelectionItem= ruleSelectionItem EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSelectionItemRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleSelectionItem_in_entryRuleSelectionItem4456);
+            pushFollow(FollowSets000.FOLLOW_ruleSelectionItem_in_entryRuleSelectionItem4506);
             iv_ruleSelectionItem=ruleSelectionItem();
 
             state._fsp--;
@@ -6026,7 +6100,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSelectionItem; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSelectionItem4466); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSelectionItem4516); if (state.failed) return current;
 
             }
 
@@ -6044,7 +6118,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSelectionItem"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2269:1: ruleSelectionItem returns [EObject current=null] : (this_EnumerationLiteralItem_0= ruleEnumerationLiteralItem (otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) ) )? ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2293:1: ruleSelectionItem returns [EObject current=null] : (this_EnumerationLiteralItem_0= ruleEnumerationLiteralItem | (otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) ) ) ) ;
     public final EObject ruleSelectionItem() throws RecognitionException {
         EObject current = null;
 
@@ -6056,52 +6130,68 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2272:28: ( (this_EnumerationLiteralItem_0= ruleEnumerationLiteralItem (otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) ) )? ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2273:1: (this_EnumerationLiteralItem_0= ruleEnumerationLiteralItem (otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) ) )? )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2296:28: ( (this_EnumerationLiteralItem_0= ruleEnumerationLiteralItem | (otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) ) ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2297:1: (this_EnumerationLiteralItem_0= ruleEnumerationLiteralItem | (otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) ) ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2273:1: (this_EnumerationLiteralItem_0= ruleEnumerationLiteralItem (otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) ) )? )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2274:5: this_EnumerationLiteralItem_0= ruleEnumerationLiteralItem (otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) ) )?
-            {
-            if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getSelectionItemAccess().getEnumerationLiteralItemParserRuleCall_0()); 
-                  
-            }
-            pushFollow(FollowSets000.FOLLOW_ruleEnumerationLiteralItem_in_ruleSelectionItem4513);
-            this_EnumerationLiteralItem_0=ruleEnumerationLiteralItem();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               
-                      current = this_EnumerationLiteralItem_0; 
-                      afterParserOrEnumRuleCall();
-                  
-            }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2282:1: (otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) ) )?
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2297:1: (this_EnumerationLiteralItem_0= ruleEnumerationLiteralItem | (otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) ) ) )
             int alt46=2;
             int LA46_0 = input.LA(1);
 
-            if ( (LA46_0==34) ) {
+            if ( (LA46_0==35) ) {
                 alt46=1;
+            }
+            else if ( (LA46_0==34) ) {
+                alt46=2;
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return current;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 46, 0, input);
+
+                throw nvae;
             }
             switch (alt46) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2282:3: otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2298:5: this_EnumerationLiteralItem_0= ruleEnumerationLiteralItem
                     {
-                    otherlv_1=(Token)match(input,34,FollowSets000.FOLLOW_34_in_ruleSelectionItem4525); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+                       
+                              newCompositeNode(grammarAccess.getSelectionItemAccess().getEnumerationLiteralItemParserRuleCall_0()); 
+                          
+                    }
+                    pushFollow(FollowSets000.FOLLOW_ruleEnumerationLiteralItem_in_ruleSelectionItem4563);
+                    this_EnumerationLiteralItem_0=ruleEnumerationLiteralItem();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+                       
+                              current = this_EnumerationLiteralItem_0; 
+                              afterParserOrEnumRuleCall();
+                          
+                    }
+
+                    }
+                    break;
+                case 2 :
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2307:6: (otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) ) )
+                    {
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2307:6: (otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) ) )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2307:8: otherlv_1= 'selection-item' ( (lv_value_2_0= RULE_STRING ) )
+                    {
+                    otherlv_1=(Token)match(input,34,FollowSets000.FOLLOW_34_in_ruleSelectionItem4581); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getSelectionItemAccess().getSelectionItemKeyword_1_0());
                           
                     }
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2286:1: ( (lv_value_2_0= RULE_STRING ) )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2287:1: (lv_value_2_0= RULE_STRING )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2311:1: ( (lv_value_2_0= RULE_STRING ) )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2312:1: (lv_value_2_0= RULE_STRING )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2287:1: (lv_value_2_0= RULE_STRING )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2288:3: lv_value_2_0= RULE_STRING
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2312:1: (lv_value_2_0= RULE_STRING )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2313:3: lv_value_2_0= RULE_STRING
                     {
-                    lv_value_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleSelectionItem4542); if (state.failed) return current;
+                    lv_value_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleSelectionItem4598); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_value_2_0, grammarAccess.getSelectionItemAccess().getValueSTRINGTerminalRuleCall_1_1_0()); 
@@ -6127,10 +6217,10 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
                     }
+
+
+                    }
                     break;
-
-            }
-
 
             }
 
@@ -6154,7 +6244,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEnumerationLiteralItem"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2312:1: entryRuleEnumerationLiteralItem returns [EObject current=null] : iv_ruleEnumerationLiteralItem= ruleEnumerationLiteralItem EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2337:1: entryRuleEnumerationLiteralItem returns [EObject current=null] : iv_ruleEnumerationLiteralItem= ruleEnumerationLiteralItem EOF ;
     public final EObject entryRuleEnumerationLiteralItem() throws RecognitionException {
         EObject current = null;
 
@@ -6162,13 +6252,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2313:2: (iv_ruleEnumerationLiteralItem= ruleEnumerationLiteralItem EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2314:2: iv_ruleEnumerationLiteralItem= ruleEnumerationLiteralItem EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2338:2: (iv_ruleEnumerationLiteralItem= ruleEnumerationLiteralItem EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2339:2: iv_ruleEnumerationLiteralItem= ruleEnumerationLiteralItem EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEnumerationLiteralItemRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleEnumerationLiteralItem_in_entryRuleEnumerationLiteralItem4585);
+            pushFollow(FollowSets000.FOLLOW_ruleEnumerationLiteralItem_in_entryRuleEnumerationLiteralItem4640);
             iv_ruleEnumerationLiteralItem=ruleEnumerationLiteralItem();
 
             state._fsp--;
@@ -6176,7 +6266,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleEnumerationLiteralItem; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEnumerationLiteralItem4595); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEnumerationLiteralItem4650); if (state.failed) return current;
 
             }
 
@@ -6194,7 +6284,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEnumerationLiteralItem"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2321:1: ruleEnumerationLiteralItem returns [EObject current=null] : (otherlv_0= 'enum-literal' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2346:1: ruleEnumerationLiteralItem returns [EObject current=null] : (otherlv_0= 'enum-literal' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) ) ;
     public final EObject ruleEnumerationLiteralItem() throws RecognitionException {
         EObject current = null;
 
@@ -6205,25 +6295,25 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2324:28: ( (otherlv_0= 'enum-literal' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2325:1: (otherlv_0= 'enum-literal' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2349:28: ( (otherlv_0= 'enum-literal' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2350:1: (otherlv_0= 'enum-literal' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2325:1: (otherlv_0= 'enum-literal' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2325:3: otherlv_0= 'enum-literal' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2350:1: (otherlv_0= 'enum-literal' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2350:3: otherlv_0= 'enum-literal' ( (lv_value_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) )
             {
-            otherlv_0=(Token)match(input,35,FollowSets000.FOLLOW_35_in_ruleEnumerationLiteralItem4632); if (state.failed) return current;
+            otherlv_0=(Token)match(input,35,FollowSets000.FOLLOW_35_in_ruleEnumerationLiteralItem4687); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getEnumerationLiteralItemAccess().getEnumLiteralKeyword_0());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2329:1: ( (lv_value_1_0= RULE_STRING ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2330:1: (lv_value_1_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2354:1: ( (lv_value_1_0= RULE_STRING ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2355:1: (lv_value_1_0= RULE_STRING )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2330:1: (lv_value_1_0= RULE_STRING )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2331:3: lv_value_1_0= RULE_STRING
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2355:1: (lv_value_1_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2356:3: lv_value_1_0= RULE_STRING
             {
-            lv_value_1_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleEnumerationLiteralItem4649); if (state.failed) return current;
+            lv_value_1_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleEnumerationLiteralItem4704); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_value_1_0, grammarAccess.getEnumerationLiteralItemAccess().getValueSTRINGTerminalRuleCall_1_0()); 
@@ -6247,17 +6337,17 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleEnumerationLiteralItem4666); if (state.failed) return current;
+            otherlv_2=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleEnumerationLiteralItem4721); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getEnumerationLiteralItemAccess().getHandlesKeyword_2());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2351:1: ( ( ruleQualifiedName ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2352:1: ( ruleQualifiedName )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2376:1: ( ( ruleQualifiedName ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2377:1: ( ruleQualifiedName )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2352:1: ( ruleQualifiedName )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2353:3: ruleQualifiedName
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2377:1: ( ruleQualifiedName )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2378:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -6271,7 +6361,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getEnumerationLiteralItemAccess().getEnumerationLiteralEnumerationLiteralCrossReference_3_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleEnumerationLiteralItem4689);
+            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleEnumerationLiteralItem4744);
             ruleQualifiedName();
 
             state._fsp--;
@@ -6310,7 +6400,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLink"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2376:1: entryRuleLink returns [EObject current=null] : iv_ruleLink= ruleLink EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2401:1: entryRuleLink returns [EObject current=null] : iv_ruleLink= ruleLink EOF ;
     public final EObject entryRuleLink() throws RecognitionException {
         EObject current = null;
 
@@ -6318,13 +6408,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2377:2: (iv_ruleLink= ruleLink EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2378:2: iv_ruleLink= ruleLink EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2402:2: (iv_ruleLink= ruleLink EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2403:2: iv_ruleLink= ruleLink EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLinkRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleLink_in_entryRuleLink4727);
+            pushFollow(FollowSets000.FOLLOW_ruleLink_in_entryRuleLink4782);
             iv_ruleLink=ruleLink();
 
             state._fsp--;
@@ -6332,7 +6422,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleLink; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleLink4737); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleLink4792); if (state.failed) return current;
 
             }
 
@@ -6350,7 +6440,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLink"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2385:1: ruleLink returns [EObject current=null] : (otherlv_0= 'link' ( (lv_label_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2410:1: ruleLink returns [EObject current=null] : (otherlv_0= 'link' ( (lv_label_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) ) ;
     public final EObject ruleLink() throws RecognitionException {
         EObject current = null;
 
@@ -6361,25 +6451,25 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2388:28: ( (otherlv_0= 'link' ( (lv_label_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2389:1: (otherlv_0= 'link' ( (lv_label_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2413:28: ( (otherlv_0= 'link' ( (lv_label_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2414:1: (otherlv_0= 'link' ( (lv_label_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2389:1: (otherlv_0= 'link' ( (lv_label_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2389:3: otherlv_0= 'link' ( (lv_label_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2414:1: (otherlv_0= 'link' ( (lv_label_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2414:3: otherlv_0= 'link' ( (lv_label_1_0= RULE_STRING ) ) otherlv_2= 'handles' ( ( ruleQualifiedName ) )
             {
-            otherlv_0=(Token)match(input,36,FollowSets000.FOLLOW_36_in_ruleLink4774); if (state.failed) return current;
+            otherlv_0=(Token)match(input,36,FollowSets000.FOLLOW_36_in_ruleLink4829); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getLinkAccess().getLinkKeyword_0());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2393:1: ( (lv_label_1_0= RULE_STRING ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2394:1: (lv_label_1_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2418:1: ( (lv_label_1_0= RULE_STRING ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2419:1: (lv_label_1_0= RULE_STRING )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2394:1: (lv_label_1_0= RULE_STRING )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2395:3: lv_label_1_0= RULE_STRING
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2419:1: (lv_label_1_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2420:3: lv_label_1_0= RULE_STRING
             {
-            lv_label_1_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleLink4791); if (state.failed) return current;
+            lv_label_1_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleLink4846); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_label_1_0, grammarAccess.getLinkAccess().getLabelSTRINGTerminalRuleCall_1_0()); 
@@ -6403,17 +6493,17 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleLink4808); if (state.failed) return current;
+            otherlv_2=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleLink4863); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getLinkAccess().getHandlesKeyword_2());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2415:1: ( ( ruleQualifiedName ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2416:1: ( ruleQualifiedName )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2440:1: ( ( ruleQualifiedName ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2441:1: ( ruleQualifiedName )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2416:1: ( ruleQualifiedName )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2417:3: ruleQualifiedName
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2441:1: ( ruleQualifiedName )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2442:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -6427,7 +6517,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getLinkAccess().getTargetViewClassOperationViewCrossReference_3_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleLink4831);
+            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_ruleLink4886);
             ruleQualifiedName();
 
             state._fsp--;
@@ -6466,7 +6556,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLayout"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2440:1: entryRuleLayout returns [EObject current=null] : iv_ruleLayout= ruleLayout EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2465:1: entryRuleLayout returns [EObject current=null] : iv_ruleLayout= ruleLayout EOF ;
     public final EObject entryRuleLayout() throws RecognitionException {
         EObject current = null;
 
@@ -6474,13 +6564,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2441:2: (iv_ruleLayout= ruleLayout EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2442:2: iv_ruleLayout= ruleLayout EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2466:2: (iv_ruleLayout= ruleLayout EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2467:2: iv_ruleLayout= ruleLayout EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLayoutRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleLayout_in_entryRuleLayout4869);
+            pushFollow(FollowSets000.FOLLOW_ruleLayout_in_entryRuleLayout4924);
             iv_ruleLayout=ruleLayout();
 
             state._fsp--;
@@ -6488,7 +6578,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleLayout; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleLayout4879); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleLayout4934); if (state.failed) return current;
 
             }
 
@@ -6506,7 +6596,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLayout"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2449:1: ruleLayout returns [EObject current=null] : ( (lv_alignment_0_0= ruleLayoutStyle ) ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2474:1: ruleLayout returns [EObject current=null] : ( (lv_alignment_0_0= ruleLayoutStyle ) ) ;
     public final EObject ruleLayout() throws RecognitionException {
         EObject current = null;
 
@@ -6516,21 +6606,21 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2452:28: ( ( (lv_alignment_0_0= ruleLayoutStyle ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2453:1: ( (lv_alignment_0_0= ruleLayoutStyle ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2477:28: ( ( (lv_alignment_0_0= ruleLayoutStyle ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2478:1: ( (lv_alignment_0_0= ruleLayoutStyle ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2453:1: ( (lv_alignment_0_0= ruleLayoutStyle ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2454:1: (lv_alignment_0_0= ruleLayoutStyle )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2478:1: ( (lv_alignment_0_0= ruleLayoutStyle ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2479:1: (lv_alignment_0_0= ruleLayoutStyle )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2454:1: (lv_alignment_0_0= ruleLayoutStyle )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2455:3: lv_alignment_0_0= ruleLayoutStyle
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2479:1: (lv_alignment_0_0= ruleLayoutStyle )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2480:3: lv_alignment_0_0= ruleLayoutStyle
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getLayoutAccess().getAlignmentLayoutStyleEnumRuleCall_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleLayoutStyle_in_ruleLayout4924);
+            pushFollow(FollowSets000.FOLLOW_ruleLayoutStyle_in_ruleLayout4979);
             lv_alignment_0_0=ruleLayoutStyle();
 
             state._fsp--;
@@ -6574,7 +6664,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCondition"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2479:1: entryRuleCondition returns [EObject current=null] : iv_ruleCondition= ruleCondition EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2504:1: entryRuleCondition returns [EObject current=null] : iv_ruleCondition= ruleCondition EOF ;
     public final EObject entryRuleCondition() throws RecognitionException {
         EObject current = null;
 
@@ -6582,13 +6672,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2480:2: (iv_ruleCondition= ruleCondition EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2481:2: iv_ruleCondition= ruleCondition EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2505:2: (iv_ruleCondition= ruleCondition EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2506:2: iv_ruleCondition= ruleCondition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConditionRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleCondition_in_entryRuleCondition4959);
+            pushFollow(FollowSets000.FOLLOW_ruleCondition_in_entryRuleCondition5014);
             iv_ruleCondition=ruleCondition();
 
             state._fsp--;
@@ -6596,7 +6686,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleCondition; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCondition4969); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCondition5024); if (state.failed) return current;
 
             }
 
@@ -6614,7 +6704,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCondition"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2488:1: ruleCondition returns [EObject current=null] : this_VisibilityCondition_0= ruleVisibilityCondition ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2513:1: ruleCondition returns [EObject current=null] : this_VisibilityCondition_0= ruleVisibilityCondition ;
     public final EObject ruleCondition() throws RecognitionException {
         EObject current = null;
 
@@ -6624,15 +6714,15 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2491:28: (this_VisibilityCondition_0= ruleVisibilityCondition )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2493:5: this_VisibilityCondition_0= ruleVisibilityCondition
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2516:28: (this_VisibilityCondition_0= ruleVisibilityCondition )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2518:5: this_VisibilityCondition_0= ruleVisibilityCondition
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getConditionAccess().getVisibilityConditionParserRuleCall()); 
                   
             }
-            pushFollow(FollowSets000.FOLLOW_ruleVisibilityCondition_in_ruleCondition5015);
+            pushFollow(FollowSets000.FOLLOW_ruleVisibilityCondition_in_ruleCondition5070);
             this_VisibilityCondition_0=ruleVisibilityCondition();
 
             state._fsp--;
@@ -6663,7 +6753,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVisibilityCondition"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2509:1: entryRuleVisibilityCondition returns [EObject current=null] : iv_ruleVisibilityCondition= ruleVisibilityCondition EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2534:1: entryRuleVisibilityCondition returns [EObject current=null] : iv_ruleVisibilityCondition= ruleVisibilityCondition EOF ;
     public final EObject entryRuleVisibilityCondition() throws RecognitionException {
         EObject current = null;
 
@@ -6671,13 +6761,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2510:2: (iv_ruleVisibilityCondition= ruleVisibilityCondition EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2511:2: iv_ruleVisibilityCondition= ruleVisibilityCondition EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2535:2: (iv_ruleVisibilityCondition= ruleVisibilityCondition EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2536:2: iv_ruleVisibilityCondition= ruleVisibilityCondition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVisibilityConditionRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleVisibilityCondition_in_entryRuleVisibilityCondition5049);
+            pushFollow(FollowSets000.FOLLOW_ruleVisibilityCondition_in_entryRuleVisibilityCondition5104);
             iv_ruleVisibilityCondition=ruleVisibilityCondition();
 
             state._fsp--;
@@ -6685,7 +6775,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleVisibilityCondition; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleVisibilityCondition5059); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleVisibilityCondition5114); if (state.failed) return current;
 
             }
 
@@ -6703,7 +6793,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVisibilityCondition"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2518:1: ruleVisibilityCondition returns [EObject current=null] : (this_CompositeCondition_0= ruleCompositeCondition | this_ComparisonCondition_1= ruleComparisonCondition ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2543:1: ruleVisibilityCondition returns [EObject current=null] : (this_CompositeCondition_0= ruleCompositeCondition | this_ComparisonCondition_1= ruleComparisonCondition ) ;
     public final EObject ruleVisibilityCondition() throws RecognitionException {
         EObject current = null;
 
@@ -6715,10 +6805,10 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2521:28: ( (this_CompositeCondition_0= ruleCompositeCondition | this_ComparisonCondition_1= ruleComparisonCondition ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2522:1: (this_CompositeCondition_0= ruleCompositeCondition | this_ComparisonCondition_1= ruleComparisonCondition )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2546:28: ( (this_CompositeCondition_0= ruleCompositeCondition | this_ComparisonCondition_1= ruleComparisonCondition ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2547:1: (this_CompositeCondition_0= ruleCompositeCondition | this_ComparisonCondition_1= ruleComparisonCondition )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2522:1: (this_CompositeCondition_0= ruleCompositeCondition | this_ComparisonCondition_1= ruleComparisonCondition )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2547:1: (this_CompositeCondition_0= ruleCompositeCondition | this_ComparisonCondition_1= ruleComparisonCondition )
             int alt47=2;
             int LA47_0 = input.LA(1);
 
@@ -6737,14 +6827,14 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             }
             switch (alt47) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2523:5: this_CompositeCondition_0= ruleCompositeCondition
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2548:5: this_CompositeCondition_0= ruleCompositeCondition
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getVisibilityConditionAccess().getCompositeConditionParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleCompositeCondition_in_ruleVisibilityCondition5106);
+                    pushFollow(FollowSets000.FOLLOW_ruleCompositeCondition_in_ruleVisibilityCondition5161);
                     this_CompositeCondition_0=ruleCompositeCondition();
 
                     state._fsp--;
@@ -6759,14 +6849,14 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2533:5: this_ComparisonCondition_1= ruleComparisonCondition
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2558:5: this_ComparisonCondition_1= ruleComparisonCondition
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getVisibilityConditionAccess().getComparisonConditionParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleComparisonCondition_in_ruleVisibilityCondition5133);
+                    pushFollow(FollowSets000.FOLLOW_ruleComparisonCondition_in_ruleVisibilityCondition5188);
                     this_ComparisonCondition_1=ruleComparisonCondition();
 
                     state._fsp--;
@@ -6803,7 +6893,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCompositeCondition"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2549:1: entryRuleCompositeCondition returns [EObject current=null] : iv_ruleCompositeCondition= ruleCompositeCondition EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2574:1: entryRuleCompositeCondition returns [EObject current=null] : iv_ruleCompositeCondition= ruleCompositeCondition EOF ;
     public final EObject entryRuleCompositeCondition() throws RecognitionException {
         EObject current = null;
 
@@ -6811,13 +6901,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2550:2: (iv_ruleCompositeCondition= ruleCompositeCondition EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2551:2: iv_ruleCompositeCondition= ruleCompositeCondition EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2575:2: (iv_ruleCompositeCondition= ruleCompositeCondition EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2576:2: iv_ruleCompositeCondition= ruleCompositeCondition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCompositeConditionRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleCompositeCondition_in_entryRuleCompositeCondition5168);
+            pushFollow(FollowSets000.FOLLOW_ruleCompositeCondition_in_entryRuleCompositeCondition5223);
             iv_ruleCompositeCondition=ruleCompositeCondition();
 
             state._fsp--;
@@ -6825,7 +6915,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleCompositeCondition; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCompositeCondition5178); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleCompositeCondition5233); if (state.failed) return current;
 
             }
 
@@ -6843,7 +6933,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompositeCondition"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2558:1: ruleCompositeCondition returns [EObject current=null] : (otherlv_0= 'composite-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' otherlv_3= '(' ( ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )* )? otherlv_9= ')' otherlv_10= '?' ( (lv_type_11_0= ruleVisibilityConditionType ) ) ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2583:1: ruleCompositeCondition returns [EObject current=null] : (otherlv_0= 'composite-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' otherlv_3= '(' ( ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )* )? otherlv_9= ')' otherlv_10= '?' ( (lv_type_11_0= ruleVisibilityConditionType ) ) ) ;
     public final EObject ruleCompositeCondition() throws RecognitionException {
         EObject current = null;
 
@@ -6868,25 +6958,25 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2561:28: ( (otherlv_0= 'composite-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' otherlv_3= '(' ( ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )* )? otherlv_9= ')' otherlv_10= '?' ( (lv_type_11_0= ruleVisibilityConditionType ) ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2562:1: (otherlv_0= 'composite-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' otherlv_3= '(' ( ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )* )? otherlv_9= ')' otherlv_10= '?' ( (lv_type_11_0= ruleVisibilityConditionType ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2586:28: ( (otherlv_0= 'composite-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' otherlv_3= '(' ( ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )* )? otherlv_9= ')' otherlv_10= '?' ( (lv_type_11_0= ruleVisibilityConditionType ) ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2587:1: (otherlv_0= 'composite-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' otherlv_3= '(' ( ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )* )? otherlv_9= ')' otherlv_10= '?' ( (lv_type_11_0= ruleVisibilityConditionType ) ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2562:1: (otherlv_0= 'composite-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' otherlv_3= '(' ( ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )* )? otherlv_9= ')' otherlv_10= '?' ( (lv_type_11_0= ruleVisibilityConditionType ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2562:3: otherlv_0= 'composite-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' otherlv_3= '(' ( ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )* )? otherlv_9= ')' otherlv_10= '?' ( (lv_type_11_0= ruleVisibilityConditionType ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2587:1: (otherlv_0= 'composite-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' otherlv_3= '(' ( ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )* )? otherlv_9= ')' otherlv_10= '?' ( (lv_type_11_0= ruleVisibilityConditionType ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2587:3: otherlv_0= 'composite-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' otherlv_3= '(' ( ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )* )? otherlv_9= ')' otherlv_10= '?' ( (lv_type_11_0= ruleVisibilityConditionType ) )
             {
-            otherlv_0=(Token)match(input,37,FollowSets000.FOLLOW_37_in_ruleCompositeCondition5215); if (state.failed) return current;
+            otherlv_0=(Token)match(input,37,FollowSets000.FOLLOW_37_in_ruleCompositeCondition5270); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getCompositeConditionAccess().getCompositeConditionKeyword_0());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2566:1: ( (lv_conditionID_1_0= RULE_ID ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2567:1: (lv_conditionID_1_0= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2591:1: ( (lv_conditionID_1_0= RULE_ID ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2592:1: (lv_conditionID_1_0= RULE_ID )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2567:1: (lv_conditionID_1_0= RULE_ID )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2568:3: lv_conditionID_1_0= RULE_ID
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2592:1: (lv_conditionID_1_0= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2593:3: lv_conditionID_1_0= RULE_ID
             {
-            lv_conditionID_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleCompositeCondition5232); if (state.failed) return current;
+            lv_conditionID_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleCompositeCondition5287); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_conditionID_1_0, grammarAccess.getCompositeConditionAccess().getConditionIDIDTerminalRuleCall_1_0()); 
@@ -6910,19 +7000,19 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,38,FollowSets000.FOLLOW_38_in_ruleCompositeCondition5249); if (state.failed) return current;
+            otherlv_2=(Token)match(input,38,FollowSets000.FOLLOW_38_in_ruleCompositeCondition5304); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getCompositeConditionAccess().getColonKeyword_2());
                   
             }
-            otherlv_3=(Token)match(input,39,FollowSets000.FOLLOW_39_in_ruleCompositeCondition5261); if (state.failed) return current;
+            otherlv_3=(Token)match(input,39,FollowSets000.FOLLOW_39_in_ruleCompositeCondition5316); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getCompositeConditionAccess().getLeftParenthesisKeyword_3());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2592:1: ( ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )* )?
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2617:1: ( ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )* )?
             int alt49=2;
             int LA49_0 = input.LA(1);
 
@@ -6931,20 +7021,20 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             }
             switch (alt49) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2592:2: ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )*
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2617:2: ( (lv_composedConditions_4_0= ruleVisibilityCondition ) ) ( (lv_compositionType_5_0= ruleCompositeConditionType ) ) (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )*
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2592:2: ( (lv_composedConditions_4_0= ruleVisibilityCondition ) )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2593:1: (lv_composedConditions_4_0= ruleVisibilityCondition )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2617:2: ( (lv_composedConditions_4_0= ruleVisibilityCondition ) )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2618:1: (lv_composedConditions_4_0= ruleVisibilityCondition )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2593:1: (lv_composedConditions_4_0= ruleVisibilityCondition )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2594:3: lv_composedConditions_4_0= ruleVisibilityCondition
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2618:1: (lv_composedConditions_4_0= ruleVisibilityCondition )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2619:3: lv_composedConditions_4_0= ruleVisibilityCondition
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCompositeConditionAccess().getComposedConditionsVisibilityConditionParserRuleCall_4_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleVisibilityCondition_in_ruleCompositeCondition5283);
+                    pushFollow(FollowSets000.FOLLOW_ruleVisibilityCondition_in_ruleCompositeCondition5338);
                     lv_composedConditions_4_0=ruleVisibilityCondition();
 
                     state._fsp--;
@@ -6968,18 +7058,18 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2610:2: ( (lv_compositionType_5_0= ruleCompositeConditionType ) )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2611:1: (lv_compositionType_5_0= ruleCompositeConditionType )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2635:2: ( (lv_compositionType_5_0= ruleCompositeConditionType ) )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2636:1: (lv_compositionType_5_0= ruleCompositeConditionType )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2611:1: (lv_compositionType_5_0= ruleCompositeConditionType )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2612:3: lv_compositionType_5_0= ruleCompositeConditionType
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2636:1: (lv_compositionType_5_0= ruleCompositeConditionType )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2637:3: lv_compositionType_5_0= ruleCompositeConditionType
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCompositeConditionAccess().getCompositionTypeCompositeConditionTypeEnumRuleCall_4_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleCompositeConditionType_in_ruleCompositeCondition5304);
+                    pushFollow(FollowSets000.FOLLOW_ruleCompositeConditionType_in_ruleCompositeCondition5359);
                     lv_compositionType_5_0=ruleCompositeConditionType();
 
                     state._fsp--;
@@ -7003,7 +7093,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2628:2: (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )*
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2653:2: (otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) ) )*
                     loop48:
                     do {
                         int alt48=2;
@@ -7016,26 +7106,26 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
                         switch (alt48) {
                     	case 1 :
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2628:4: otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2653:4: otherlv_6= '||' ( (lv_compositionType_7_0= ruleCompositeConditionType ) ) ( (lv_composedConditions_8_0= ruleVisibilityCondition ) )
                     	    {
-                    	    otherlv_6=(Token)match(input,40,FollowSets000.FOLLOW_40_in_ruleCompositeCondition5317); if (state.failed) return current;
+                    	    otherlv_6=(Token)match(input,40,FollowSets000.FOLLOW_40_in_ruleCompositeCondition5372); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_6, grammarAccess.getCompositeConditionAccess().getVerticalLineVerticalLineKeyword_4_2_0());
                     	          
                     	    }
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2632:1: ( (lv_compositionType_7_0= ruleCompositeConditionType ) )
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2633:1: (lv_compositionType_7_0= ruleCompositeConditionType )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2657:1: ( (lv_compositionType_7_0= ruleCompositeConditionType ) )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2658:1: (lv_compositionType_7_0= ruleCompositeConditionType )
                     	    {
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2633:1: (lv_compositionType_7_0= ruleCompositeConditionType )
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2634:3: lv_compositionType_7_0= ruleCompositeConditionType
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2658:1: (lv_compositionType_7_0= ruleCompositeConditionType )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2659:3: lv_compositionType_7_0= ruleCompositeConditionType
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getCompositeConditionAccess().getCompositionTypeCompositeConditionTypeEnumRuleCall_4_2_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FollowSets000.FOLLOW_ruleCompositeConditionType_in_ruleCompositeCondition5338);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleCompositeConditionType_in_ruleCompositeCondition5393);
                     	    lv_compositionType_7_0=ruleCompositeConditionType();
 
                     	    state._fsp--;
@@ -7059,18 +7149,18 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2650:2: ( (lv_composedConditions_8_0= ruleVisibilityCondition ) )
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2651:1: (lv_composedConditions_8_0= ruleVisibilityCondition )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2675:2: ( (lv_composedConditions_8_0= ruleVisibilityCondition ) )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2676:1: (lv_composedConditions_8_0= ruleVisibilityCondition )
                     	    {
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2651:1: (lv_composedConditions_8_0= ruleVisibilityCondition )
-                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2652:3: lv_composedConditions_8_0= ruleVisibilityCondition
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2676:1: (lv_composedConditions_8_0= ruleVisibilityCondition )
+                    	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2677:3: lv_composedConditions_8_0= ruleVisibilityCondition
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getCompositeConditionAccess().getComposedConditionsVisibilityConditionParserRuleCall_4_2_2_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FollowSets000.FOLLOW_ruleVisibilityCondition_in_ruleCompositeCondition5359);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleVisibilityCondition_in_ruleCompositeCondition5414);
                     	    lv_composedConditions_8_0=ruleVisibilityCondition();
 
                     	    state._fsp--;
@@ -7109,30 +7199,30 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,41,FollowSets000.FOLLOW_41_in_ruleCompositeCondition5375); if (state.failed) return current;
+            otherlv_9=(Token)match(input,41,FollowSets000.FOLLOW_41_in_ruleCompositeCondition5430); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_9, grammarAccess.getCompositeConditionAccess().getRightParenthesisKeyword_5());
                   
             }
-            otherlv_10=(Token)match(input,42,FollowSets000.FOLLOW_42_in_ruleCompositeCondition5387); if (state.failed) return current;
+            otherlv_10=(Token)match(input,42,FollowSets000.FOLLOW_42_in_ruleCompositeCondition5442); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_10, grammarAccess.getCompositeConditionAccess().getQuestionMarkKeyword_6());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2676:1: ( (lv_type_11_0= ruleVisibilityConditionType ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2677:1: (lv_type_11_0= ruleVisibilityConditionType )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2701:1: ( (lv_type_11_0= ruleVisibilityConditionType ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2702:1: (lv_type_11_0= ruleVisibilityConditionType )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2677:1: (lv_type_11_0= ruleVisibilityConditionType )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2678:3: lv_type_11_0= ruleVisibilityConditionType
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2702:1: (lv_type_11_0= ruleVisibilityConditionType )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2703:3: lv_type_11_0= ruleVisibilityConditionType
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getCompositeConditionAccess().getTypeVisibilityConditionTypeEnumRuleCall_7_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleVisibilityConditionType_in_ruleCompositeCondition5408);
+            pushFollow(FollowSets000.FOLLOW_ruleVisibilityConditionType_in_ruleCompositeCondition5463);
             lv_type_11_0=ruleVisibilityConditionType();
 
             state._fsp--;
@@ -7179,7 +7269,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComparisonCondition"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2702:1: entryRuleComparisonCondition returns [EObject current=null] : iv_ruleComparisonCondition= ruleComparisonCondition EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2727:1: entryRuleComparisonCondition returns [EObject current=null] : iv_ruleComparisonCondition= ruleComparisonCondition EOF ;
     public final EObject entryRuleComparisonCondition() throws RecognitionException {
         EObject current = null;
 
@@ -7187,13 +7277,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2703:2: (iv_ruleComparisonCondition= ruleComparisonCondition EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2704:2: iv_ruleComparisonCondition= ruleComparisonCondition EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2728:2: (iv_ruleComparisonCondition= ruleComparisonCondition EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2729:2: iv_ruleComparisonCondition= ruleComparisonCondition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getComparisonConditionRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleComparisonCondition_in_entryRuleComparisonCondition5444);
+            pushFollow(FollowSets000.FOLLOW_ruleComparisonCondition_in_entryRuleComparisonCondition5499);
             iv_ruleComparisonCondition=ruleComparisonCondition();
 
             state._fsp--;
@@ -7201,7 +7291,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleComparisonCondition; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleComparisonCondition5454); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleComparisonCondition5509); if (state.failed) return current;
 
             }
 
@@ -7219,7 +7309,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComparisonCondition"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2711:1: ruleComparisonCondition returns [EObject current=null] : (otherlv_0= 'comparison-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_comparisonType_4_0= ruleComparisonConditionType ) ) ( (lv_comparisonValue_5_0= RULE_STRING ) ) otherlv_6= '?' ( (lv_type_7_0= ruleVisibilityConditionType ) ) ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2736:1: ruleComparisonCondition returns [EObject current=null] : (otherlv_0= 'comparison-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_comparisonType_4_0= ruleComparisonConditionType ) ) ( (lv_comparisonValue_5_0= RULE_STRING ) ) otherlv_6= '?' ( (lv_type_7_0= ruleVisibilityConditionType ) ) ) ;
     public final EObject ruleComparisonCondition() throws RecognitionException {
         EObject current = null;
 
@@ -7237,25 +7327,25 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2714:28: ( (otherlv_0= 'comparison-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_comparisonType_4_0= ruleComparisonConditionType ) ) ( (lv_comparisonValue_5_0= RULE_STRING ) ) otherlv_6= '?' ( (lv_type_7_0= ruleVisibilityConditionType ) ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2715:1: (otherlv_0= 'comparison-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_comparisonType_4_0= ruleComparisonConditionType ) ) ( (lv_comparisonValue_5_0= RULE_STRING ) ) otherlv_6= '?' ( (lv_type_7_0= ruleVisibilityConditionType ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2739:28: ( (otherlv_0= 'comparison-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_comparisonType_4_0= ruleComparisonConditionType ) ) ( (lv_comparisonValue_5_0= RULE_STRING ) ) otherlv_6= '?' ( (lv_type_7_0= ruleVisibilityConditionType ) ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2740:1: (otherlv_0= 'comparison-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_comparisonType_4_0= ruleComparisonConditionType ) ) ( (lv_comparisonValue_5_0= RULE_STRING ) ) otherlv_6= '?' ( (lv_type_7_0= ruleVisibilityConditionType ) ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2715:1: (otherlv_0= 'comparison-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_comparisonType_4_0= ruleComparisonConditionType ) ) ( (lv_comparisonValue_5_0= RULE_STRING ) ) otherlv_6= '?' ( (lv_type_7_0= ruleVisibilityConditionType ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2715:3: otherlv_0= 'comparison-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_comparisonType_4_0= ruleComparisonConditionType ) ) ( (lv_comparisonValue_5_0= RULE_STRING ) ) otherlv_6= '?' ( (lv_type_7_0= ruleVisibilityConditionType ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2740:1: (otherlv_0= 'comparison-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_comparisonType_4_0= ruleComparisonConditionType ) ) ( (lv_comparisonValue_5_0= RULE_STRING ) ) otherlv_6= '?' ( (lv_type_7_0= ruleVisibilityConditionType ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2740:3: otherlv_0= 'comparison-condition' ( (lv_conditionID_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_comparisonType_4_0= ruleComparisonConditionType ) ) ( (lv_comparisonValue_5_0= RULE_STRING ) ) otherlv_6= '?' ( (lv_type_7_0= ruleVisibilityConditionType ) )
             {
-            otherlv_0=(Token)match(input,43,FollowSets000.FOLLOW_43_in_ruleComparisonCondition5491); if (state.failed) return current;
+            otherlv_0=(Token)match(input,43,FollowSets000.FOLLOW_43_in_ruleComparisonCondition5546); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getComparisonConditionAccess().getComparisonConditionKeyword_0());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2719:1: ( (lv_conditionID_1_0= RULE_ID ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2720:1: (lv_conditionID_1_0= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2744:1: ( (lv_conditionID_1_0= RULE_ID ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2745:1: (lv_conditionID_1_0= RULE_ID )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2720:1: (lv_conditionID_1_0= RULE_ID )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2721:3: lv_conditionID_1_0= RULE_ID
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2745:1: (lv_conditionID_1_0= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2746:3: lv_conditionID_1_0= RULE_ID
             {
-            lv_conditionID_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleComparisonCondition5508); if (state.failed) return current;
+            lv_conditionID_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleComparisonCondition5563); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_conditionID_1_0, grammarAccess.getComparisonConditionAccess().getConditionIDIDTerminalRuleCall_1_0()); 
@@ -7279,17 +7369,17 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,38,FollowSets000.FOLLOW_38_in_ruleComparisonCondition5525); if (state.failed) return current;
+            otherlv_2=(Token)match(input,38,FollowSets000.FOLLOW_38_in_ruleComparisonCondition5580); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getComparisonConditionAccess().getColonKeyword_2());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2741:1: ( (otherlv_3= RULE_ID ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2742:1: (otherlv_3= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2766:1: ( (otherlv_3= RULE_ID ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2767:1: (otherlv_3= RULE_ID )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2742:1: (otherlv_3= RULE_ID )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2743:3: otherlv_3= RULE_ID
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2767:1: (otherlv_3= RULE_ID )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2768:3: otherlv_3= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -7298,7 +7388,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
               	        }
                       
             }
-            otherlv_3=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleComparisonCondition5545); if (state.failed) return current;
+            otherlv_3=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleComparisonCondition5600); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		newLeafNode(otherlv_3, grammarAccess.getComparisonConditionAccess().getPropertyPropertyElementCrossReference_3_0()); 
@@ -7310,18 +7400,18 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2754:2: ( (lv_comparisonType_4_0= ruleComparisonConditionType ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2755:1: (lv_comparisonType_4_0= ruleComparisonConditionType )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2779:2: ( (lv_comparisonType_4_0= ruleComparisonConditionType ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2780:1: (lv_comparisonType_4_0= ruleComparisonConditionType )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2755:1: (lv_comparisonType_4_0= ruleComparisonConditionType )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2756:3: lv_comparisonType_4_0= ruleComparisonConditionType
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2780:1: (lv_comparisonType_4_0= ruleComparisonConditionType )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2781:3: lv_comparisonType_4_0= ruleComparisonConditionType
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getComparisonConditionAccess().getComparisonTypeComparisonConditionTypeEnumRuleCall_4_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleComparisonConditionType_in_ruleComparisonCondition5566);
+            pushFollow(FollowSets000.FOLLOW_ruleComparisonConditionType_in_ruleComparisonCondition5621);
             lv_comparisonType_4_0=ruleComparisonConditionType();
 
             state._fsp--;
@@ -7345,13 +7435,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2772:2: ( (lv_comparisonValue_5_0= RULE_STRING ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2773:1: (lv_comparisonValue_5_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2797:2: ( (lv_comparisonValue_5_0= RULE_STRING ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2798:1: (lv_comparisonValue_5_0= RULE_STRING )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2773:1: (lv_comparisonValue_5_0= RULE_STRING )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2774:3: lv_comparisonValue_5_0= RULE_STRING
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2798:1: (lv_comparisonValue_5_0= RULE_STRING )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2799:3: lv_comparisonValue_5_0= RULE_STRING
             {
-            lv_comparisonValue_5_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleComparisonCondition5583); if (state.failed) return current;
+            lv_comparisonValue_5_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleComparisonCondition5638); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_comparisonValue_5_0, grammarAccess.getComparisonConditionAccess().getComparisonValueSTRINGTerminalRuleCall_5_0()); 
@@ -7375,24 +7465,24 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,42,FollowSets000.FOLLOW_42_in_ruleComparisonCondition5600); if (state.failed) return current;
+            otherlv_6=(Token)match(input,42,FollowSets000.FOLLOW_42_in_ruleComparisonCondition5655); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getComparisonConditionAccess().getQuestionMarkKeyword_6());
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2794:1: ( (lv_type_7_0= ruleVisibilityConditionType ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2795:1: (lv_type_7_0= ruleVisibilityConditionType )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2819:1: ( (lv_type_7_0= ruleVisibilityConditionType ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2820:1: (lv_type_7_0= ruleVisibilityConditionType )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2795:1: (lv_type_7_0= ruleVisibilityConditionType )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2796:3: lv_type_7_0= ruleVisibilityConditionType
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2820:1: (lv_type_7_0= ruleVisibilityConditionType )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2821:3: lv_type_7_0= ruleVisibilityConditionType
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getComparisonConditionAccess().getTypeVisibilityConditionTypeEnumRuleCall_7_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleVisibilityConditionType_in_ruleComparisonCondition5621);
+            pushFollow(FollowSets000.FOLLOW_ruleVisibilityConditionType_in_ruleComparisonCondition5676);
             lv_type_7_0=ruleVisibilityConditionType();
 
             state._fsp--;
@@ -7439,7 +7529,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2822:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2847:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -7447,13 +7537,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2823:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2824:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2848:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2849:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName5660);
+            pushFollow(FollowSets000.FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName5715);
             iv_ruleQualifiedName=ruleQualifiedName();
 
             state._fsp--;
@@ -7461,7 +7551,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleQualifiedName.getText(); 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleQualifiedName5671); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleQualifiedName5726); if (state.failed) return current;
 
             }
 
@@ -7479,7 +7569,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2831:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID ( ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID )* ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2856:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID ( ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -7490,13 +7580,13 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2834:28: ( (this_ID_0= RULE_ID ( ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID )* ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2835:1: (this_ID_0= RULE_ID ( ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID )* )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2859:28: ( (this_ID_0= RULE_ID ( ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID )* ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2860:1: (this_ID_0= RULE_ID ( ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID )* )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2835:1: (this_ID_0= RULE_ID ( ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID )* )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2835:6: this_ID_0= RULE_ID ( ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID )*
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2860:1: (this_ID_0= RULE_ID ( ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID )* )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2860:6: this_ID_0= RULE_ID ( ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleQualifiedName5711); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleQualifiedName5766); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(this_ID_0);
@@ -7507,7 +7597,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                   newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
                   
             }
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2842:1: ( ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID )*
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2867:1: ( ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID )*
             loop50:
             do {
                 int alt50=2;
@@ -7520,12 +7610,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
                 switch (alt50) {
             	case 1 :
-            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2842:2: ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID
+            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2867:2: ( ( '.' )=>kw= '.' ) this_ID_2= RULE_ID
             	    {
-            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2842:2: ( ( '.' )=>kw= '.' )
-            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2842:3: ( '.' )=>kw= '.'
+            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2867:2: ( ( '.' )=>kw= '.' )
+            	    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2867:3: ( '.' )=>kw= '.'
             	    {
-            	    kw=(Token)match(input,44,FollowSets000.FOLLOW_44_in_ruleQualifiedName5739); if (state.failed) return current;
+            	    kw=(Token)match(input,44,FollowSets000.FOLLOW_44_in_ruleQualifiedName5794); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              current.merge(kw);
@@ -7535,7 +7625,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleQualifiedName5755); if (state.failed) return current;
+            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleQualifiedName5810); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      		current.merge(this_ID_2);
@@ -7578,7 +7668,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLayoutStyle"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2865:1: ruleLayoutStyle returns [Enumerator current=null] : ( (enumLiteral_0= 'vertical' ) | (enumLiteral_1= 'horizontal' ) ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2890:1: ruleLayoutStyle returns [Enumerator current=null] : ( (enumLiteral_0= 'vertical' ) | (enumLiteral_1= 'horizontal' ) ) ;
     public final Enumerator ruleLayoutStyle() throws RecognitionException {
         Enumerator current = null;
 
@@ -7587,10 +7677,10 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2867:28: ( ( (enumLiteral_0= 'vertical' ) | (enumLiteral_1= 'horizontal' ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2868:1: ( (enumLiteral_0= 'vertical' ) | (enumLiteral_1= 'horizontal' ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2892:28: ( ( (enumLiteral_0= 'vertical' ) | (enumLiteral_1= 'horizontal' ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2893:1: ( (enumLiteral_0= 'vertical' ) | (enumLiteral_1= 'horizontal' ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2868:1: ( (enumLiteral_0= 'vertical' ) | (enumLiteral_1= 'horizontal' ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2893:1: ( (enumLiteral_0= 'vertical' ) | (enumLiteral_1= 'horizontal' ) )
             int alt51=2;
             int LA51_0 = input.LA(1);
 
@@ -7609,12 +7699,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             }
             switch (alt51) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2868:2: (enumLiteral_0= 'vertical' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2893:2: (enumLiteral_0= 'vertical' )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2868:2: (enumLiteral_0= 'vertical' )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2868:4: enumLiteral_0= 'vertical'
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2893:2: (enumLiteral_0= 'vertical' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2893:4: enumLiteral_0= 'vertical'
                     {
-                    enumLiteral_0=(Token)match(input,45,FollowSets000.FOLLOW_45_in_ruleLayoutStyle5816); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,45,FollowSets000.FOLLOW_45_in_ruleLayoutStyle5871); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getLayoutStyleAccess().getVerticalEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -7628,12 +7718,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2874:6: (enumLiteral_1= 'horizontal' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2899:6: (enumLiteral_1= 'horizontal' )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2874:6: (enumLiteral_1= 'horizontal' )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2874:8: enumLiteral_1= 'horizontal'
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2899:6: (enumLiteral_1= 'horizontal' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2899:8: enumLiteral_1= 'horizontal'
                     {
-                    enumLiteral_1=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleLayoutStyle5833); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleLayoutStyle5888); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getLayoutStyleAccess().getHorizontalEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -7669,7 +7759,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVisibilityConditionType"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2884:1: ruleVisibilityConditionType returns [Enumerator current=null] : ( (enumLiteral_0= 'Hide' ) | (enumLiteral_1= 'Show' ) | (enumLiteral_2= 'Enable' ) | (enumLiteral_3= 'Disable' ) ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2909:1: ruleVisibilityConditionType returns [Enumerator current=null] : ( (enumLiteral_0= 'Hide' ) | (enumLiteral_1= 'Show' ) | (enumLiteral_2= 'Enable' ) | (enumLiteral_3= 'Disable' ) ) ;
     public final Enumerator ruleVisibilityConditionType() throws RecognitionException {
         Enumerator current = null;
 
@@ -7680,10 +7770,10 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2886:28: ( ( (enumLiteral_0= 'Hide' ) | (enumLiteral_1= 'Show' ) | (enumLiteral_2= 'Enable' ) | (enumLiteral_3= 'Disable' ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2887:1: ( (enumLiteral_0= 'Hide' ) | (enumLiteral_1= 'Show' ) | (enumLiteral_2= 'Enable' ) | (enumLiteral_3= 'Disable' ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2911:28: ( ( (enumLiteral_0= 'Hide' ) | (enumLiteral_1= 'Show' ) | (enumLiteral_2= 'Enable' ) | (enumLiteral_3= 'Disable' ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2912:1: ( (enumLiteral_0= 'Hide' ) | (enumLiteral_1= 'Show' ) | (enumLiteral_2= 'Enable' ) | (enumLiteral_3= 'Disable' ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2887:1: ( (enumLiteral_0= 'Hide' ) | (enumLiteral_1= 'Show' ) | (enumLiteral_2= 'Enable' ) | (enumLiteral_3= 'Disable' ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2912:1: ( (enumLiteral_0= 'Hide' ) | (enumLiteral_1= 'Show' ) | (enumLiteral_2= 'Enable' ) | (enumLiteral_3= 'Disable' ) )
             int alt52=4;
             switch ( input.LA(1) ) {
             case 47:
@@ -7716,12 +7806,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             switch (alt52) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2887:2: (enumLiteral_0= 'Hide' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2912:2: (enumLiteral_0= 'Hide' )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2887:2: (enumLiteral_0= 'Hide' )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2887:4: enumLiteral_0= 'Hide'
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2912:2: (enumLiteral_0= 'Hide' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2912:4: enumLiteral_0= 'Hide'
                     {
-                    enumLiteral_0=(Token)match(input,47,FollowSets000.FOLLOW_47_in_ruleVisibilityConditionType5878); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,47,FollowSets000.FOLLOW_47_in_ruleVisibilityConditionType5933); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getVisibilityConditionTypeAccess().getHideEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -7735,12 +7825,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2893:6: (enumLiteral_1= 'Show' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2918:6: (enumLiteral_1= 'Show' )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2893:6: (enumLiteral_1= 'Show' )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2893:8: enumLiteral_1= 'Show'
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2918:6: (enumLiteral_1= 'Show' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2918:8: enumLiteral_1= 'Show'
                     {
-                    enumLiteral_1=(Token)match(input,48,FollowSets000.FOLLOW_48_in_ruleVisibilityConditionType5895); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,48,FollowSets000.FOLLOW_48_in_ruleVisibilityConditionType5950); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getVisibilityConditionTypeAccess().getShowEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -7754,12 +7844,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2899:6: (enumLiteral_2= 'Enable' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2924:6: (enumLiteral_2= 'Enable' )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2899:6: (enumLiteral_2= 'Enable' )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2899:8: enumLiteral_2= 'Enable'
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2924:6: (enumLiteral_2= 'Enable' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2924:8: enumLiteral_2= 'Enable'
                     {
-                    enumLiteral_2=(Token)match(input,49,FollowSets000.FOLLOW_49_in_ruleVisibilityConditionType5912); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,49,FollowSets000.FOLLOW_49_in_ruleVisibilityConditionType5967); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getVisibilityConditionTypeAccess().getEnableEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -7773,12 +7863,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2905:6: (enumLiteral_3= 'Disable' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2930:6: (enumLiteral_3= 'Disable' )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2905:6: (enumLiteral_3= 'Disable' )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2905:8: enumLiteral_3= 'Disable'
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2930:6: (enumLiteral_3= 'Disable' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2930:8: enumLiteral_3= 'Disable'
                     {
-                    enumLiteral_3=(Token)match(input,50,FollowSets000.FOLLOW_50_in_ruleVisibilityConditionType5929); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,50,FollowSets000.FOLLOW_50_in_ruleVisibilityConditionType5984); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getVisibilityConditionTypeAccess().getDisableEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -7814,7 +7904,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompositeConditionType"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2915:1: ruleCompositeConditionType returns [Enumerator current=null] : ( (enumLiteral_0= 'And' ) | (enumLiteral_1= 'Or' ) ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2940:1: ruleCompositeConditionType returns [Enumerator current=null] : ( (enumLiteral_0= 'And' ) | (enumLiteral_1= 'Or' ) ) ;
     public final Enumerator ruleCompositeConditionType() throws RecognitionException {
         Enumerator current = null;
 
@@ -7823,10 +7913,10 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2917:28: ( ( (enumLiteral_0= 'And' ) | (enumLiteral_1= 'Or' ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2918:1: ( (enumLiteral_0= 'And' ) | (enumLiteral_1= 'Or' ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2942:28: ( ( (enumLiteral_0= 'And' ) | (enumLiteral_1= 'Or' ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2943:1: ( (enumLiteral_0= 'And' ) | (enumLiteral_1= 'Or' ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2918:1: ( (enumLiteral_0= 'And' ) | (enumLiteral_1= 'Or' ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2943:1: ( (enumLiteral_0= 'And' ) | (enumLiteral_1= 'Or' ) )
             int alt53=2;
             int LA53_0 = input.LA(1);
 
@@ -7845,12 +7935,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
             }
             switch (alt53) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2918:2: (enumLiteral_0= 'And' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2943:2: (enumLiteral_0= 'And' )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2918:2: (enumLiteral_0= 'And' )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2918:4: enumLiteral_0= 'And'
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2943:2: (enumLiteral_0= 'And' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2943:4: enumLiteral_0= 'And'
                     {
-                    enumLiteral_0=(Token)match(input,51,FollowSets000.FOLLOW_51_in_ruleCompositeConditionType5974); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,51,FollowSets000.FOLLOW_51_in_ruleCompositeConditionType6029); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getCompositeConditionTypeAccess().getAndEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -7864,12 +7954,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2924:6: (enumLiteral_1= 'Or' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2949:6: (enumLiteral_1= 'Or' )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2924:6: (enumLiteral_1= 'Or' )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2924:8: enumLiteral_1= 'Or'
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2949:6: (enumLiteral_1= 'Or' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2949:8: enumLiteral_1= 'Or'
                     {
-                    enumLiteral_1=(Token)match(input,52,FollowSets000.FOLLOW_52_in_ruleCompositeConditionType5991); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,52,FollowSets000.FOLLOW_52_in_ruleCompositeConditionType6046); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getCompositeConditionTypeAccess().getOrEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -7905,7 +7995,7 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComparisonConditionType"
-    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2934:1: ruleComparisonConditionType returns [Enumerator current=null] : ( (enumLiteral_0= '==' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '>' ) ) ;
+    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2959:1: ruleComparisonConditionType returns [Enumerator current=null] : ( (enumLiteral_0= '==' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '>' ) ) ;
     public final Enumerator ruleComparisonConditionType() throws RecognitionException {
         Enumerator current = null;
 
@@ -7915,10 +8005,10 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2936:28: ( ( (enumLiteral_0= '==' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '>' ) ) )
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2937:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '>' ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2961:28: ( ( (enumLiteral_0= '==' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '>' ) ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2962:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '>' ) )
             {
-            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2937:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '>' ) )
+            // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2962:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '<' ) | (enumLiteral_2= '>' ) )
             int alt54=3;
             switch ( input.LA(1) ) {
             case 53:
@@ -7946,12 +8036,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
             switch (alt54) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2937:2: (enumLiteral_0= '==' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2962:2: (enumLiteral_0= '==' )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2937:2: (enumLiteral_0= '==' )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2937:4: enumLiteral_0= '=='
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2962:2: (enumLiteral_0= '==' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2962:4: enumLiteral_0= '=='
                     {
-                    enumLiteral_0=(Token)match(input,53,FollowSets000.FOLLOW_53_in_ruleComparisonConditionType6036); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,53,FollowSets000.FOLLOW_53_in_ruleComparisonConditionType6091); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getComparisonConditionTypeAccess().getEqualEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -7965,12 +8055,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2943:6: (enumLiteral_1= '<' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2968:6: (enumLiteral_1= '<' )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2943:6: (enumLiteral_1= '<' )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2943:8: enumLiteral_1= '<'
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2968:6: (enumLiteral_1= '<' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2968:8: enumLiteral_1= '<'
                     {
-                    enumLiteral_1=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleComparisonConditionType6053); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleComparisonConditionType6108); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getComparisonConditionTypeAccess().getLessEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -7984,12 +8074,12 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2949:6: (enumLiteral_2= '>' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2974:6: (enumLiteral_2= '>' )
                     {
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2949:6: (enumLiteral_2= '>' )
-                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2949:8: enumLiteral_2= '>'
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2974:6: (enumLiteral_2= '>' )
+                    // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2974:8: enumLiteral_2= '>'
                     {
-                    enumLiteral_2=(Token)match(input,55,FollowSets000.FOLLOW_55_in_ruleComparisonConditionType6070); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,55,FollowSets000.FOLLOW_55_in_ruleComparisonConditionType6125); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getComparisonConditionTypeAccess().getGreaterEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -8025,10 +8115,10 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred1_InternalView
     public final void synpred1_InternalView_fragment() throws RecognitionException {   
-        // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2842:3: ( '.' )
-        // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2843:2: '.'
+        // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2867:3: ( '.' )
+        // ../at.ac.tuwien.big.views.view/src-gen/at/ac/tuwien/big/views/view/parser/antlr/internal/InternalView.g:2868:2: '.'
         {
-        match(input,44,FollowSets000.FOLLOW_44_in_synpred1_InternalView5730); if (state.failed) return ;
+        match(input,44,FollowSets000.FOLLOW_44_in_synpred1_InternalView5785); if (state.failed) return ;
 
         }
     }
@@ -8052,6 +8142,74 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
     }
 
 
+    protected DFA40 dfa40 = new DFA40(this);
+    static final String DFA40_eotS =
+        "\21\uffff";
+    static final String DFA40_eofS =
+        "\21\uffff";
+    static final String DFA40_minS =
+        "\1\17\1\5\1\uffff\1\22\1\4\1\16\1\4\1\34\1\uffff\1\16\1\uffff\1"+
+        "\5\1\22\1\4\1\16\1\4\1\16";
+    static final String DFA40_maxS =
+        "\1\44\1\5\1\uffff\1\22\1\4\1\54\1\4\1\44\1\uffff\1\54\1\uffff\1"+
+        "\5\1\22\1\4\1\54\1\4\1\54";
+    static final String DFA40_acceptS =
+        "\2\uffff\1\3\5\uffff\1\1\1\uffff\1\2\6\uffff";
+    static final String DFA40_specialS =
+        "\21\uffff}>";
+    static final String[] DFA40_transitionS = {
+            "\1\2\14\uffff\1\2\7\uffff\1\1",
+            "\1\3",
+            "",
+            "\1\4",
+            "\1\5",
+            "\1\7\1\10\34\uffff\1\6",
+            "\1\11",
+            "\1\12\7\uffff\1\13",
+            "",
+            "\1\7\1\10\34\uffff\1\6",
+            "",
+            "\1\14",
+            "\1\15",
+            "\1\16",
+            "\1\7\1\10\34\uffff\1\17",
+            "\1\20",
+            "\1\7\1\10\34\uffff\1\17"
+    };
+
+    static final short[] DFA40_eot = DFA.unpackEncodedString(DFA40_eotS);
+    static final short[] DFA40_eof = DFA.unpackEncodedString(DFA40_eofS);
+    static final char[] DFA40_min = DFA.unpackEncodedStringToUnsignedChars(DFA40_minS);
+    static final char[] DFA40_max = DFA.unpackEncodedStringToUnsignedChars(DFA40_maxS);
+    static final short[] DFA40_accept = DFA.unpackEncodedString(DFA40_acceptS);
+    static final short[] DFA40_special = DFA.unpackEncodedString(DFA40_specialS);
+    static final short[][] DFA40_transition;
+
+    static {
+        int numStates = DFA40_transitionS.length;
+        DFA40_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA40_transition[i] = DFA.unpackEncodedString(DFA40_transitionS[i]);
+        }
+    }
+
+    class DFA40 extends DFA {
+
+        public DFA40(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 40;
+            this.eot = DFA40_eot;
+            this.eof = DFA40_eof;
+            this.min = DFA40_min;
+            this.max = DFA40_max;
+            this.accept = DFA40_accept;
+            this.special = DFA40_special;
+            this.transition = DFA40_transition;
+        }
+        public String getDescription() {
+            return "1645:1: ( ( ( (lv_link_6_0= ruleLink ) ) (otherlv_7= ',' ( (lv_link_8_0= ruleLink ) ) )* ) | ( ( ( (lv_link_9_0= ruleLink ) ) otherlv_10= ',' )+ ( ( (lv_columns_11_0= ruleColumn ) ) (otherlv_12= ',' ( (lv_columns_13_0= ruleColumn ) ) )* ) ) | ( ( (lv_columns_14_0= ruleColumn ) ) (otherlv_15= ',' ( (lv_columns_16_0= ruleColumn ) ) )* )? )";
+        }
+    }
  
 
     
@@ -8199,127 +8357,129 @@ public class InternalViewParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_18_in_ruleTable3197 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_ruleQualifiedName_in_ruleTable3220 = new BitSet(new long[]{0x0000000000002000L});
         public static final BitSet FOLLOW_13_in_ruleTable3232 = new BitSet(new long[]{0x0000001010008000L});
-        public static final BitSet FOLLOW_ruleLink_in_ruleTable3254 = new BitSet(new long[]{0x000000001000C000L});
-        public static final BitSet FOLLOW_14_in_ruleTable3267 = new BitSet(new long[]{0x0000001000000000L});
-        public static final BitSet FOLLOW_ruleLink_in_ruleTable3288 = new BitSet(new long[]{0x0000000010008000L});
-        public static final BitSet FOLLOW_ruleColumn_in_ruleTable3312 = new BitSet(new long[]{0x000000001000C000L});
-        public static final BitSet FOLLOW_14_in_ruleTable3325 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_ruleColumn_in_ruleTable3346 = new BitSet(new long[]{0x000000001000C000L});
-        public static final BitSet FOLLOW_ruleColumn_in_ruleTable3374 = new BitSet(new long[]{0x000000000000C000L});
-        public static final BitSet FOLLOW_14_in_ruleTable3387 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_ruleColumn_in_ruleTable3408 = new BitSet(new long[]{0x000000000000C000L});
-        public static final BitSet FOLLOW_15_in_ruleTable3424 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePropertyElement_in_entryRulePropertyElement3460 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulePropertyElement3470 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleColumn_in_rulePropertyElement3517 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleText_in_rulePropertyElement3544 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSelection_in_rulePropertyElement3571 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDateTimePicker_in_rulePropertyElement3598 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleColumn_in_entryRuleColumn3633 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleColumn3643 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_28_in_ruleColumn3680 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleColumn3697 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleColumn3719 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_18_in_ruleColumn3736 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleColumn3759 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDateTimePicker_in_entryRuleDateTimePicker3795 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleDateTimePicker3805 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_29_in_ruleDateTimePicker3842 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleDateTimePicker3859 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleDateTimePicker3881 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleDateTimePicker3903 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_18_in_ruleDateTimePicker3920 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleDateTimePicker3943 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleText_in_entryRuleText3979 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleText3989 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_30_in_ruleText4032 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_31_in_ruleText4058 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleText4075 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleText4097 = new BitSet(new long[]{0x0000000100040000L});
-        public static final BitSet FOLLOW_32_in_ruleText4115 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleText4132 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_18_in_ruleText4151 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleText4174 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSelection_in_entryRuleSelection4210 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleSelection4220 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_33_in_ruleSelection4257 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleSelection4274 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleSelection4296 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_18_in_ruleSelection4313 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleSelection4336 = new BitSet(new long[]{0x0000000000002000L});
-        public static final BitSet FOLLOW_13_in_ruleSelection4348 = new BitSet(new long[]{0x0000000800008000L});
-        public static final BitSet FOLLOW_ruleSelectionItem_in_ruleSelection4370 = new BitSet(new long[]{0x000000000000C000L});
-        public static final BitSet FOLLOW_14_in_ruleSelection4383 = new BitSet(new long[]{0x0000000800000000L});
-        public static final BitSet FOLLOW_ruleSelectionItem_in_ruleSelection4404 = new BitSet(new long[]{0x000000000000C000L});
-        public static final BitSet FOLLOW_15_in_ruleSelection4420 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSelectionItem_in_entryRuleSelectionItem4456 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleSelectionItem4466 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEnumerationLiteralItem_in_ruleSelectionItem4513 = new BitSet(new long[]{0x0000000400000002L});
-        public static final BitSet FOLLOW_34_in_ruleSelectionItem4525 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleSelectionItem4542 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEnumerationLiteralItem_in_entryRuleEnumerationLiteralItem4585 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleEnumerationLiteralItem4595 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_35_in_ruleEnumerationLiteralItem4632 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleEnumerationLiteralItem4649 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_18_in_ruleEnumerationLiteralItem4666 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEnumerationLiteralItem4689 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLink_in_entryRuleLink4727 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleLink4737 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_36_in_ruleLink4774 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleLink4791 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_18_in_ruleLink4808 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleLink4831 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLayout_in_entryRuleLayout4869 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleLayout4879 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLayoutStyle_in_ruleLayout4924 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCondition_in_entryRuleCondition4959 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleCondition4969 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVisibilityCondition_in_ruleCondition5015 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVisibilityCondition_in_entryRuleVisibilityCondition5049 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleVisibilityCondition5059 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCompositeCondition_in_ruleVisibilityCondition5106 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleComparisonCondition_in_ruleVisibilityCondition5133 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCompositeCondition_in_entryRuleCompositeCondition5168 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleCompositeCondition5178 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_37_in_ruleCompositeCondition5215 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleCompositeCondition5232 = new BitSet(new long[]{0x0000004000000000L});
-        public static final BitSet FOLLOW_38_in_ruleCompositeCondition5249 = new BitSet(new long[]{0x0000008000000000L});
-        public static final BitSet FOLLOW_39_in_ruleCompositeCondition5261 = new BitSet(new long[]{0x00000A2000000000L});
-        public static final BitSet FOLLOW_ruleVisibilityCondition_in_ruleCompositeCondition5283 = new BitSet(new long[]{0x0018000000000000L});
-        public static final BitSet FOLLOW_ruleCompositeConditionType_in_ruleCompositeCondition5304 = new BitSet(new long[]{0x0000030000000000L});
-        public static final BitSet FOLLOW_40_in_ruleCompositeCondition5317 = new BitSet(new long[]{0x0018000000000000L});
-        public static final BitSet FOLLOW_ruleCompositeConditionType_in_ruleCompositeCondition5338 = new BitSet(new long[]{0x0000082000000000L});
-        public static final BitSet FOLLOW_ruleVisibilityCondition_in_ruleCompositeCondition5359 = new BitSet(new long[]{0x0000030000000000L});
-        public static final BitSet FOLLOW_41_in_ruleCompositeCondition5375 = new BitSet(new long[]{0x0000040000000000L});
-        public static final BitSet FOLLOW_42_in_ruleCompositeCondition5387 = new BitSet(new long[]{0x0007800000000000L});
-        public static final BitSet FOLLOW_ruleVisibilityConditionType_in_ruleCompositeCondition5408 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleComparisonCondition_in_entryRuleComparisonCondition5444 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleComparisonCondition5454 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_43_in_ruleComparisonCondition5491 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleComparisonCondition5508 = new BitSet(new long[]{0x0000004000000000L});
-        public static final BitSet FOLLOW_38_in_ruleComparisonCondition5525 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleComparisonCondition5545 = new BitSet(new long[]{0x00E0000000000000L});
-        public static final BitSet FOLLOW_ruleComparisonConditionType_in_ruleComparisonCondition5566 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleComparisonCondition5583 = new BitSet(new long[]{0x0000040000000000L});
-        public static final BitSet FOLLOW_42_in_ruleComparisonCondition5600 = new BitSet(new long[]{0x0007800000000000L});
-        public static final BitSet FOLLOW_ruleVisibilityConditionType_in_ruleComparisonCondition5621 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName5660 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName5671 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName5711 = new BitSet(new long[]{0x0000100000000002L});
-        public static final BitSet FOLLOW_44_in_ruleQualifiedName5739 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName5755 = new BitSet(new long[]{0x0000100000000002L});
-        public static final BitSet FOLLOW_45_in_ruleLayoutStyle5816 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_46_in_ruleLayoutStyle5833 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_47_in_ruleVisibilityConditionType5878 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_48_in_ruleVisibilityConditionType5895 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_49_in_ruleVisibilityConditionType5912 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_ruleVisibilityConditionType5929 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_ruleCompositeConditionType5974 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_ruleCompositeConditionType5991 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_ruleComparisonConditionType6036 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_54_in_ruleComparisonConditionType6053 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_ruleComparisonConditionType6070 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_44_in_synpred1_InternalView5730 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLink_in_ruleTable3255 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_14_in_ruleTable3268 = new BitSet(new long[]{0x0000001000000000L});
+        public static final BitSet FOLLOW_ruleLink_in_ruleTable3289 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_ruleLink_in_ruleTable3321 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_14_in_ruleTable3333 = new BitSet(new long[]{0x0000001010000000L});
+        public static final BitSet FOLLOW_ruleColumn_in_ruleTable3357 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_14_in_ruleTable3370 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_ruleColumn_in_ruleTable3391 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_ruleColumn_in_ruleTable3423 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_14_in_ruleTable3436 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_ruleColumn_in_ruleTable3457 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_15_in_ruleTable3474 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePropertyElement_in_entryRulePropertyElement3510 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulePropertyElement3520 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleColumn_in_rulePropertyElement3567 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleText_in_rulePropertyElement3594 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleSelection_in_rulePropertyElement3621 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDateTimePicker_in_rulePropertyElement3648 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleColumn_in_entryRuleColumn3683 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleColumn3693 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_28_in_ruleColumn3730 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleColumn3747 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleColumn3769 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_18_in_ruleColumn3786 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleColumn3809 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDateTimePicker_in_entryRuleDateTimePicker3845 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleDateTimePicker3855 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_29_in_ruleDateTimePicker3892 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleDateTimePicker3909 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleDateTimePicker3931 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleDateTimePicker3953 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_18_in_ruleDateTimePicker3970 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleDateTimePicker3993 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleText_in_entryRuleText4029 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleText4039 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_30_in_ruleText4082 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_31_in_ruleText4108 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleText4125 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleText4147 = new BitSet(new long[]{0x0000000100040000L});
+        public static final BitSet FOLLOW_32_in_ruleText4165 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleText4182 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_18_in_ruleText4201 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleText4224 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleSelection_in_entryRuleSelection4260 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleSelection4270 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_33_in_ruleSelection4307 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleSelection4324 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleSelection4346 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_18_in_ruleSelection4363 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleSelection4386 = new BitSet(new long[]{0x0000000000002000L});
+        public static final BitSet FOLLOW_13_in_ruleSelection4398 = new BitSet(new long[]{0x0000000C00008000L});
+        public static final BitSet FOLLOW_ruleSelectionItem_in_ruleSelection4420 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_14_in_ruleSelection4433 = new BitSet(new long[]{0x0000000C00000000L});
+        public static final BitSet FOLLOW_ruleSelectionItem_in_ruleSelection4454 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_15_in_ruleSelection4470 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleSelectionItem_in_entryRuleSelectionItem4506 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleSelectionItem4516 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEnumerationLiteralItem_in_ruleSelectionItem4563 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_34_in_ruleSelectionItem4581 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleSelectionItem4598 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEnumerationLiteralItem_in_entryRuleEnumerationLiteralItem4640 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleEnumerationLiteralItem4650 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_35_in_ruleEnumerationLiteralItem4687 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleEnumerationLiteralItem4704 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_18_in_ruleEnumerationLiteralItem4721 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEnumerationLiteralItem4744 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLink_in_entryRuleLink4782 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleLink4792 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_36_in_ruleLink4829 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleLink4846 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_18_in_ruleLink4863 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_ruleQualifiedName_in_ruleLink4886 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLayout_in_entryRuleLayout4924 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleLayout4934 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLayoutStyle_in_ruleLayout4979 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCondition_in_entryRuleCondition5014 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleCondition5024 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleVisibilityCondition_in_ruleCondition5070 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleVisibilityCondition_in_entryRuleVisibilityCondition5104 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleVisibilityCondition5114 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCompositeCondition_in_ruleVisibilityCondition5161 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleComparisonCondition_in_ruleVisibilityCondition5188 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCompositeCondition_in_entryRuleCompositeCondition5223 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleCompositeCondition5233 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_37_in_ruleCompositeCondition5270 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleCompositeCondition5287 = new BitSet(new long[]{0x0000004000000000L});
+        public static final BitSet FOLLOW_38_in_ruleCompositeCondition5304 = new BitSet(new long[]{0x0000008000000000L});
+        public static final BitSet FOLLOW_39_in_ruleCompositeCondition5316 = new BitSet(new long[]{0x00000A2000000000L});
+        public static final BitSet FOLLOW_ruleVisibilityCondition_in_ruleCompositeCondition5338 = new BitSet(new long[]{0x0018000000000000L});
+        public static final BitSet FOLLOW_ruleCompositeConditionType_in_ruleCompositeCondition5359 = new BitSet(new long[]{0x0000030000000000L});
+        public static final BitSet FOLLOW_40_in_ruleCompositeCondition5372 = new BitSet(new long[]{0x0018000000000000L});
+        public static final BitSet FOLLOW_ruleCompositeConditionType_in_ruleCompositeCondition5393 = new BitSet(new long[]{0x0000082000000000L});
+        public static final BitSet FOLLOW_ruleVisibilityCondition_in_ruleCompositeCondition5414 = new BitSet(new long[]{0x0000030000000000L});
+        public static final BitSet FOLLOW_41_in_ruleCompositeCondition5430 = new BitSet(new long[]{0x0000040000000000L});
+        public static final BitSet FOLLOW_42_in_ruleCompositeCondition5442 = new BitSet(new long[]{0x0007800000000000L});
+        public static final BitSet FOLLOW_ruleVisibilityConditionType_in_ruleCompositeCondition5463 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleComparisonCondition_in_entryRuleComparisonCondition5499 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleComparisonCondition5509 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_43_in_ruleComparisonCondition5546 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleComparisonCondition5563 = new BitSet(new long[]{0x0000004000000000L});
+        public static final BitSet FOLLOW_38_in_ruleComparisonCondition5580 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleComparisonCondition5600 = new BitSet(new long[]{0x00E0000000000000L});
+        public static final BitSet FOLLOW_ruleComparisonConditionType_in_ruleComparisonCondition5621 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleComparisonCondition5638 = new BitSet(new long[]{0x0000040000000000L});
+        public static final BitSet FOLLOW_42_in_ruleComparisonCondition5655 = new BitSet(new long[]{0x0007800000000000L});
+        public static final BitSet FOLLOW_ruleVisibilityConditionType_in_ruleComparisonCondition5676 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName5715 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName5726 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName5766 = new BitSet(new long[]{0x0000100000000002L});
+        public static final BitSet FOLLOW_44_in_ruleQualifiedName5794 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName5810 = new BitSet(new long[]{0x0000100000000002L});
+        public static final BitSet FOLLOW_45_in_ruleLayoutStyle5871 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_46_in_ruleLayoutStyle5888 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_47_in_ruleVisibilityConditionType5933 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_48_in_ruleVisibilityConditionType5950 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_49_in_ruleVisibilityConditionType5967 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_ruleVisibilityConditionType5984 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_ruleCompositeConditionType6029 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_ruleCompositeConditionType6046 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_ruleComparisonConditionType6091 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_54_in_ruleComparisonConditionType6108 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_ruleComparisonConditionType6125 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_44_in_synpred1_InternalView5785 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 
