@@ -87,7 +87,7 @@ Column returns Column:
 	'column' elementID=ID label=STRING 'handles' property= [Property|QualifiedName];
 
 DateTimePicker returns DateTimePicker :
-	'date-time-picker' 	elementID=ID label=STRING format=STRING 'handles' property= [Property|QualifiedName];
+	'date-time-picker' 	elementID=ID label=STRING ('format' format=STRING)? 'handles' property= [Property|QualifiedName];
 	
 Text returns Text:
 	 (long?= 'long')?'text' elementID=ID label=STRING ('format' format=STRING)? 'handles' property= [Property|QualifiedName]
