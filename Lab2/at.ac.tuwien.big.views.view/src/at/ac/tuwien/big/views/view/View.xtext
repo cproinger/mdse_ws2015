@@ -46,20 +46,23 @@ layout=Layout  (startView?= 'start' )? 'delete-view' name= ID header= STRING 'ha
 	('view-description' description= STRING)?
 	 (elementGroups+=ElementGroup (',' elementGroups+=ElementGroup)*)?  '}' ;
 
+//cp: ich glaub nicht das die in irgendeiner weise zieht
+//weils in keiner regel vorkommt. 
 ConditionalElement returns ConditionalElement:
-	ElementGroup|ViewElement
-	('with' condition=Condition )?
+	(ElementGroup|ViewElement)
 	 ;
 
   
 ElementGroup returns ElementGroup:
 	layout=Layout 'elementgroup' header= STRING '{'
 	(viewElements+=ViewElement (','viewElements+=ViewElement)*)?
-	 ('with' condition=Condition )? '}';
+	'}'
+	('with' condition=Condition )?
+	;
 
 ViewElement returns ViewElement:
-	AssociationElement | PropertyElement
-	
+	(AssociationElement | PropertyElement)
+	('with' condition=Condition )?
 	;
 
 AssociationElement returns AssociationElement:
@@ -129,15 +132,15 @@ VisibilityCondition returns VisibilityCondition:
 	CompositeCondition|ComparisonCondition ;
 
 CompositeCondition returns CompositeCondition:
-	'composite-condition' conditionID=ID ':' 
-	'(' (composedConditions+=VisibilityCondition compositionType=CompositeConditionType ('||' 
-		compositionType=CompositeConditionType composedConditions+=VisibilityCondition)*)? ')' '?' type= VisibilityConditionType ;
+ 'composite-condition' conditionID=ID ':' 
+ '(' (composedConditions+=VisibilityCondition compositionType=CompositeConditionType 
+  composedConditions+=VisibilityCondition) ')' '?' type= VisibilityConditionType ;
 		
 enum VisibilityConditionType returns VisibilityConditionType:
 				Hide ='Hide' | Show = 'Show'  | Enable = 'Enable'  | Disable= 'Disable' ;
 
 enum CompositeConditionType returns CompositeConditionType:
-				And ='And'  | Or = 'Or';
+    And ='&&'  | Or = '||';
 
 ComparisonCondition returns ComparisonCondition:
 	'comparison-condition' conditionID=ID  ':' 	property=[PropertyElement] comparisonType=ComparisonConditionType comparisonValue=STRING '?' type= VisibilityConditionType
