@@ -19,7 +19,6 @@ public class InternalViewLexer extends Lexer {
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__11=11;
-    public static final int T__55=55;
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
@@ -210,10 +209,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:17:7: ( 'And' )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:17:9: 'And'
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:17:7: ( '&&' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:17:9: '&&'
             {
-            match("And"); 
+            match("&&"); 
 
 
             }
@@ -231,10 +230,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:18:7: ( 'Or' )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:18:9: 'Or'
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:18:7: ( '||' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:18:9: '||'
             {
-            match("Or"); 
+            match("||"); 
 
 
             }
@@ -667,10 +666,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:39:7: ( 'text' )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:39:9: 'text'
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:39:7: ( 'format' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:39:9: 'format'
             {
-            match("text"); 
+            match("format"); 
 
 
             }
@@ -688,10 +687,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:40:7: ( 'format' )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:40:9: 'format'
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:40:7: ( 'text' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:40:9: 'text'
             {
-            match("format"); 
+            match("text"); 
 
 
             }
@@ -894,10 +893,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:50:7: ( '||' )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:50:9: '||'
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:50:7: ( 'comparison-condition' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:50:9: 'comparison-condition'
             {
-            match("||"); 
+            match("comparison-condition"); 
 
 
             }
@@ -915,11 +914,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:51:7: ( 'comparison-condition' )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:51:9: 'comparison-condition'
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:51:7: ( '.' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:51:9: '.'
             {
-            match("comparison-condition"); 
-
+            match('.'); 
 
             }
 
@@ -936,10 +934,11 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:52:7: ( '.' )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:52:9: '.'
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:52:7: ( 'welcome' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:52:9: 'welcome'
             {
-            match('.'); 
+            match("welcome"); 
+
 
             }
 
@@ -956,10 +955,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:53:7: ( 'welcome' )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:53:9: 'welcome'
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:53:7: ( 'start' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:53:9: 'start'
             {
-            match("welcome"); 
+            match("start"); 
 
 
             }
@@ -977,29 +976,8 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:54:7: ( 'start' )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:54:9: 'start'
-            {
-            match("start"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__54"
-
-    // $ANTLR start "T__55"
-    public final void mT__55() throws RecognitionException {
-        try {
-            int _type = T__55;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:55:7: ( 'long' )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:55:9: 'long'
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:54:7: ( 'long' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:54:9: 'long'
             {
             match("long"); 
 
@@ -1012,17 +990,17 @@ public class InternalViewLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__55"
+    // $ANTLR end "T__54"
 
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9574:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9574:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9664:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9664:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9574:11: ( '^' )?
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9664:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1031,7 +1009,7 @@ public class InternalViewLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9574:11: '^'
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9664:11: '^'
                     {
                     match('^'); 
 
@@ -1049,7 +1027,7 @@ public class InternalViewLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9574:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9664:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -1098,10 +1076,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9576:10: ( ( '0' .. '9' )+ )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9576:12: ( '0' .. '9' )+
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9666:10: ( ( '0' .. '9' )+ )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9666:12: ( '0' .. '9' )+
             {
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9576:12: ( '0' .. '9' )+
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9666:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -1115,7 +1093,7 @@ public class InternalViewLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9576:13: '0' .. '9'
+            	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9666:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1147,10 +1125,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9668:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9668:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9668:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1168,10 +1146,10 @@ public class InternalViewLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9668:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9668:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1187,7 +1165,7 @@ public class InternalViewLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:21: '\\\\' .
+                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9668:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1195,7 +1173,7 @@ public class InternalViewLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9668:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1220,10 +1198,10 @@ public class InternalViewLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9668:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9668:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1239,7 +1217,7 @@ public class InternalViewLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:54: '\\\\' .
+                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9668:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1247,7 +1225,7 @@ public class InternalViewLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9578:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9668:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1290,12 +1268,12 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9580:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9580:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9670:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9670:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9580:24: ( options {greedy=false; } : . )*
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9670:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1320,7 +1298,7 @@ public class InternalViewLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9580:52: .
+            	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9670:52: .
             	    {
             	    matchAny(); 
 
@@ -1350,12 +1328,12 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9672:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9672:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9672:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1368,7 +1346,7 @@ public class InternalViewLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9672:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1388,7 +1366,7 @@ public class InternalViewLexer extends Lexer {
                 }
             } while (true);
 
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:40: ( ( '\\r' )? '\\n' )?
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9672:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1397,9 +1375,9 @@ public class InternalViewLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:41: ( '\\r' )? '\\n'
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9672:41: ( '\\r' )? '\\n'
                     {
-                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:41: ( '\\r' )?
+                    // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9672:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1408,7 +1386,7 @@ public class InternalViewLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9582:41: '\\r'
+                            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9672:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1440,10 +1418,10 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9584:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9584:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9674:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9674:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9584:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9674:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1497,8 +1475,8 @@ public class InternalViewLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9586:16: ( . )
-            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9586:18: .
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9676:16: ( . )
+            // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:9676:18: .
             {
             matchAny(); 
 
@@ -1513,8 +1491,8 @@ public class InternalViewLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=52;
+        // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=51;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -1826,56 +1804,49 @@ public class InternalViewLexer extends Lexer {
                 }
                 break;
             case 45 :
-                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:274: T__55
-                {
-                mT__55(); 
-
-                }
-                break;
-            case 46 :
-                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:280: RULE_ID
+                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:274: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 47 :
-                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:288: RULE_INT
+            case 46 :
+                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:282: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 48 :
-                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:297: RULE_STRING
+            case 47 :
+                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:291: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 49 :
-                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:309: RULE_ML_COMMENT
+            case 48 :
+                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:303: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 50 :
-                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:325: RULE_SL_COMMENT
+            case 49 :
+                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:319: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 51 :
-                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:341: RULE_WS
+            case 50 :
+                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:335: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 52 :
-                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:349: RULE_ANY_OTHER
+            case 51 :
+                // ../at.ac.tuwien.big.views.view.ui/src-gen/at/ac/tuwien/big/views/view/ui/contentassist/antlr/internal/InternalView.g:1:343: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1889,162 +1860,162 @@ public class InternalViewLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\10\52\1\47\5\uffff\13\52\4\uffff\1\47\1\uffff\1\47\2\uffff"+
-        "\3\47\2\uffff\2\52\1\uffff\7\52\1\137\6\uffff\22\52\13\uffff\10"+
-        "\52\1\174\1\uffff\30\52\1\u0096\1\u0097\2\52\1\uffff\12\52\1\u00a5"+
-        "\1\52\1\u00a7\1\u00a8\1\u00a9\1\52\1\u00ab\5\52\1\uffff\2\52\2\uffff"+
-        "\7\52\1\uffff\2\52\1\uffff\1\52\2\uffff\1\52\3\uffff\1\u00be\1\uffff"+
-        "\2\52\1\u00c1\4\52\1\u00c6\1\52\1\uffff\1\52\1\u00c9\6\52\1\uffff"+
-        "\1\u00d0\1\52\1\uffff\3\52\1\u00d5\1\uffff\1\u00d6\2\uffff\2\52"+
-        "\2\uffff\1\52\1\u00da\1\uffff\1\52\1\u00dc\2\52\2\uffff\3\52\1\uffff"+
-        "\1\52\1\uffff\1\u00e3\4\52\1\u00e9\1\uffff\1\u00ea\1\uffff\2\52"+
-        "\4\uffff\1\52\1\u00ee\1\uffff";
+        "\1\uffff\6\51\3\46\5\uffff\13\51\5\uffff\1\46\2\uffff\3\46\2\uffff"+
+        "\2\51\1\uffff\6\51\10\uffff\22\51\12\uffff\40\51\1\u0091\1\u0092"+
+        "\14\51\1\u00a0\1\51\1\u00a2\1\u00a3\1\u00a4\1\51\1\u00a6\5\51\1"+
+        "\uffff\2\51\2\uffff\7\51\1\uffff\2\51\1\uffff\1\51\2\uffff\1\51"+
+        "\3\uffff\1\u00b9\1\uffff\2\51\1\u00bc\4\51\1\u00c1\1\51\1\uffff"+
+        "\1\51\1\u00c4\6\51\1\uffff\1\u00cb\1\51\1\uffff\3\51\1\u00d0\1\uffff"+
+        "\1\u00d1\2\uffff\2\51\2\uffff\1\51\1\u00d5\1\uffff\1\51\1\u00d7"+
+        "\2\51\2\uffff\3\51\1\uffff\1\51\1\uffff\1\u00de\4\51\1\u00e4\1\uffff"+
+        "\1\u00e5\1\uffff\2\51\4\uffff\1\51\1\u00e9\1\uffff";
     static final String DFA12_eofS =
-        "\u00ef\uffff";
+        "\u00ea\uffff";
     static final String DFA12_minS =
-        "\1\0\1\145\1\141\1\151\1\150\1\156\1\151\1\156\1\162\1\75\5\uffff"+
+        "\1\0\1\145\1\141\1\151\1\150\1\156\1\151\1\46\1\174\1\75\5\uffff"+
         "\1\156\1\157\1\145\1\160\1\141\1\154\1\145\1\151\1\141\1\157\1\145"+
-        "\4\uffff\1\174\1\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\162\1\145"+
-        "\1\uffff\1\162\1\156\1\144\1\157\1\141\1\163\1\144\1\60\6\uffff"+
-        "\1\144\1\145\1\154\1\141\1\144\1\154\1\164\1\145\1\165\1\164\1\154"+
-        "\2\156\1\142\1\170\1\162\1\154\1\141\13\uffff\1\164\1\167\1\151"+
-        "\1\144\1\145\1\167\1\142\1\141\1\60\1\uffff\1\145\1\141\1\165\1"+
-        "\160\1\144\1\141\2\145\2\155\1\150\1\143\1\164\1\153\1\147\1\154"+
-        "\1\164\1\155\1\145\1\162\1\151\1\55\1\172\1\154\2\60\1\154\1\142"+
-        "\1\uffff\1\170\1\164\1\155\1\141\1\55\2\164\1\55\1\145\1\55\1\60"+
-        "\1\157\3\60\1\145\1\60\1\141\1\143\1\164\1\143\1\162\1\uffff\1\157"+
-        "\1\145\2\uffff\1\145\1\154\1\55\1\145\1\156\1\163\1\162\1\uffff"+
-        "\2\145\1\uffff\1\156\2\uffff\1\155\3\uffff\1\60\1\uffff\2\164\1"+
-        "\60\1\141\1\157\1\156\1\163\1\60\1\145\1\uffff\1\55\1\60\2\151\2"+
-        "\55\1\164\1\145\1\uffff\1\60\1\151\1\uffff\1\154\1\165\1\164\1\60"+
-        "\1\uffff\1\60\2\uffff\1\164\1\163\2\uffff\1\147\1\60\1\uffff\1\157"+
-        "\1\60\1\160\1\141\2\uffff\1\145\1\157\1\162\1\uffff\1\156\1\uffff"+
-        "\1\60\1\154\1\55\1\156\1\157\1\55\1\uffff\1\60\1\uffff\1\55\1\165"+
-        "\4\uffff\1\160\1\60\1\uffff";
+        "\5\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\162\1\145\1\uffff\1\162"+
+        "\1\156\1\144\1\157\1\141\1\163\10\uffff\1\144\1\145\1\154\1\141"+
+        "\1\144\1\154\1\164\1\145\1\165\1\164\1\154\2\156\1\142\1\170\1\162"+
+        "\1\154\1\141\12\uffff\1\164\1\167\1\151\1\144\1\145\1\167\1\142"+
+        "\1\141\1\145\1\141\1\165\1\160\1\144\1\141\2\145\2\155\1\150\1\143"+
+        "\1\164\1\153\1\147\1\154\1\164\1\155\1\145\1\162\1\151\1\55\1\172"+
+        "\1\154\2\60\1\154\1\142\1\170\1\164\1\155\1\141\1\55\2\164\1\55"+
+        "\1\145\1\55\1\60\1\157\3\60\1\145\1\60\1\141\1\143\1\164\1\143\1"+
+        "\162\1\uffff\1\157\1\145\2\uffff\1\145\1\154\1\55\1\145\1\156\1"+
+        "\163\1\162\1\uffff\2\145\1\uffff\1\156\2\uffff\1\155\3\uffff\1\60"+
+        "\1\uffff\2\164\1\60\1\141\1\157\1\156\1\163\1\60\1\145\1\uffff\1"+
+        "\55\1\60\2\151\2\55\1\164\1\145\1\uffff\1\60\1\151\1\uffff\1\154"+
+        "\1\165\1\164\1\60\1\uffff\1\60\2\uffff\1\164\1\163\2\uffff\1\147"+
+        "\1\60\1\uffff\1\157\1\60\1\160\1\141\2\uffff\1\145\1\157\1\162\1"+
+        "\uffff\1\156\1\uffff\1\60\1\154\1\55\1\156\1\157\1\55\1\uffff\1"+
+        "\60\1\uffff\1\55\1\165\4\uffff\1\160\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\151\1\157\1\151\1\150\1\156\1\151\1\156\1\162\1\75\5"+
+        "\1\uffff\1\151\1\157\1\151\1\150\1\156\1\151\1\46\1\174\1\75\5"+
         "\uffff\1\156\1\162\1\145\1\160\1\145\1\156\1\151\1\157\1\145\1\157"+
-        "\1\164\4\uffff\1\174\1\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff"+
-        "\1\162\1\145\1\uffff\1\162\1\156\1\144\1\157\1\141\1\163\1\144\1"+
-        "\172\6\uffff\1\144\1\145\1\155\1\141\1\144\1\154\1\164\1\145\1\165"+
-        "\1\164\1\154\1\163\1\156\1\142\1\170\1\162\1\154\1\141\13\uffff"+
-        "\1\164\1\167\1\151\1\144\1\145\1\167\1\142\1\141\1\172\1\uffff\1"+
-        "\145\1\141\1\165\1\160\1\144\1\141\2\145\2\155\1\150\1\143\1\164"+
-        "\1\153\1\147\1\154\1\164\1\155\1\145\1\162\1\151\1\147\1\172\1\154"+
-        "\2\172\1\154\1\142\1\uffff\1\170\1\164\1\155\1\157\1\55\2\164\1"+
-        "\55\1\145\1\55\1\172\1\157\3\172\1\145\1\172\1\141\1\143\1\164\1"+
-        "\143\1\162\1\uffff\1\157\1\145\2\uffff\1\145\1\154\1\55\1\145\1"+
-        "\156\1\163\1\162\1\uffff\2\145\1\uffff\1\156\2\uffff\1\155\3\uffff"+
-        "\1\172\1\uffff\2\164\1\172\1\141\1\157\1\156\1\163\1\172\1\145\1"+
-        "\uffff\1\55\1\172\2\151\2\55\1\164\1\145\1\uffff\1\172\1\151\1\uffff"+
-        "\1\154\1\165\1\164\1\172\1\uffff\1\172\2\uffff\1\164\1\163\2\uffff"+
-        "\1\147\1\172\1\uffff\1\157\1\172\1\160\1\141\2\uffff\1\145\1\157"+
-        "\1\162\1\uffff\1\156\1\uffff\1\172\1\154\1\55\1\156\1\157\1\172"+
-        "\1\uffff\1\172\1\uffff\1\55\1\165\4\uffff\1\160\1\172\1\uffff";
+        "\1\164\5\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\162\1\145\1"+
+        "\uffff\1\162\1\156\1\144\1\157\1\141\1\163\10\uffff\1\144\1\145"+
+        "\1\155\1\141\1\144\1\154\1\164\1\145\1\165\1\164\1\154\1\163\1\156"+
+        "\1\142\1\170\1\162\1\154\1\141\12\uffff\1\164\1\167\1\151\1\144"+
+        "\1\145\1\167\1\142\1\141\1\145\1\141\1\165\1\160\1\144\1\141\2\145"+
+        "\2\155\1\150\1\143\1\164\1\153\1\147\1\154\1\164\1\155\1\145\1\162"+
+        "\1\151\1\147\1\172\1\154\2\172\1\154\1\142\1\170\1\164\1\155\1\157"+
+        "\1\55\2\164\1\55\1\145\1\55\1\172\1\157\3\172\1\145\1\172\1\141"+
+        "\1\143\1\164\1\143\1\162\1\uffff\1\157\1\145\2\uffff\1\145\1\154"+
+        "\1\55\1\145\1\156\1\163\1\162\1\uffff\2\145\1\uffff\1\156\2\uffff"+
+        "\1\155\3\uffff\1\172\1\uffff\2\164\1\172\1\141\1\157\1\156\1\163"+
+        "\1\172\1\145\1\uffff\1\55\1\172\2\151\2\55\1\164\1\145\1\uffff\1"+
+        "\172\1\151\1\uffff\1\154\1\165\1\164\1\172\1\uffff\1\172\2\uffff"+
+        "\1\164\1\163\2\uffff\1\147\1\172\1\uffff\1\157\1\172\1\160\1\141"+
+        "\2\uffff\1\145\1\157\1\162\1\uffff\1\156\1\uffff\1\172\1\154\1\55"+
+        "\1\156\1\157\1\172\1\uffff\1\172\1\uffff\1\55\1\165\4\uffff\1\160"+
+        "\1\172\1\uffff";
     static final String DFA12_acceptS =
         "\12\uffff\1\12\1\13\1\15\1\16\1\17\13\uffff\1\44\1\45\1\46\1\47"+
-        "\1\uffff\1\52\1\uffff\1\56\1\57\3\uffff\1\63\1\64\2\uffff\1\56\10"+
-        "\uffff\1\11\1\12\1\13\1\15\1\16\1\17\22\uffff\1\44\1\45\1\46\1\47"+
-        "\1\50\1\52\1\57\1\60\1\61\1\62\1\63\11\uffff\1\10\34\uffff\1\7\26"+
-        "\uffff\1\22\2\uffff\1\3\1\4\7\uffff\1\24\2\uffff\1\34\1\uffff\1"+
-        "\41\1\30\1\uffff\1\31\1\42\1\55\1\uffff\1\35\11\uffff\1\20\10\uffff"+
-        "\1\32\2\uffff\1\54\4\uffff\1\5\1\uffff\1\23\1\33\2\uffff\1\25\1"+
-        "\26\2\uffff\1\36\4\uffff\1\21\1\6\3\uffff\1\53\1\uffff\1\1\6\uffff"+
-        "\1\14\1\uffff\1\43\2\uffff\1\40\1\37\1\2\1\51\2\uffff\1\27";
+        "\1\51\1\uffff\1\55\1\56\3\uffff\1\62\1\63\2\uffff\1\55\6\uffff\1"+
+        "\7\1\10\1\11\1\12\1\13\1\15\1\16\1\17\22\uffff\1\44\1\45\1\46\1"+
+        "\47\1\51\1\56\1\57\1\60\1\61\1\62\72\uffff\1\22\2\uffff\1\3\1\4"+
+        "\7\uffff\1\24\2\uffff\1\34\1\uffff\1\41\1\30\1\uffff\1\31\1\42\1"+
+        "\54\1\uffff\1\36\11\uffff\1\20\10\uffff\1\32\2\uffff\1\53\4\uffff"+
+        "\1\5\1\uffff\1\23\1\33\2\uffff\1\25\1\26\2\uffff\1\35\4\uffff\1"+
+        "\21\1\6\3\uffff\1\52\1\uffff\1\1\6\uffff\1\14\1\uffff\1\43\2\uffff"+
+        "\1\40\1\37\1\2\1\50\2\uffff\1\27";
     static final String DFA12_specialS =
-        "\1\1\42\uffff\1\2\1\0\u00ca\uffff}>";
+        "\1\0\41\uffff\1\1\1\2\u00c6\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\47\2\46\2\47\1\46\22\47\1\46\1\47\1\43\4\47\1\44\1\33\1"+
-            "\34\2\47\1\16\1\47\1\37\1\45\12\42\1\32\1\47\1\12\1\11\1\13"+
-            "\1\35\1\47\1\7\2\41\1\6\1\5\2\41\1\3\6\41\1\10\3\41\1\4\7\41"+
-            "\3\47\1\40\1\41\1\47\2\41\1\20\1\23\1\24\1\30\1\41\1\2\1\17"+
-            "\2\41\1\26\5\41\1\21\1\31\1\27\1\22\1\1\1\25\3\41\1\14\1\36"+
-            "\1\15\uff82\47",
-            "\1\50\3\uffff\1\51",
-            "\1\54\15\uffff\1\53",
+            "\11\46\2\45\2\46\1\45\22\46\1\45\1\46\1\42\3\46\1\7\1\43\1"+
+            "\33\1\34\2\46\1\16\1\46\1\36\1\44\12\41\1\32\1\46\1\12\1\11"+
+            "\1\13\1\35\1\46\3\40\1\6\1\5\2\40\1\3\12\40\1\4\7\40\3\46\1"+
+            "\37\1\40\1\46\2\40\1\20\1\23\1\24\1\30\1\40\1\2\1\17\2\40\1"+
+            "\26\5\40\1\21\1\31\1\27\1\22\1\1\1\25\3\40\1\14\1\10\1\15\uff82"+
+            "\46",
+            "\1\47\3\uffff\1\50",
+            "\1\53\15\uffff\1\52",
+            "\1\54",
             "\1\55",
             "\1\56",
             "\1\57",
             "\1\60",
             "\1\61",
             "\1\62",
-            "\1\63",
             "",
             "",
             "",
             "",
             "",
-            "\1\71",
-            "\1\73\2\uffff\1\72",
+            "\1\70",
+            "\1\72\2\uffff\1\71",
+            "\1\73",
             "\1\74",
-            "\1\75",
-            "\1\77\3\uffff\1\76",
-            "\1\100\1\uffff\1\101",
-            "\1\103\3\uffff\1\102",
-            "\1\104\5\uffff\1\105",
-            "\1\106\3\uffff\1\107",
-            "\1\110",
-            "\1\111\16\uffff\1\112",
+            "\1\76\3\uffff\1\75",
+            "\1\77\1\uffff\1\100",
+            "\1\102\3\uffff\1\101",
+            "\1\103\5\uffff\1\104",
+            "\1\105\3\uffff\1\106",
+            "\1\107",
+            "\1\110\16\uffff\1\111",
             "",
             "",
             "",
             "",
-            "\1\117",
             "",
-            "\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\32\51\4\uffff\1\51\1\uffff\32\51",
             "",
             "",
-            "\0\122",
-            "\0\122",
-            "\1\123\4\uffff\1\124",
+            "\0\120",
+            "\0\120",
+            "\1\121\4\uffff\1\122",
             "",
+            "",
+            "\1\124",
+            "\1\125",
             "",
             "\1\126",
             "\1\127",
-            "",
             "\1\130",
             "\1\131",
             "\1\132",
             "\1\133",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\134",
             "\1\135",
-            "\1\136",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\1\136\1\137",
             "\1\140",
             "\1\141",
-            "\1\142\1\143",
+            "\1\142",
+            "\1\143",
             "\1\144",
             "\1\145",
             "\1\146",
             "\1\147",
-            "\1\150",
-            "\1\151",
+            "\1\151\4\uffff\1\150",
             "\1\152",
             "\1\153",
-            "\1\155\4\uffff\1\154",
+            "\1\154",
+            "\1\155",
             "\1\156",
             "\1\157",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\160",
             "\1\161",
             "\1\162",
             "\1\163",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\164",
             "\1\165",
             "\1\166",
@@ -2053,8 +2024,7 @@ public class InternalViewLexer extends Lexer {
             "\1\171",
             "\1\172",
             "\1\173",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "",
+            "\1\174",
             "\1\175",
             "\1\176",
             "\1\177",
@@ -2071,133 +2041,127 @@ public class InternalViewLexer extends Lexer {
             "\1\u008a",
             "\1\u008b",
             "\1\u008c",
-            "\1\u008d",
-            "\1\u008e",
+            "\1\u008e\71\uffff\1\u008d",
             "\1\u008f",
             "\1\u0090",
-            "\1\u0091",
-            "\1\u0093\71\uffff\1\u0092",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u0093",
             "\1\u0094",
             "\1\u0095",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\1\u0098",
-            "\1\u0099",
-            "",
+            "\1\u0096",
+            "\1\u0097",
+            "\1\u0099\15\uffff\1\u0098",
             "\1\u009a",
             "\1\u009b",
             "\1\u009c",
-            "\1\u009e\15\uffff\1\u009d",
+            "\1\u009d",
+            "\1\u009e",
             "\1\u009f",
-            "\1\u00a0",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00a1",
-            "\1\u00a2",
-            "\1\u00a3",
-            "\1\u00a4",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\1\u00a6",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00a5",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00a7",
+            "\1\u00a8",
+            "\1\u00a9",
             "\1\u00aa",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\1\u00ab",
+            "",
             "\1\u00ac",
             "\1\u00ad",
+            "",
+            "",
             "\1\u00ae",
             "\1\u00af",
             "\1\u00b0",
-            "",
             "\1\u00b1",
             "\1\u00b2",
-            "",
-            "",
             "\1\u00b3",
             "\1\u00b4",
+            "",
             "\1\u00b5",
             "\1\u00b6",
+            "",
             "\1\u00b7",
+            "",
+            "",
             "\1\u00b8",
-            "\1\u00b9",
+            "",
+            "",
+            "",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "",
             "\1\u00ba",
             "\1\u00bb",
-            "",
-            "\1\u00bc",
-            "",
-            "",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00bd",
-            "",
-            "",
-            "",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "",
+            "\1\u00be",
             "\1\u00bf",
             "\1\u00c0",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00c2",
-            "\1\u00c3",
-            "\1\u00c4",
-            "\1\u00c5",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\1\u00c7",
             "",
+            "\1\u00c3",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00c5",
+            "\1\u00c6",
+            "\1\u00c7",
             "\1\u00c8",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\1\u00c9",
             "\1\u00ca",
-            "\1\u00cb",
+            "",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00cc",
+            "",
             "\1\u00cd",
             "\1\u00ce",
             "\1\u00cf",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\1\u00d1",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "",
             "",
             "\1\u00d2",
             "\1\u00d3",
+            "",
+            "",
             "\1\u00d4",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "",
-            "",
-            "\1\u00d7",
+            "\1\u00d6",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00d8",
-            "",
-            "",
             "\1\u00d9",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
             "",
+            "",
+            "\1\u00da",
             "\1\u00db",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\1\u00dc",
+            "",
             "\1\u00dd",
-            "\1\u00de",
             "",
-            "",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             "\1\u00df",
             "\1\u00e0",
             "\1\u00e1",
-            "",
             "\1\u00e2",
+            "\1\u00e3\2\uffff\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff"+
+            "\32\51",
             "",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "\1\u00e4",
-            "\1\u00e5",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "",
             "\1\u00e6",
             "\1\u00e7",
-            "\1\u00e8\2\uffff\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff"+
-            "\32\52",
-            "",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
-            "",
-            "\1\u00eb",
-            "\1\u00ec",
             "",
             "",
             "",
             "",
-            "\1\u00ed",
-            "\12\52\7\uffff\32\52\4\uffff\1\52\1\uffff\32\52",
+            "\1\u00e8",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
             ""
     };
 
@@ -2231,23 +2195,13 @@ public class InternalViewLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_36 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_36>='\u0000' && LA12_36<='\uFFFF')) ) {s = 82;}
-
-                        else s = 39;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -2263,9 +2217,9 @@ public class InternalViewLexer extends Lexer {
 
                         else if ( (LA12_0=='D') ) {s = 6;}
 
-                        else if ( (LA12_0=='A') ) {s = 7;}
+                        else if ( (LA12_0=='&') ) {s = 7;}
 
-                        else if ( (LA12_0=='O') ) {s = 8;}
+                        else if ( (LA12_0=='|') ) {s = 8;}
 
                         else if ( (LA12_0=='=') ) {s = 9;}
 
@@ -2309,25 +2263,33 @@ public class InternalViewLexer extends Lexer {
 
                         else if ( (LA12_0=='?') ) {s = 29;}
 
-                        else if ( (LA12_0=='|') ) {s = 30;}
+                        else if ( (LA12_0=='.') ) {s = 30;}
 
-                        else if ( (LA12_0=='.') ) {s = 31;}
+                        else if ( (LA12_0=='^') ) {s = 31;}
 
-                        else if ( (LA12_0=='^') ) {s = 32;}
+                        else if ( ((LA12_0>='A' && LA12_0<='C')||(LA12_0>='F' && LA12_0<='G')||(LA12_0>='I' && LA12_0<='R')||(LA12_0>='T' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='b')||LA12_0=='g'||(LA12_0>='j' && LA12_0<='k')||(LA12_0>='m' && LA12_0<='q')||(LA12_0>='x' && LA12_0<='z')) ) {s = 32;}
 
-                        else if ( ((LA12_0>='B' && LA12_0<='C')||(LA12_0>='F' && LA12_0<='G')||(LA12_0>='I' && LA12_0<='N')||(LA12_0>='P' && LA12_0<='R')||(LA12_0>='T' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='b')||LA12_0=='g'||(LA12_0>='j' && LA12_0<='k')||(LA12_0>='m' && LA12_0<='q')||(LA12_0>='x' && LA12_0<='z')) ) {s = 33;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 33;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 34;}
+                        else if ( (LA12_0=='\"') ) {s = 34;}
 
-                        else if ( (LA12_0=='\"') ) {s = 35;}
+                        else if ( (LA12_0=='\'') ) {s = 35;}
 
-                        else if ( (LA12_0=='\'') ) {s = 36;}
+                        else if ( (LA12_0=='/') ) {s = 36;}
 
-                        else if ( (LA12_0=='/') ) {s = 37;}
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 37;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 38;}
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='%')||(LA12_0>='*' && LA12_0<='+')||LA12_0=='-'||LA12_0==';'||LA12_0=='@'||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 38;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='*' && LA12_0<='+')||LA12_0=='-'||LA12_0==';'||LA12_0=='@'||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 39;}
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA12_34 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_34>='\u0000' && LA12_34<='\uFFFF')) ) {s = 80;}
+
+                        else s = 38;
 
                         if ( s>=0 ) return s;
                         break;
@@ -2335,9 +2297,9 @@ public class InternalViewLexer extends Lexer {
                         int LA12_35 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_35>='\u0000' && LA12_35<='\uFFFF')) ) {s = 82;}
+                        if ( ((LA12_35>='\u0000' && LA12_35<='\uFFFF')) ) {s = 80;}
 
-                        else s = 39;
+                        else s = 38;
 
                         if ( s>=0 ) return s;
                         break;

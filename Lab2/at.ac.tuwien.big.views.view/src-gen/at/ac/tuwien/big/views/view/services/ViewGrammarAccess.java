@@ -749,40 +749,22 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ConditionalElement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cElementGroupParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final RuleCall cViewElementParserRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
-		private final Group cGroup_1_1 = (Group)cGroup_1.eContents().get(1);
-		private final Keyword cWithKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
-		private final Assignment cConditionAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
-		private final RuleCall cConditionConditionParserRuleCall_1_1_1_0 = (RuleCall)cConditionAssignment_1_1_1.eContents().get(0);
+		private final RuleCall cViewElementParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
+		////cp: ich glaub nicht das die in irgendeiner weise zieht
+		////weils in keiner regel vorkommt. 
 		//ConditionalElement:
-		//	ElementGroup | ViewElement ("with" condition=Condition)?;
+		//	ElementGroup | ViewElement;
 		@Override public ParserRule getRule() { return rule; }
 
-		//ElementGroup | ViewElement ("with" condition=Condition)?
+		//ElementGroup | ViewElement
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ElementGroup
 		public RuleCall getElementGroupParserRuleCall_0() { return cElementGroupParserRuleCall_0; }
 
-		//ViewElement ("with" condition=Condition)?
-		public Group getGroup_1() { return cGroup_1; }
-
 		//ViewElement
-		public RuleCall getViewElementParserRuleCall_1_0() { return cViewElementParserRuleCall_1_0; }
-
-		//("with" condition=Condition)?
-		public Group getGroup_1_1() { return cGroup_1_1; }
-
-		//"with"
-		public Keyword getWithKeyword_1_1_0() { return cWithKeyword_1_1_0; }
-
-		//condition=Condition
-		public Assignment getConditionAssignment_1_1_1() { return cConditionAssignment_1_1_1; }
-
-		//Condition
-		public RuleCall getConditionConditionParserRuleCall_1_1_1_0() { return cConditionConditionParserRuleCall_1_1_1_0; }
+		public RuleCall getViewElementParserRuleCall_1() { return cViewElementParserRuleCall_1; }
 	}
 
 	public class ElementGroupElements extends AbstractParserRuleElementFinder {
@@ -801,19 +783,19 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_4_1_0 = (Keyword)cGroup_4_1.eContents().get(0);
 		private final Assignment cViewElementsAssignment_4_1_1 = (Assignment)cGroup_4_1.eContents().get(1);
 		private final RuleCall cViewElementsViewElementParserRuleCall_4_1_1_0 = (RuleCall)cViewElementsAssignment_4_1_1.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cWithKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cConditionAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cConditionConditionParserRuleCall_5_1_0 = (RuleCall)cConditionAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cWithKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cConditionAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cConditionConditionParserRuleCall_6_1_0 = (RuleCall)cConditionAssignment_6_1.eContents().get(0);
 		
 		//ElementGroup:
-		//	layout=Layout "elementgroup" header=STRING "{" (viewElements+=ViewElement ("," viewElements+=ViewElement)*)? ("with"
-		//	condition=Condition)? "}";
+		//	layout=Layout "elementgroup" header=STRING "{" (viewElements+=ViewElement ("," viewElements+=ViewElement)*)? "}"
+		//	("with" condition=Condition)?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//layout=Layout "elementgroup" header=STRING "{" (viewElements+=ViewElement ("," viewElements+=ViewElement)*)? ("with"
-		//condition=Condition)? "}"
+		//layout=Layout "elementgroup" header=STRING "{" (viewElements+=ViewElement ("," viewElements+=ViewElement)*)? "}" ("with"
+		//condition=Condition)?
 		public Group getGroup() { return cGroup; }
 
 		//layout=Layout
@@ -855,40 +837,60 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		//ViewElement
 		public RuleCall getViewElementsViewElementParserRuleCall_4_1_1_0() { return cViewElementsViewElementParserRuleCall_4_1_1_0; }
 
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+
 		//("with" condition=Condition)?
-		public Group getGroup_5() { return cGroup_5; }
+		public Group getGroup_6() { return cGroup_6; }
 
 		//"with"
-		public Keyword getWithKeyword_5_0() { return cWithKeyword_5_0; }
+		public Keyword getWithKeyword_6_0() { return cWithKeyword_6_0; }
 
 		//condition=Condition
-		public Assignment getConditionAssignment_5_1() { return cConditionAssignment_5_1; }
+		public Assignment getConditionAssignment_6_1() { return cConditionAssignment_6_1; }
 
 		//Condition
-		public RuleCall getConditionConditionParserRuleCall_5_1_0() { return cConditionConditionParserRuleCall_5_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public RuleCall getConditionConditionParserRuleCall_6_1_0() { return cConditionConditionParserRuleCall_6_1_0; }
 	}
 
 	public class ViewElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ViewElement");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cAssociationElementParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cPropertyElementParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final RuleCall cAssociationElementParserRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
+		private final RuleCall cPropertyElementParserRuleCall_0_1 = (RuleCall)cAlternatives_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cWithKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cConditionAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cConditionConditionParserRuleCall_1_1_0 = (RuleCall)cConditionAssignment_1_1.eContents().get(0);
 		
 		//ViewElement:
-		//	AssociationElement | PropertyElement;
+		//	(AssociationElement | PropertyElement) ("with" condition=Condition)?;
 		@Override public ParserRule getRule() { return rule; }
 
+		//(AssociationElement | PropertyElement) ("with" condition=Condition)?
+		public Group getGroup() { return cGroup; }
+
 		//AssociationElement | PropertyElement
-		public Alternatives getAlternatives() { return cAlternatives; }
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//AssociationElement
-		public RuleCall getAssociationElementParserRuleCall_0() { return cAssociationElementParserRuleCall_0; }
+		public RuleCall getAssociationElementParserRuleCall_0_0() { return cAssociationElementParserRuleCall_0_0; }
 
 		//PropertyElement
-		public RuleCall getPropertyElementParserRuleCall_1() { return cPropertyElementParserRuleCall_1; }
+		public RuleCall getPropertyElementParserRuleCall_0_1() { return cPropertyElementParserRuleCall_0_1; }
+
+		//("with" condition=Condition)?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"with"
+		public Keyword getWithKeyword_1_0() { return cWithKeyword_1_0; }
+
+		//condition=Condition
+		public Assignment getConditionAssignment_1_1() { return cConditionAssignment_1_1; }
+
+		//Condition
+		public RuleCall getConditionConditionParserRuleCall_1_1_0() { return cConditionConditionParserRuleCall_1_1_0; }
 	}
 
 	public class AssociationElementElements extends AbstractParserRuleElementFinder {
@@ -1248,18 +1250,20 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cElementIDIDTerminalRuleCall_1_0 = (RuleCall)cElementIDAssignment_1.eContents().get(0);
 		private final Assignment cLabelAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cLabelSTRINGTerminalRuleCall_2_0 = (RuleCall)cLabelAssignment_2.eContents().get(0);
-		private final Assignment cFormatAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cFormatSTRINGTerminalRuleCall_3_0 = (RuleCall)cFormatAssignment_3.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cFormatKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cFormatAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cFormatSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cFormatAssignment_3_1.eContents().get(0);
 		private final Keyword cHandlesKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cPropertyAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final CrossReference cPropertyPropertyCrossReference_5_0 = (CrossReference)cPropertyAssignment_5.eContents().get(0);
 		private final RuleCall cPropertyPropertyQualifiedNameParserRuleCall_5_0_1 = (RuleCall)cPropertyPropertyCrossReference_5_0.eContents().get(1);
 		
 		//DateTimePicker:
-		//	"date-time-picker" elementID=ID label=STRING format=STRING "handles" property=[Property|QualifiedName];
+		//	"date-time-picker" elementID=ID label=STRING ("format" format=STRING)? "handles" property=[Property|QualifiedName];
 		@Override public ParserRule getRule() { return rule; }
 
-		//"date-time-picker" elementID=ID label=STRING format=STRING "handles" property=[Property|QualifiedName]
+		//"date-time-picker" elementID=ID label=STRING ("format" format=STRING)? "handles" property=[Property|QualifiedName]
 		public Group getGroup() { return cGroup; }
 
 		//"date-time-picker"
@@ -1277,11 +1281,17 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getLabelSTRINGTerminalRuleCall_2_0() { return cLabelSTRINGTerminalRuleCall_2_0; }
 
+		//("format" format=STRING)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"format"
+		public Keyword getFormatKeyword_3_0() { return cFormatKeyword_3_0; }
+
 		//format=STRING
-		public Assignment getFormatAssignment_3() { return cFormatAssignment_3; }
+		public Assignment getFormatAssignment_3_1() { return cFormatAssignment_3_1; }
 
 		//STRING
-		public RuleCall getFormatSTRINGTerminalRuleCall_3_0() { return cFormatSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getFormatSTRINGTerminalRuleCall_3_1_0() { return cFormatSTRINGTerminalRuleCall_3_1_0; }
 
 		//"handles"
 		public Keyword getHandlesKeyword_4() { return cHandlesKeyword_4; }
@@ -1679,12 +1689,8 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cComposedConditionsVisibilityConditionParserRuleCall_4_0_0 = (RuleCall)cComposedConditionsAssignment_4_0.eContents().get(0);
 		private final Assignment cCompositionTypeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cCompositionTypeCompositeConditionTypeEnumRuleCall_4_1_0 = (RuleCall)cCompositionTypeAssignment_4_1.eContents().get(0);
-		private final Group cGroup_4_2 = (Group)cGroup_4.eContents().get(2);
-		private final Keyword cVerticalLineVerticalLineKeyword_4_2_0 = (Keyword)cGroup_4_2.eContents().get(0);
-		private final Assignment cCompositionTypeAssignment_4_2_1 = (Assignment)cGroup_4_2.eContents().get(1);
-		private final RuleCall cCompositionTypeCompositeConditionTypeEnumRuleCall_4_2_1_0 = (RuleCall)cCompositionTypeAssignment_4_2_1.eContents().get(0);
-		private final Assignment cComposedConditionsAssignment_4_2_2 = (Assignment)cGroup_4_2.eContents().get(2);
-		private final RuleCall cComposedConditionsVisibilityConditionParserRuleCall_4_2_2_0 = (RuleCall)cComposedConditionsAssignment_4_2_2.eContents().get(0);
+		private final Assignment cComposedConditionsAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cComposedConditionsVisibilityConditionParserRuleCall_4_2_0 = (RuleCall)cComposedConditionsAssignment_4_2.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Keyword cQuestionMarkKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Assignment cTypeAssignment_7 = (Assignment)cGroup.eContents().get(7);
@@ -1692,13 +1698,11 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//CompositeCondition:
 		//	"composite-condition" conditionID=ID ":" "(" (composedConditions+=VisibilityCondition
-		//	compositionType=CompositeConditionType ("||" compositionType=CompositeConditionType
-		//	composedConditions+=VisibilityCondition)*)? ")" "?" type=VisibilityConditionType;
+		//	compositionType=CompositeConditionType composedConditions+=VisibilityCondition) ")" "?" type=VisibilityConditionType;
 		@Override public ParserRule getRule() { return rule; }
 
 		//"composite-condition" conditionID=ID ":" "(" (composedConditions+=VisibilityCondition
-		//compositionType=CompositeConditionType ("||" compositionType=CompositeConditionType
-		//composedConditions+=VisibilityCondition)*)? ")" "?" type=VisibilityConditionType
+		//compositionType=CompositeConditionType composedConditions+=VisibilityCondition) ")" "?" type=VisibilityConditionType
 		public Group getGroup() { return cGroup; }
 
 		//"composite-condition"
@@ -1716,8 +1720,7 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_3() { return cLeftParenthesisKeyword_3; }
 
-		//(composedConditions+=VisibilityCondition compositionType=CompositeConditionType ("||"
-		//compositionType=CompositeConditionType composedConditions+=VisibilityCondition)*)?
+		//composedConditions+=VisibilityCondition compositionType=CompositeConditionType composedConditions+=VisibilityCondition
 		public Group getGroup_4() { return cGroup_4; }
 
 		//composedConditions+=VisibilityCondition
@@ -1732,23 +1735,11 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		//CompositeConditionType
 		public RuleCall getCompositionTypeCompositeConditionTypeEnumRuleCall_4_1_0() { return cCompositionTypeCompositeConditionTypeEnumRuleCall_4_1_0; }
 
-		//("||" compositionType=CompositeConditionType composedConditions+=VisibilityCondition)*
-		public Group getGroup_4_2() { return cGroup_4_2; }
-
-		//"||"
-		public Keyword getVerticalLineVerticalLineKeyword_4_2_0() { return cVerticalLineVerticalLineKeyword_4_2_0; }
-
-		//compositionType=CompositeConditionType
-		public Assignment getCompositionTypeAssignment_4_2_1() { return cCompositionTypeAssignment_4_2_1; }
-
-		//CompositeConditionType
-		public RuleCall getCompositionTypeCompositeConditionTypeEnumRuleCall_4_2_1_0() { return cCompositionTypeCompositeConditionTypeEnumRuleCall_4_2_1_0; }
-
 		//composedConditions+=VisibilityCondition
-		public Assignment getComposedConditionsAssignment_4_2_2() { return cComposedConditionsAssignment_4_2_2; }
+		public Assignment getComposedConditionsAssignment_4_2() { return cComposedConditionsAssignment_4_2; }
 
 		//VisibilityCondition
-		public RuleCall getComposedConditionsVisibilityConditionParserRuleCall_4_2_2_0() { return cComposedConditionsVisibilityConditionParserRuleCall_4_2_2_0; }
+		public RuleCall getComposedConditionsVisibilityConditionParserRuleCall_4_2_0() { return cComposedConditionsVisibilityConditionParserRuleCall_4_2_0; }
 
 		//")"
 		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
@@ -1958,28 +1949,28 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "CompositeConditionType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cAndEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cAndAndKeyword_0_0 = (Keyword)cAndEnumLiteralDeclaration_0.eContents().get(0);
+		private final Keyword cAndAmpersandAmpersandKeyword_0_0 = (Keyword)cAndEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cOrEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cOrOrKeyword_1_0 = (Keyword)cOrEnumLiteralDeclaration_1.eContents().get(0);
+		private final Keyword cOrVerticalLineVerticalLineKeyword_1_0 = (Keyword)cOrEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum CompositeConditionType:
-		//	And | Or;
+		//	And="&&" | Or="||";
 		public EnumRule getRule() { return rule; }
 
-		//And | Or
+		//And="&&" | Or="||"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//And
+		//And="&&"
 		public EnumLiteralDeclaration getAndEnumLiteralDeclaration_0() { return cAndEnumLiteralDeclaration_0; }
 
-		//"And"
-		public Keyword getAndAndKeyword_0_0() { return cAndAndKeyword_0_0; }
+		//"&&"
+		public Keyword getAndAmpersandAmpersandKeyword_0_0() { return cAndAmpersandAmpersandKeyword_0_0; }
 
-		//Or
+		//Or="||"
 		public EnumLiteralDeclaration getOrEnumLiteralDeclaration_1() { return cOrEnumLiteralDeclaration_1; }
 
-		//"Or"
-		public Keyword getOrOrKeyword_1_0() { return cOrOrKeyword_1_0; }
+		//"||"
+		public Keyword getOrVerticalLineVerticalLineKeyword_1_0() { return cOrVerticalLineVerticalLineKeyword_1_0; }
 	}
 
 	public class ComparisonConditionTypeElements extends AbstractEnumRuleElementFinder {
@@ -2225,8 +2216,10 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 		return getDeleteViewAccess().getRule();
 	}
 
+	////cp: ich glaub nicht das die in irgendeiner weise zieht
+	////weils in keiner regel vorkommt. 
 	//ConditionalElement:
-	//	ElementGroup | ViewElement ("with" condition=Condition)?;
+	//	ElementGroup | ViewElement;
 	public ConditionalElementElements getConditionalElementAccess() {
 		return pConditionalElement;
 	}
@@ -2236,8 +2229,8 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ElementGroup:
-	//	layout=Layout "elementgroup" header=STRING "{" (viewElements+=ViewElement ("," viewElements+=ViewElement)*)? ("with"
-	//	condition=Condition)? "}";
+	//	layout=Layout "elementgroup" header=STRING "{" (viewElements+=ViewElement ("," viewElements+=ViewElement)*)? "}"
+	//	("with" condition=Condition)?;
 	public ElementGroupElements getElementGroupAccess() {
 		return pElementGroup;
 	}
@@ -2247,7 +2240,7 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ViewElement:
-	//	AssociationElement | PropertyElement;
+	//	(AssociationElement | PropertyElement) ("with" condition=Condition)?;
 	public ViewElementElements getViewElementAccess() {
 		return pViewElement;
 	}
@@ -2309,7 +2302,7 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DateTimePicker:
-	//	"date-time-picker" elementID=ID label=STRING format=STRING "handles" property=[Property|QualifiedName];
+	//	"date-time-picker" elementID=ID label=STRING ("format" format=STRING)? "handles" property=[Property|QualifiedName];
 	public DateTimePickerElements getDateTimePickerAccess() {
 		return pDateTimePicker;
 	}
@@ -2431,8 +2424,7 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 
 	//CompositeCondition:
 	//	"composite-condition" conditionID=ID ":" "(" (composedConditions+=VisibilityCondition
-	//	compositionType=CompositeConditionType ("||" compositionType=CompositeConditionType
-	//	composedConditions+=VisibilityCondition)*)? ")" "?" type=VisibilityConditionType;
+	//	compositionType=CompositeConditionType composedConditions+=VisibilityCondition) ")" "?" type=VisibilityConditionType;
 	public CompositeConditionElements getCompositeConditionAccess() {
 		return pCompositeCondition;
 	}
@@ -2452,7 +2444,7 @@ public class ViewGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum CompositeConditionType:
-	//	And | Or;
+	//	And="&&" | Or="||";
 	public CompositeConditionTypeElements getCompositeConditionTypeAccess() {
 		return unknownRuleCompositeConditionType;
 	}

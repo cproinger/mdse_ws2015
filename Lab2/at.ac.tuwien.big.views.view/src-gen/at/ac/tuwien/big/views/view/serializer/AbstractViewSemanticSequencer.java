@@ -53,13 +53,13 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 				return; 
 			case ViewsPackage.COLUMN:
 				if(context == grammarAccess.getColumnRule() ||
-				   context == grammarAccess.getPropertyElementRule() ||
-				   context == grammarAccess.getViewElementRule()) {
+				   context == grammarAccess.getPropertyElementRule()) {
 					sequence_Column(context, (Column) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getConditionalElementRule()) {
-					sequence_Column_ConditionalElement(context, (Column) semanticObject); 
+				else if(context == grammarAccess.getConditionalElementRule() ||
+				   context == grammarAccess.getViewElementRule()) {
+					sequence_Column_ViewElement(context, (Column) semanticObject); 
 					return; 
 				}
 				else break;
@@ -73,14 +73,14 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 				sequence_CreateView(context, (CreateView) semanticObject); 
 				return; 
 			case ViewsPackage.DATE_TIME_PICKER:
-				if(context == grammarAccess.getConditionalElementRule()) {
-					sequence_ConditionalElement_DateTimePicker(context, (DateTimePicker) semanticObject); 
+				if(context == grammarAccess.getDateTimePickerRule() ||
+				   context == grammarAccess.getPropertyElementRule()) {
+					sequence_DateTimePicker(context, (DateTimePicker) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getDateTimePickerRule() ||
-				   context == grammarAccess.getPropertyElementRule() ||
+				else if(context == grammarAccess.getConditionalElementRule() ||
 				   context == grammarAccess.getViewElementRule()) {
-					sequence_DateTimePicker(context, (DateTimePicker) semanticObject); 
+					sequence_DateTimePicker_ViewElement(context, (DateTimePicker) semanticObject); 
 					return; 
 				}
 				else break;
@@ -100,18 +100,18 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 				sequence_Link(context, (Link) semanticObject); 
 				return; 
 			case ViewsPackage.LIST:
-				if(context == grammarAccess.getConditionalElementRule()) {
-					sequence_ConditionalElement_List(context, (List) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getLinkableElementRule()) {
+				if(context == grammarAccess.getLinkableElementRule()) {
 					sequence_LinkableElement_List(context, (List) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getAssociationElementRule() ||
-				   context == grammarAccess.getListRule() ||
-				   context == grammarAccess.getViewElementRule()) {
+				   context == grammarAccess.getListRule()) {
 					sequence_List(context, (List) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getConditionalElementRule() ||
+				   context == grammarAccess.getViewElementRule()) {
+					sequence_List_ViewElement(context, (List) semanticObject); 
 					return; 
 				}
 				else break;
@@ -119,14 +119,14 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 				sequence_ReadView(context, (ReadView) semanticObject); 
 				return; 
 			case ViewsPackage.SELECTION:
-				if(context == grammarAccess.getConditionalElementRule()) {
-					sequence_ConditionalElement_Selection(context, (Selection) semanticObject); 
+				if(context == grammarAccess.getPropertyElementRule() ||
+				   context == grammarAccess.getSelectionRule()) {
+					sequence_Selection(context, (Selection) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getPropertyElementRule() ||
-				   context == grammarAccess.getSelectionRule() ||
+				else if(context == grammarAccess.getConditionalElementRule() ||
 				   context == grammarAccess.getViewElementRule()) {
-					sequence_Selection(context, (Selection) semanticObject); 
+					sequence_Selection_ViewElement(context, (Selection) semanticObject); 
 					return; 
 				}
 				else break;
@@ -134,30 +134,30 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 				sequence_SelectionItem(context, (SelectionItem) semanticObject); 
 				return; 
 			case ViewsPackage.TABLE:
-				if(context == grammarAccess.getConditionalElementRule()) {
-					sequence_ConditionalElement_Table(context, (Table) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getLinkableElementRule()) {
+				if(context == grammarAccess.getLinkableElementRule()) {
 					sequence_LinkableElement_Table(context, (Table) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getAssociationElementRule() ||
-				   context == grammarAccess.getTableRule() ||
-				   context == grammarAccess.getViewElementRule()) {
+				   context == grammarAccess.getTableRule()) {
 					sequence_Table(context, (Table) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getConditionalElementRule() ||
+				   context == grammarAccess.getViewElementRule()) {
+					sequence_Table_ViewElement(context, (Table) semanticObject); 
 					return; 
 				}
 				else break;
 			case ViewsPackage.TEXT:
-				if(context == grammarAccess.getConditionalElementRule()) {
-					sequence_ConditionalElement_Text(context, (Text) semanticObject); 
+				if(context == grammarAccess.getPropertyElementRule() ||
+				   context == grammarAccess.getTextRule()) {
+					sequence_Text(context, (Text) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getPropertyElementRule() ||
-				   context == grammarAccess.getTextRule() ||
+				else if(context == grammarAccess.getConditionalElementRule() ||
 				   context == grammarAccess.getViewElementRule()) {
-					sequence_Text(context, (Text) semanticObject); 
+					sequence_Text_ViewElement(context, (Text) semanticObject); 
 					return; 
 				}
 				else break;
@@ -203,7 +203,7 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 	 * Constraint:
 	 *     (elementID=ID label=STRING property=[Property|QualifiedName] condition=Condition?)
 	 */
-	protected void sequence_Column_ConditionalElement(EObject context, Column semanticObject) {
+	protected void sequence_Column_ViewElement(EObject context, Column semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -240,73 +240,13 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 	 * Constraint:
 	 *     (
 	 *         conditionID=ID 
-	 *         (
-	 *             composedConditions+=VisibilityCondition 
-	 *             compositionType=CompositeConditionType 
-	 *             (compositionType=CompositeConditionType composedConditions+=VisibilityCondition)*
-	 *         )? 
+	 *         composedConditions+=VisibilityCondition 
+	 *         compositionType=CompositeConditionType 
+	 *         composedConditions+=VisibilityCondition 
 	 *         type=VisibilityConditionType
 	 *     )
 	 */
 	protected void sequence_CompositeCondition(EObject context, CompositeCondition semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (elementID=ID label=STRING format=STRING property=[Property|QualifiedName] condition=Condition?)
-	 */
-	protected void sequence_ConditionalElement_DateTimePicker(EObject context, DateTimePicker semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (elementID=ID label=STRING association=[Association|QualifiedName] (link+=Link link+=Link*)? condition=Condition?)
-	 */
-	protected void sequence_ConditionalElement_List(EObject context, List semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (elementID=ID label=STRING property=[Property|QualifiedName] (selectionItems+=SelectionItem selectionItems+=SelectionItem*)? condition=Condition?)
-	 */
-	protected void sequence_ConditionalElement_Selection(EObject context, Selection semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (
-	 *         elementID=ID 
-	 *         label=STRING 
-	 *         association=[Association|QualifiedName] 
-	 *         ((link+=Link link+=Link*) | (link+=Link+ columns+=Column columns+=Column*) | (columns+=Column columns+=Column*)?) 
-	 *         condition=Condition?
-	 *     )
-	 */
-	protected void sequence_ConditionalElement_Table(EObject context, Table semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (
-	 *         long?='long'? 
-	 *         elementID=ID 
-	 *         label=STRING 
-	 *         format=STRING? 
-	 *         property=[Property|QualifiedName] 
-	 *         condition=Condition?
-	 *     )
-	 */
-	protected void sequence_ConditionalElement_Text(EObject context, Text semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -330,9 +270,18 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 	
 	/**
 	 * Constraint:
-	 *     (elementID=ID label=STRING format=STRING property=[Property|QualifiedName])
+	 *     (elementID=ID label=STRING format=STRING? property=[Property|QualifiedName])
 	 */
 	protected void sequence_DateTimePicker(EObject context, DateTimePicker semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (elementID=ID label=STRING format=STRING? property=[Property|QualifiedName] condition=Condition?)
+	 */
+	protected void sequence_DateTimePicker_ViewElement(EObject context, DateTimePicker semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -452,6 +401,15 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 	
 	/**
 	 * Constraint:
+	 *     (elementID=ID label=STRING association=[Association|QualifiedName] (link+=Link link+=Link*)? condition=Condition?)
+	 */
+	protected void sequence_List_ViewElement(EObject context, List semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (
 	 *         layout=Layout 
 	 *         startView?='start'? 
@@ -494,6 +452,15 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 	
 	/**
 	 * Constraint:
+	 *     (elementID=ID label=STRING property=[Property|QualifiedName] (selectionItems+=SelectionItem selectionItems+=SelectionItem*)? condition=Condition?)
+	 */
+	protected void sequence_Selection_ViewElement(EObject context, Selection semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (
 	 *         elementID=ID 
 	 *         label=STRING 
@@ -508,9 +475,40 @@ public abstract class AbstractViewSemanticSequencer extends AbstractDelegatingSe
 	
 	/**
 	 * Constraint:
+	 *     (
+	 *         elementID=ID 
+	 *         label=STRING 
+	 *         association=[Association|QualifiedName] 
+	 *         ((link+=Link link+=Link*) | (link+=Link+ columns+=Column columns+=Column*) | (columns+=Column columns+=Column*)?) 
+	 *         condition=Condition?
+	 *     )
+	 */
+	protected void sequence_Table_ViewElement(EObject context, Table semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (long?='long'? elementID=ID label=STRING format=STRING? property=[Property|QualifiedName])
 	 */
 	protected void sequence_Text(EObject context, Text semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         long?='long'? 
+	 *         elementID=ID 
+	 *         label=STRING 
+	 *         format=STRING? 
+	 *         property=[Property|QualifiedName] 
+	 *         condition=Condition?
+	 *     )
+	 */
+	protected void sequence_Text_ViewElement(EObject context, Text semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

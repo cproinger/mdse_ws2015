@@ -40,7 +40,7 @@ public class ViewParser extends AbstractContentAssistParser {
 					put(grammarAccess.getViewAccess().getAlternatives(), "rule__View__Alternatives");
 					put(grammarAccess.getClassOperationViewAccess().getAlternatives(), "rule__ClassOperationView__Alternatives");
 					put(grammarAccess.getConditionalElementAccess().getAlternatives(), "rule__ConditionalElement__Alternatives");
-					put(grammarAccess.getViewElementAccess().getAlternatives(), "rule__ViewElement__Alternatives");
+					put(grammarAccess.getViewElementAccess().getAlternatives_0(), "rule__ViewElement__Alternatives_0");
 					put(grammarAccess.getAssociationElementAccess().getAlternatives(), "rule__AssociationElement__Alternatives");
 					put(grammarAccess.getTableAccess().getAlternatives_6(), "rule__Table__Alternatives_6");
 					put(grammarAccess.getPropertyElementAccess().getAlternatives(), "rule__PropertyElement__Alternatives");
@@ -76,12 +76,12 @@ public class ViewParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDeleteViewAccess().getGroup_8(), "rule__DeleteView__Group_8__0");
 					put(grammarAccess.getDeleteViewAccess().getGroup_9(), "rule__DeleteView__Group_9__0");
 					put(grammarAccess.getDeleteViewAccess().getGroup_9_1(), "rule__DeleteView__Group_9_1__0");
-					put(grammarAccess.getConditionalElementAccess().getGroup_1(), "rule__ConditionalElement__Group_1__0");
-					put(grammarAccess.getConditionalElementAccess().getGroup_1_1(), "rule__ConditionalElement__Group_1_1__0");
 					put(grammarAccess.getElementGroupAccess().getGroup(), "rule__ElementGroup__Group__0");
 					put(grammarAccess.getElementGroupAccess().getGroup_4(), "rule__ElementGroup__Group_4__0");
 					put(grammarAccess.getElementGroupAccess().getGroup_4_1(), "rule__ElementGroup__Group_4_1__0");
-					put(grammarAccess.getElementGroupAccess().getGroup_5(), "rule__ElementGroup__Group_5__0");
+					put(grammarAccess.getElementGroupAccess().getGroup_6(), "rule__ElementGroup__Group_6__0");
+					put(grammarAccess.getViewElementAccess().getGroup(), "rule__ViewElement__Group__0");
+					put(grammarAccess.getViewElementAccess().getGroup_1(), "rule__ViewElement__Group_1__0");
 					put(grammarAccess.getListAccess().getGroup(), "rule__List__Group__0");
 					put(grammarAccess.getListAccess().getGroup_6(), "rule__List__Group_6__0");
 					put(grammarAccess.getListAccess().getGroup_6_1(), "rule__List__Group_6_1__0");
@@ -96,6 +96,7 @@ public class ViewParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTableAccess().getGroup_6_2_1(), "rule__Table__Group_6_2_1__0");
 					put(grammarAccess.getColumnAccess().getGroup(), "rule__Column__Group__0");
 					put(grammarAccess.getDateTimePickerAccess().getGroup(), "rule__DateTimePicker__Group__0");
+					put(grammarAccess.getDateTimePickerAccess().getGroup_3(), "rule__DateTimePicker__Group_3__0");
 					put(grammarAccess.getTextAccess().getGroup(), "rule__Text__Group__0");
 					put(grammarAccess.getTextAccess().getGroup_4(), "rule__Text__Group_4__0");
 					put(grammarAccess.getSelectionAccess().getGroup(), "rule__Selection__Group__0");
@@ -107,7 +108,6 @@ public class ViewParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLinkAccess().getGroup(), "rule__Link__Group__0");
 					put(grammarAccess.getCompositeConditionAccess().getGroup(), "rule__CompositeCondition__Group__0");
 					put(grammarAccess.getCompositeConditionAccess().getGroup_4(), "rule__CompositeCondition__Group_4__0");
-					put(grammarAccess.getCompositeConditionAccess().getGroup_4_2(), "rule__CompositeCondition__Group_4_2__0");
 					put(grammarAccess.getComparisonConditionAccess().getGroup(), "rule__ComparisonCondition__Group__0");
 					put(grammarAccess.getEIntAccess().getGroup(), "rule__EInt__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
@@ -157,12 +157,12 @@ public class ViewParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDeleteViewAccess().getDescriptionAssignment_8_1(), "rule__DeleteView__DescriptionAssignment_8_1");
 					put(grammarAccess.getDeleteViewAccess().getElementGroupsAssignment_9_0(), "rule__DeleteView__ElementGroupsAssignment_9_0");
 					put(grammarAccess.getDeleteViewAccess().getElementGroupsAssignment_9_1_1(), "rule__DeleteView__ElementGroupsAssignment_9_1_1");
-					put(grammarAccess.getConditionalElementAccess().getConditionAssignment_1_1_1(), "rule__ConditionalElement__ConditionAssignment_1_1_1");
 					put(grammarAccess.getElementGroupAccess().getLayoutAssignment_0(), "rule__ElementGroup__LayoutAssignment_0");
 					put(grammarAccess.getElementGroupAccess().getHeaderAssignment_2(), "rule__ElementGroup__HeaderAssignment_2");
 					put(grammarAccess.getElementGroupAccess().getViewElementsAssignment_4_0(), "rule__ElementGroup__ViewElementsAssignment_4_0");
 					put(grammarAccess.getElementGroupAccess().getViewElementsAssignment_4_1_1(), "rule__ElementGroup__ViewElementsAssignment_4_1_1");
-					put(grammarAccess.getElementGroupAccess().getConditionAssignment_5_1(), "rule__ElementGroup__ConditionAssignment_5_1");
+					put(grammarAccess.getElementGroupAccess().getConditionAssignment_6_1(), "rule__ElementGroup__ConditionAssignment_6_1");
+					put(grammarAccess.getViewElementAccess().getConditionAssignment_1_1(), "rule__ViewElement__ConditionAssignment_1_1");
 					put(grammarAccess.getListAccess().getElementIDAssignment_1(), "rule__List__ElementIDAssignment_1");
 					put(grammarAccess.getListAccess().getLabelAssignment_2(), "rule__List__LabelAssignment_2");
 					put(grammarAccess.getListAccess().getAssociationAssignment_4(), "rule__List__AssociationAssignment_4");
@@ -183,7 +183,7 @@ public class ViewParser extends AbstractContentAssistParser {
 					put(grammarAccess.getColumnAccess().getPropertyAssignment_4(), "rule__Column__PropertyAssignment_4");
 					put(grammarAccess.getDateTimePickerAccess().getElementIDAssignment_1(), "rule__DateTimePicker__ElementIDAssignment_1");
 					put(grammarAccess.getDateTimePickerAccess().getLabelAssignment_2(), "rule__DateTimePicker__LabelAssignment_2");
-					put(grammarAccess.getDateTimePickerAccess().getFormatAssignment_3(), "rule__DateTimePicker__FormatAssignment_3");
+					put(grammarAccess.getDateTimePickerAccess().getFormatAssignment_3_1(), "rule__DateTimePicker__FormatAssignment_3_1");
 					put(grammarAccess.getDateTimePickerAccess().getPropertyAssignment_5(), "rule__DateTimePicker__PropertyAssignment_5");
 					put(grammarAccess.getTextAccess().getLongAssignment_0(), "rule__Text__LongAssignment_0");
 					put(grammarAccess.getTextAccess().getElementIDAssignment_2(), "rule__Text__ElementIDAssignment_2");
@@ -205,8 +205,7 @@ public class ViewParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCompositeConditionAccess().getConditionIDAssignment_1(), "rule__CompositeCondition__ConditionIDAssignment_1");
 					put(grammarAccess.getCompositeConditionAccess().getComposedConditionsAssignment_4_0(), "rule__CompositeCondition__ComposedConditionsAssignment_4_0");
 					put(grammarAccess.getCompositeConditionAccess().getCompositionTypeAssignment_4_1(), "rule__CompositeCondition__CompositionTypeAssignment_4_1");
-					put(grammarAccess.getCompositeConditionAccess().getCompositionTypeAssignment_4_2_1(), "rule__CompositeCondition__CompositionTypeAssignment_4_2_1");
-					put(grammarAccess.getCompositeConditionAccess().getComposedConditionsAssignment_4_2_2(), "rule__CompositeCondition__ComposedConditionsAssignment_4_2_2");
+					put(grammarAccess.getCompositeConditionAccess().getComposedConditionsAssignment_4_2(), "rule__CompositeCondition__ComposedConditionsAssignment_4_2");
 					put(grammarAccess.getCompositeConditionAccess().getTypeAssignment_7(), "rule__CompositeCondition__TypeAssignment_7");
 					put(grammarAccess.getComparisonConditionAccess().getConditionIDAssignment_1(), "rule__ComparisonCondition__ConditionIDAssignment_1");
 					put(grammarAccess.getComparisonConditionAccess().getPropertyAssignment_3(), "rule__ComparisonCondition__PropertyAssignment_3");
