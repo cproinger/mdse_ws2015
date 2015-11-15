@@ -102,7 +102,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Enumeration" containerMappings="//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='enumerationNode']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Enumeration" containerMappings="//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='enumerationNode']" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EEnum.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -140,9 +140,7 @@
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.eContainer()/]">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="superClass" valueExpression="var:source"/>
-                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="superClass" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -154,7 +152,20 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
                 <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.eContainer()/]">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="views.Association" referenceName="domainModelElements"/>
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="views.Association" referenceName="domainModelElements" variableName="assoc">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="views.Property" referenceName="associationEnds" variableName="prop1">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:source"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="source"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="upperBound" valueExpression="1"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="views.Property" referenceName="associationEnds" variableName="prop2">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:target"/>
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="target"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="navigableEnd" valueExpression="var:prop2"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newAssociation"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="isComposition" valueExpression="false"/>
+                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>

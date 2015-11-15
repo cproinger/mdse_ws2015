@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xmlns:views="http://www.big.tuwien.ac.at/views" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_sC00QIq-EeWVT7ytExmJJA" selectedViews="_RLAaQIrfEeW0KagLiPswjg" version="10.0.0.201505222000">
+  <semanticResources>instituteDomainModel.views</semanticResources>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_RLAaQIrfEeW0KagLiPswjg">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_ckR6MIuQEeWrs5bteeA76g" name="diagram">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_ckR6MYuQEeWrs5bteeA76g" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_ckR6MouQEeWrs5bteeA76g"/>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_ckTvYIuQEeWrs5bteeA76g" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_ckTvYYuQEeWrs5bteeA76g" type="Sirius" element="_ckR6MIuQEeWrs5bteeA76g" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_ckUWcIuQEeWrs5bteeA76g" type="2001" element="_ckR6M4uQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckUWc4uQEeWrs5bteeA76g" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ckUWdIuQEeWrs5bteeA76g" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ckWLo4uQEeWrs5bteeA76g" type="3004" element="_ckR6NIuQEeWrs5bteeA76g">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ckWLpIuQEeWrs5bteeA76g" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckWLpYuQEeWrs5bteeA76g"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ckUWcYuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckUWcouQEeWrs5bteeA76g" width="90" height="90"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ckUWdYuQEeWrs5bteeA76g" type="2001" element="_ckR6NYuQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckUWeIuQEeWrs5bteeA76g" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ckUWeYuQEeWrs5bteeA76g" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ckWLpouQEeWrs5bteeA76g" type="3004" element="_ckR6NouQEeWrs5bteeA76g">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ckWLp4uQEeWrs5bteeA76g" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckWLqIuQEeWrs5bteeA76g"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ckUWdouQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckUWd4uQEeWrs5bteeA76g" x="150" width="90" height="90"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ckUWeouQEeWrs5bteeA76g" type="2001" element="_ckR6N4uQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckUWfYuQEeWrs5bteeA76g" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ckUWfouQEeWrs5bteeA76g" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ckWysIuQEeWrs5bteeA76g" type="3004" element="_ckR6OIuQEeWrs5bteeA76g">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ckWysYuQEeWrs5bteeA76g" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckWysouQEeWrs5bteeA76g"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ckUWe4uQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckUWfIuQEeWrs5bteeA76g" x="300" width="90" height="90"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ckU9gIuQEeWrs5bteeA76g" type="2001" element="_ckR6OYuQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckU9g4uQEeWrs5bteeA76g" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ckU9hIuQEeWrs5bteeA76g" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ckWys4uQEeWrs5bteeA76g" type="3004" element="_ckR6OouQEeWrs5bteeA76g">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ckWytIuQEeWrs5bteeA76g" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckWytYuQEeWrs5bteeA76g"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ckU9gYuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckU9gouQEeWrs5bteeA76g" x="450" width="90" height="90"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ckU9hYuQEeWrs5bteeA76g" type="2001" element="_ckR6O4uQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckU9iIuQEeWrs5bteeA76g" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ckU9iYuQEeWrs5bteeA76g" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ckWytouQEeWrs5bteeA76g" type="3004" element="_ckR6PIuQEeWrs5bteeA76g">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ckWyt4uQEeWrs5bteeA76g" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckWyuIuQEeWrs5bteeA76g"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ckU9houQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckU9h4uQEeWrs5bteeA76g" x="600" width="90" height="90"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ckU9iouQEeWrs5bteeA76g" type="2003" element="_ckR6PYuQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckU9jYuQEeWrs5bteeA76g" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_ckU9jouQEeWrs5bteeA76g" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_ckWyuYuQEeWrs5bteeA76g" type="3010" element="_ckR6P4uQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckWyuouQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckWyu4uQEeWrs5bteeA76g"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ckWyvIuQEeWrs5bteeA76g" type="3010" element="_ckR6QYuQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckWyvYuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckWyvouQEeWrs5bteeA76g"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_ckU9j4uQEeWrs5bteeA76g"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_ckU9kIuQEeWrs5bteeA76g"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ckU9i4uQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckU9jIuQEeWrs5bteeA76g" x="126" y="120"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ckU9kYuQEeWrs5bteeA76g" type="2003" element="_ckR6Q4uQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckVkkIuQEeWrs5bteeA76g" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_ckVkkYuQEeWrs5bteeA76g" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_ckXZwIuQEeWrs5bteeA76g" type="3010" element="_ckR6RYuQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckXZwYuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckXZwouQEeWrs5bteeA76g"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ckXZw4uQEeWrs5bteeA76g" type="3010" element="_ckR6R4uQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckXZxIuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckXZxYuQEeWrs5bteeA76g"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ckXZxouQEeWrs5bteeA76g" type="3010" element="_ckR6SYuQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckXZx4uQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckXZyIuQEeWrs5bteeA76g"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ckXZyYuQEeWrs5bteeA76g" type="3010" element="_ckR6S4uQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckXZyouQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckXZy4uQEeWrs5bteeA76g"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ckXZzIuQEeWrs5bteeA76g" type="3010" element="_ckR6TYuQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckXZzYuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckXZzouQEeWrs5bteeA76g"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ckXZz4uQEeWrs5bteeA76g" type="3010" element="_ckR6T4uQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckXZ0IuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckXZ0YuQEeWrs5bteeA76g"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ckYA0IuQEeWrs5bteeA76g" type="3010" element="_ckR6UYuQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckYA0YuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckYA0ouQEeWrs5bteeA76g"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ckYA04uQEeWrs5bteeA76g" type="3010" element="_ckR6U4uQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckYA1IuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckYA1YuQEeWrs5bteeA76g"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_ckVkkouQEeWrs5bteeA76g"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_ckVkk4uQEeWrs5bteeA76g"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ckU9kouQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckU9k4uQEeWrs5bteeA76g" x="468" y="108"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ckVklIuQEeWrs5bteeA76g" type="2003" element="_ckR6VYuQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckVkl4uQEeWrs5bteeA76g" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_ckVkmIuQEeWrs5bteeA76g" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_ckYA1ouQEeWrs5bteeA76g" type="3010" element="_ckR6V4uQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckYA14uQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckYA2IuQEeWrs5bteeA76g"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ckYn4IuQEeWrs5bteeA76g" type="3010" element="_ckR6WYuQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckYn4YuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckYn4ouQEeWrs5bteeA76g"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ckYn44uQEeWrs5bteeA76g" type="3010" element="_ckR6W4uQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckYn5IuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckYn5YuQEeWrs5bteeA76g"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_ckVkmYuQEeWrs5bteeA76g"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_ckVkmouQEeWrs5bteeA76g"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ckVklYuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckVklouQEeWrs5bteeA76g" x="426" y="342"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ckVkm4uQEeWrs5bteeA76g" type="2003" element="_ckR6XYuQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckVknouQEeWrs5bteeA76g" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_ckVkn4uQEeWrs5bteeA76g" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_ckYn5ouQEeWrs5bteeA76g" type="3010" element="_ckR6X4uQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckYn54uQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckYn6IuQEeWrs5bteeA76g"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ckYn6YuQEeWrs5bteeA76g" type="3010" element="_ckR6YYuQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckYn6ouQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckYn64uQEeWrs5bteeA76g"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_ckVkoIuQEeWrs5bteeA76g"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_ckVkoYuQEeWrs5bteeA76g"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ckVknIuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckVknYuQEeWrs5bteeA76g" x="108" y="372"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ckVkoouQEeWrs5bteeA76g" type="2003" element="_ckR6Y4uQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckVkpYuQEeWrs5bteeA76g" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_ckWLoIuQEeWrs5bteeA76g" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_ckZO8IuQEeWrs5bteeA76g" type="3010" element="_ckR6ZYuQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckZO8YuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckZO8ouQEeWrs5bteeA76g"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ckZ2AIuQEeWrs5bteeA76g" type="3010" element="_ckR6Z4uQEeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_ckZ2AYuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ckZ2AouQEeWrs5bteeA76g"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_ckWLoYuQEeWrs5bteeA76g"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_ckWLoouQEeWrs5bteeA76g"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ckVko4uQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckVkpIuQEeWrs5bteeA76g" x="750"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_FjaKIIuREeWrs5bteeA76g" type="2003" element="_FjUDgIuREeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_FjaxMIuREeWrs5bteeA76g" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_FjaxMYuREeWrs5bteeA76g" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_GmKnoIuREeWrs5bteeA76g" type="3010" element="_GmFIEIuREeWrs5bteeA76g">
+                <styles xmi:type="notation:FontStyle" xmi:id="_GmKnoYuREeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_GmKnoouREeWrs5bteeA76g"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_FjaxMouREeWrs5bteeA76g"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_FjaxM4uREeWrs5bteeA76g"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_FjaKIYuREeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FjaKIouREeWrs5bteeA76g" x="705" y="130" width="171" height="93"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_ckTvYouQEeWrs5bteeA76g"/>
+          <edges xmi:type="notation:Edge" xmi:id="_ckadEIuQEeWrs5bteeA76g" type="4001" element="_ckR6aYuQEeWrs5bteeA76g" source="_ckVkm4uQEeWrs5bteeA76g" target="_ckVklIuQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckadFIuQEeWrs5bteeA76g" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckadFYuQEeWrs5bteeA76g" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ckadFouQEeWrs5bteeA76g" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckadF4uQEeWrs5bteeA76g" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ckadGIuQEeWrs5bteeA76g" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckadGYuQEeWrs5bteeA76g" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ckadEYuQEeWrs5bteeA76g"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ckadEouQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ckadE4uQEeWrs5bteeA76g" points="[104, 28, -187, -23]$[215, 41, -76, -10]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ckbEIIuQEeWrs5bteeA76g" id="(0.49760765550239233,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ckbEIYuQEeWrs5bteeA76g" id="(0.5,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_ckbEIouQEeWrs5bteeA76g" type="4001" element="_ckR6bIuQEeWrs5bteeA76g" source="_ckU9iouQEeWrs5bteeA76g" target="_ckU9kYuQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckbEJouQEeWrs5bteeA76g" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckbEJ4uQEeWrs5bteeA76g" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ckbEKIuQEeWrs5bteeA76g" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckbEKYuQEeWrs5bteeA76g" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ckbEKouQEeWrs5bteeA76g" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckbEK4uQEeWrs5bteeA76g" x="-42" y="30"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ckbEI4uQEeWrs5bteeA76g"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ckbEJIuQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ckbEJYuQEeWrs5bteeA76g" points="[16, -8, -192, 0]$[203, -8, -5, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ckbELIuQEeWrs5bteeA76g" id="(0.8980891719745223,0.36363636363636365)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ckbELYuQEeWrs5bteeA76g" id="(0.03550295857988166,0.16666666666666666)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_ckbrMIuQEeWrs5bteeA76g" type="4001" element="_ckR6cYuQEeWrs5bteeA76g" source="_ckU9iouQEeWrs5bteeA76g" target="_ckVkm4uQEeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_ckbrNIuQEeWrs5bteeA76g" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckbrNYuQEeWrs5bteeA76g" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ckbrNouQEeWrs5bteeA76g" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckbrN4uQEeWrs5bteeA76g" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ckbrOIuQEeWrs5bteeA76g" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ckbrOYuQEeWrs5bteeA76g" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ckbrMYuQEeWrs5bteeA76g"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ckbrMouQEeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ckbrM4uQEeWrs5bteeA76g" points="[0, 64, -8, -252]$[2, 252, -6, -64]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ckbrOouQEeWrs5bteeA76g" id="(0.4968152866242038,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ckbrO4uQEeWrs5bteeA76g" id="(0.49760765550239233,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_PfNr8IuREeWrs5bteeA76g" type="4001" element="_Pe_CcIuREeWrs5bteeA76g" source="_ckU9kYuQEeWrs5bteeA76g" target="_FjaKIIuREeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_PfOTA4uREeWrs5bteeA76g" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PfOTBIuREeWrs5bteeA76g" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_PfOTBYuREeWrs5bteeA76g" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PfOTBouREeWrs5bteeA76g" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_PfOTB4uREeWrs5bteeA76g" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PfOTCIuREeWrs5bteeA76g" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_PfOTAIuREeWrs5bteeA76g"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_PfOTAYuREeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PfOTAouREeWrs5bteeA76g" points="[0, 0, -70, -12]$[70, 12, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PfOTCYuREeWrs5bteeA76g" id="(1.0,0.14457831325301204)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PfOTCouREeWrs5bteeA76g" id="(0.0,0.15384615384615385)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_gXB9oIuREeWrs5bteeA76g" type="4001" element="_gWz7MIuREeWrs5bteeA76g" source="_ckVklIuQEeWrs5bteeA76g" target="_FjaKIIuREeWrs5bteeA76g">
+            <children xmi:type="notation:Node" xmi:id="_gXCksIuREeWrs5bteeA76g" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gXCksYuREeWrs5bteeA76g" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_gXCksouREeWrs5bteeA76g" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gXCks4uREeWrs5bteeA76g" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_gXCktIuREeWrs5bteeA76g" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gXCktYuREeWrs5bteeA76g" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_gXB9oYuREeWrs5bteeA76g"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_gXB9oouREeWrs5bteeA76g" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gXB9o4uREeWrs5bteeA76g" points="[0, 0, -312, 121]$[312, -121, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gXCktouREeWrs5bteeA76g" id="(0.7894736842105263,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gXCkt4uREeWrs5bteeA76g" id="(0.9053254437869822,1.0)"/>
+          </edges>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_ckR6M4uQEeWrs5bteeA76g" name="Boolean" width="9" height="9" resizeKind="NSEW">
+        <target xmi:type="views:DataType" href="instituteDomainModel.views#//@domainModelElements.7"/>
+        <semanticElements xmi:type="views:DataType" href="instituteDomainModel.views#//@domainModelElements.7"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_ckR6NIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EDataType.gif" labelPosition="node" color="194,239,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@nodeMappings[name='dataType']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@nodeMappings[name='dataType']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_ckR6NYuQEeWrs5bteeA76g" name="String" width="9" height="9" resizeKind="NSEW">
+        <target xmi:type="views:DataType" href="instituteDomainModel.views#//@domainModelElements.8"/>
+        <semanticElements xmi:type="views:DataType" href="instituteDomainModel.views#//@domainModelElements.8"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_ckR6NouQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EDataType.gif" labelPosition="node" color="194,239,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@nodeMappings[name='dataType']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@nodeMappings[name='dataType']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_ckR6N4uQEeWrs5bteeA76g" name="Integer" width="9" height="9" resizeKind="NSEW">
+        <target xmi:type="views:DataType" href="instituteDomainModel.views#//@domainModelElements.9"/>
+        <semanticElements xmi:type="views:DataType" href="instituteDomainModel.views#//@domainModelElements.9"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_ckR6OIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EDataType.gif" labelPosition="node" color="194,239,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@nodeMappings[name='dataType']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@nodeMappings[name='dataType']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_ckR6OYuQEeWrs5bteeA76g" name="Double" width="9" height="9" resizeKind="NSEW">
+        <target xmi:type="views:DataType" href="instituteDomainModel.views#//@domainModelElements.10"/>
+        <semanticElements xmi:type="views:DataType" href="instituteDomainModel.views#//@domainModelElements.10"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_ckR6OouQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EDataType.gif" labelPosition="node" color="194,239,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@nodeMappings[name='dataType']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@nodeMappings[name='dataType']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_ckR6O4uQEeWrs5bteeA76g" name="DateTime" width="9" height="9" resizeKind="NSEW">
+        <target xmi:type="views:DataType" href="instituteDomainModel.views#//@domainModelElements.11"/>
+        <semanticElements xmi:type="views:DataType" href="instituteDomainModel.views#//@domainModelElements.11"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_ckR6PIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EDataType.gif" labelPosition="node" color="194,239,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@nodeMappings[name='dataType']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@nodeMappings[name='dataType']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_ckR6PYuQEeWrs5bteeA76g" name="Institute" outgoingEdges="_ckR6bIuQEeWrs5bteeA76g _ckR6cYuQEeWrs5bteeA76g">
+        <target xmi:type="views:Class" href="instituteDomainModel.views#//@domainModelElements.0"/>
+        <semanticElements xmi:type="views:Class" href="instituteDomainModel.views#//@domainModelElements.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ckR6PouQEeWrs5bteeA76g" showIcon="false" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EClass.gif" foregroundColor="253,206,137">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6P4uQEeWrs5bteeA76g" name="*number: Integer[1..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.0/@properties.0"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.0/@properties.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6QIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6QYuQEeWrs5bteeA76g" name="name: String[1..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.0/@properties.1"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.0/@properties.1"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6QouQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_ckR6Q4uQEeWrs5bteeA76g" name="Course" outgoingEdges="_Pe_CcIuREeWrs5bteeA76g" incomingEdges="_ckR6bIuQEeWrs5bteeA76g">
+        <target xmi:type="views:Class" href="instituteDomainModel.views#//@domainModelElements.1"/>
+        <semanticElements xmi:type="views:Class" href="instituteDomainModel.views#//@domainModelElements.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ckR6RIuQEeWrs5bteeA76g" showIcon="false" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EClass.gif" foregroundColor="253,206,137">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6RYuQEeWrs5bteeA76g" name="type: TeachingType[1..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.0"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6RouQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6R4uQEeWrs5bteeA76g" name="*title: String[1..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.1"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.1"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6SIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6SYuQEeWrs5bteeA76g" name="credits: Double[1..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.2"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.2"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6SouQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6S4uQEeWrs5bteeA76g" name="description: String[0..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.3"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.3"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6TIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6TYuQEeWrs5bteeA76g" name="date: DateTime[0..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.4"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.4"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6TouQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6T4uQEeWrs5bteeA76g" name="time: DateTime[0..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.5"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.5"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6UIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6UYuQEeWrs5bteeA76g" name="topic: String[0..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.6"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.6"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6UouQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6U4uQEeWrs5bteeA76g" name="keywords: String[0..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.7"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.1/@properties.7"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6VIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_ckR6VYuQEeWrs5bteeA76g" name="Staff" outgoingEdges="_gWz7MIuREeWrs5bteeA76g" incomingEdges="_ckR6aYuQEeWrs5bteeA76g">
+        <target xmi:type="views:Class" href="instituteDomainModel.views#//@domainModelElements.2"/>
+        <semanticElements xmi:type="views:Class" href="instituteDomainModel.views#//@domainModelElements.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ckR6VouQEeWrs5bteeA76g" showIcon="false" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EClass.gif" foregroundColor="253,206,137">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6V4uQEeWrs5bteeA76g" name="firstname: String[1..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.2/@properties.0"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.2/@properties.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6WIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6WYuQEeWrs5bteeA76g" name="lastname: String[1..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.2/@properties.1"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.2/@properties.1"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6WouQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6W4uQEeWrs5bteeA76g" name="*email: String[1..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.2/@properties.2"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.2/@properties.2"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6XIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_ckR6XYuQEeWrs5bteeA76g" name="Professor" outgoingEdges="_ckR6aYuQEeWrs5bteeA76g" incomingEdges="_ckR6cYuQEeWrs5bteeA76g">
+        <target xmi:type="views:Class" href="instituteDomainModel.views#//@domainModelElements.3"/>
+        <semanticElements xmi:type="views:Class" href="instituteDomainModel.views#//@domainModelElements.3"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ckR6XouQEeWrs5bteeA76g" showIcon="false" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EClass.gif" foregroundColor="253,206,137">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6X4uQEeWrs5bteeA76g" name="visitingProfessor: Boolean[1..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.3/@properties.0"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.3/@properties.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6YIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6YYuQEeWrs5bteeA76g" name="homeUniversity: String[0..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.3/@properties.1"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.3/@properties.1"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6YouQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_ckR6Y4uQEeWrs5bteeA76g" name="TeachingType">
+        <target xmi:type="views:Enumeration" href="instituteDomainModel.views#//@domainModelElements.4"/>
+        <semanticElements xmi:type="views:Enumeration" href="instituteDomainModel.views#//@domainModelElements.4"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ckR6ZIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EEnum.gif" foregroundColor="204,242,166">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='enumerationNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='enumerationNode']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6ZYuQEeWrs5bteeA76g" name="&lt;&lt;LE>> Lecture">
+          <target xmi:type="views:EnumerationLiteral" href="instituteDomainModel.views#//@domainModelElements.4/@literals.0"/>
+          <semanticElements xmi:type="views:EnumerationLiteral" href="instituteDomainModel.views#//@domainModelElements.4/@literals.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6ZouQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EEnumLiteral.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='enumerationNode']/@subNodeMappings[name='enumLiteralNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='enumerationNode']/@subNodeMappings[name='enumLiteralNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ckR6Z4uQEeWrs5bteeA76g" name="&lt;&lt;TH>> Thesis">
+          <target xmi:type="views:EnumerationLiteral" href="instituteDomainModel.views#//@domainModelElements.4/@literals.1"/>
+          <semanticElements xmi:type="views:EnumerationLiteral" href="instituteDomainModel.views#//@domainModelElements.4/@literals.1"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_ckR6aIuQEeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EEnumLiteral.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='enumerationNode']/@subNodeMappings[name='enumLiteralNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='enumerationNode']/@subNodeMappings[name='enumLiteralNode']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ckR6aYuQEeWrs5bteeA76g" sourceNode="_ckR6XYuQEeWrs5bteeA76g" targetNode="_ckR6VYuQEeWrs5bteeA76g">
+        <target xmi:type="views:Class" href="instituteDomainModel.views#//@domainModelElements.3"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ckR6aouQEeWrs5bteeA76g" targetArrow="InputClosedArrow" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@edgeMappings[name='superTypeRelation']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ckR6a4uQEeWrs5bteeA76g" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@edgeMappings[name='superTypeRelation']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ckR6bIuQEeWrs5bteeA76g" name="courses" sourceNode="_ckR6PYuQEeWrs5bteeA76g" targetNode="_ckR6Q4uQEeWrs5bteeA76g" beginLabel="institute [0..1]" endLabel="courses [0..*]">
+        <target xmi:type="views:Association" href="instituteDomainModel.views#//@domainModelElements.5"/>
+        <semanticElements xmi:type="views:Association" href="instituteDomainModel.views#//@domainModelElements.5"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ckR6bYuQEeWrs5bteeA76g" sourceArrow="FillDiamond" targetArrow="InputFillClosedArrow" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@edgeMappings[name='compositionRelation']/@style"/>
+          <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_ckR6bouQEeWrs5bteeA76g" showIcon="false"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ckR6b4uQEeWrs5bteeA76g" showIcon="false"/>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_ckR6cIuQEeWrs5bteeA76g" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@edgeMappings[name='compositionRelation']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ckR6cYuQEeWrs5bteeA76g" name="professors" sourceNode="_ckR6PYuQEeWrs5bteeA76g" targetNode="_ckR6XYuQEeWrs5bteeA76g" beginLabel="institute [0..1]" endLabel="professors [1..*]">
+        <target xmi:type="views:Association" href="instituteDomainModel.views#//@domainModelElements.6"/>
+        <semanticElements xmi:type="views:Association" href="instituteDomainModel.views#//@domainModelElements.6"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ckR6couQEeWrs5bteeA76g" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@edgeMappings[name='simpleAssociationRelation']/@style"/>
+          <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_ckR6c4uQEeWrs5bteeA76g" showIcon="false"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ckR6dIuQEeWrs5bteeA76g" showIcon="false"/>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_ckR6dYuQEeWrs5bteeA76g" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@edgeMappings[name='simpleAssociationRelation']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_FjUDgIuREeWrs5bteeA76g" name="Class" incomingEdges="_Pe_CcIuREeWrs5bteeA76g _gWz7MIuREeWrs5bteeA76g">
+        <target xmi:type="views:Class" href="instituteDomainModel.views#//@domainModelElements.12"/>
+        <semanticElements xmi:type="views:Class" href="instituteDomainModel.views#//@domainModelElements.12"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_FjUqkIuREeWrs5bteeA76g" showIcon="false" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EClass.gif" foregroundColor="253,206,137">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_GmFIEIuREeWrs5bteeA76g" name="*id: Integer[1..1]">
+          <target xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.12/@properties.0"/>
+          <semanticElements xmi:type="views:Property" href="instituteDomainModel.views#//@domainModelElements.12/@properties.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_GmFIEYuREeWrs5bteeA76g" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EAttribute.gif" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@containerMappings[name='classNode']/@subNodeMappings[name='propertyNode']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Pe_CcIuREeWrs5bteeA76g" sourceNode="_ckR6Q4uQEeWrs5bteeA76g" targetNode="_FjUDgIuREeWrs5bteeA76g">
+        <target xmi:type="views:Class" href="instituteDomainModel.views#//@domainModelElements.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Pe_CcYuREeWrs5bteeA76g" targetArrow="InputClosedArrow" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@edgeMappings[name='superTypeRelation']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Pe_CcouREeWrs5bteeA76g" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@edgeMappings[name='superTypeRelation']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_gWz7MIuREeWrs5bteeA76g" name="newAssociation" sourceNode="_ckR6VYuQEeWrs5bteeA76g" targetNode="_FjUDgIuREeWrs5bteeA76g" beginLabel="source [0..1]" endLabel="target [0..*]">
+        <target xmi:type="views:Association" href="instituteDomainModel.views#//@domainModelElements.13"/>
+        <semanticElements xmi:type="views:Association" href="instituteDomainModel.views#//@domainModelElements.13"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_gW0iQIuREeWrs5bteeA76g" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@edgeMappings[name='simpleAssociationRelation']/@style"/>
+          <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_gW0iQYuREeWrs5bteeA76g" showIcon="false"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_gW0iQouREeWrs5bteeA76g" showIcon="false"/>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_gW0iQ4uREeWrs5bteeA76g" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer/@edgeMappings[name='simpleAssociationRelation']"/>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_ckR6douQEeWrs5bteeA76g"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']/@ownedRepresentations[name='Domain%20diagram']/@defaultLayer"/>
+      <target xmi:type="views:DomainModel" href="instituteDomainModel.views#/"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/at.ac.tuwien.big.views.design/description/views.odesign#//@ownedViewpoints[name='views']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>
