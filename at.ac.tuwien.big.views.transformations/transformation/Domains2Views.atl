@@ -124,12 +124,33 @@ rule CreatSelection extends Property2PropertyElement {
 		)
  to
 		pe: Views!Selection (
-			selectionItems <- si
-		),
-		si: Views!EnumerationLiteralItem (
-			value <- 'a'
+			--selectionItems <- si
 		)
+		--,
+		--si: Views!EnumerationLiteralItem (
+			--value <- 'a'
+		--)
  do {
       pe.property <- p;
+      for(s in p.type.literals) {
+      	  pe.selectionItems <- thisModule.newEnumerationLiteral2EnumerationLiteralItem(s);
+      }
  }
 }
+
+lazy rule newEnumerationLiteral2EnumerationLiteralItem {
+	from
+		el : Views!EnumerationLiteral
+	to
+		eli : Views!EnumerationLiteralItem (
+			enumerationLiteral <- el,
+			value <- el.name
+		)
+}
+
+rule NewEnumLiteralItems (e: Views!Enumeration) {
+	do {
+		
+	}
+}
+

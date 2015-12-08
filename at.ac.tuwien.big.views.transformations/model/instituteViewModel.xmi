@@ -14,14 +14,19 @@
         </viewElements>
       </elementGroups>
     </views>
-    <views xsi:type="views:CreateView" name="Course" header="Course" startView="true">
+    <views xsi:type="views:CreateView" name="Course" header="Course">
       <class href="instituteDomainModel.xmi#//@domainModelElements.1"/>
       <layout alignment="Horizontal"/>
       <elementGroups header="Course Information">
         <layout/>
         <viewElements xsi:type="views:Selection" label="Type" elementID="14">
           <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.0"/>
-          <selectionItems xsi:type="views:EnumerationLiteralItem" value="a"/>
+          <selectionItems xsi:type="views:EnumerationLiteralItem" value="Lecture">
+            <enumerationLiteral href="instituteDomainModel.xmi#//@domainModelElements.4/@literals.0"/>
+          </selectionItems>
+          <selectionItems xsi:type="views:EnumerationLiteralItem" value="Thesis">
+            <enumerationLiteral href="instituteDomainModel.xmi#//@domainModelElements.4/@literals.1"/>
+          </selectionItems>
         </viewElements>
         <viewElements xsi:type="views:Text" label="Title" elementID="5" format="^[a-zA-Z -]+$">
           <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.1"/>
@@ -46,7 +51,7 @@
         </viewElements>
       </elementGroups>
     </views>
-    <views xsi:type="views:CreateView" name="Staff" header="Staff">
+    <views xsi:type="views:CreateView" name="Staff" header="Staff" startView="true">
       <class href="instituteDomainModel.xmi#//@domainModelElements.2"/>
       <layout alignment="Horizontal"/>
       <elementGroups header="Staff Information">
