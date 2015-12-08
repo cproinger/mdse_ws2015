@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<views:ViewModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:views="http://www.big.tuwien.ac.at/views">
+  <viewGroups name="Welcome View Group" welcomeViewGroup="true">
+    <views xsi:type="views:CreateView" name="Institute" header="Institute">
+      <class href="instituteDomainModel.xmi#//@domainModelElements.0"/>
+      <layout alignment="Horizontal"/>
+      <elementGroups header="Institute Information">
+        <layout/>
+        <viewElements xsi:type="views:Text" label="Number" elementID="3" format="^[0-9]+$">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.0/@properties.0"/>
+        </viewElements>
+        <viewElements xsi:type="views:Text" label="Name" elementID="4" format="^[a-zA-Z -]+$">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.0/@properties.1"/>
+        </viewElements>
+      </elementGroups>
+    </views>
+    <views xsi:type="views:CreateView" name="Course" header="Course" startView="true">
+      <class href="instituteDomainModel.xmi#//@domainModelElements.1"/>
+      <layout alignment="Horizontal"/>
+      <elementGroups header="Course Information">
+        <layout/>
+        <viewElements xsi:type="views:Selection" label="Type" elementID="14">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.0"/>
+          <selectionItems xsi:type="views:EnumerationLiteralItem" value="a"/>
+        </viewElements>
+        <viewElements xsi:type="views:Text" label="Title" elementID="5" format="^[a-zA-Z -]+$">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.1"/>
+        </viewElements>
+        <viewElements xsi:type="views:Text" label="Credits" elementID="6" format="/^[0-9]+(\.[0-9]+)?$">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.2"/>
+        </viewElements>
+        <viewElements xsi:type="views:Text" label="Description" elementID="7" format="^[a-zA-Z -]+$">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.3"/>
+        </viewElements>
+        <viewElements xsi:type="views:DateTimePicker" label="Date" elementID="1" format="dddd, MMMM Do YYYY, h:mm A">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.4"/>
+        </viewElements>
+        <viewElements xsi:type="views:DateTimePicker" label="Time" elementID="2" format="dddd, MMMM Do YYYY, h:mm A">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.5"/>
+        </viewElements>
+        <viewElements xsi:type="views:Text" label="Topic" elementID="8" format="^[a-zA-Z -]+$">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.6"/>
+        </viewElements>
+        <viewElements xsi:type="views:Text" label="Keywords" elementID="9" format="^[a-zA-Z -]+$">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.7"/>
+        </viewElements>
+      </elementGroups>
+    </views>
+    <views xsi:type="views:CreateView" name="Staff" header="Staff">
+      <class href="instituteDomainModel.xmi#//@domainModelElements.2"/>
+      <layout alignment="Horizontal"/>
+      <elementGroups header="Staff Information">
+        <layout/>
+        <viewElements xsi:type="views:Text" label="Firstname" elementID="10" format="^[a-zA-Z -]+$">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.2/@properties.0"/>
+        </viewElements>
+        <viewElements xsi:type="views:Text" label="Lastname" elementID="11" format="^[a-zA-Z -]+$">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.2/@properties.1"/>
+        </viewElements>
+        <viewElements xsi:type="views:Text" label="Email" elementID="12" format="^[a-zA-Z -]+$">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.2/@properties.2"/>
+        </viewElements>
+      </elementGroups>
+    </views>
+    <views xsi:type="views:CreateView" name="Professor" header="Professor">
+      <class href="instituteDomainModel.xmi#//@domainModelElements.3"/>
+      <layout alignment="Horizontal"/>
+      <elementGroups header="Professor Information">
+        <layout/>
+        <viewElements xsi:type="views:Text" label="HomeUniversity" elementID="13" format="^[a-zA-Z -]+$">
+          <property href="instituteDomainModel.xmi#//@domainModelElements.3/@properties.0"/>
+        </viewElements>
+      </elementGroups>
+    </views>
+  </viewGroups>
+</views:ViewModel>

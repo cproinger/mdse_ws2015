@@ -1,0 +1,135 @@
+-- @path Views=/at.ac.tuwien.big.views.transformations/metamodel/views.ecore
+
+
+module Domains2Views;
+create OUT: Views from IN: Views;
+
+helper def: id: Integer =
+	0;
+
+helper def: newId(): String =
+	thisModule.refSetValue('id', thisModule.id + 1).refGetValue('id').toString();
+
+helper context String def: firstToUpper(): String =
+	if (self.size() > 1) then
+		self.toSequence().first().toUpper().concat(self.substring(2, self.size()))
+	else
+		self.toUpper()
+	endif;
+
+helper context Views!Class def: isUnreferenced(): Boolean =
+	Views!Class.allInstances().asSet() -> symetricDifference(Views!Association.
+			allInstances() -> asSet()) -> asSequence() -> first();
+
+rule DomainModel2ViewModel {
+	from
+		dm: Views!DomainModel
+	to
+		vm: Views!ViewModel (
+			viewGroups <- vg
+		),
+		vg: Views!ViewGroup (
+			views <- dm.domainModelElements
+		)
+	do{
+  vg.name <- 'Welcome View Group' ;
+  vg.welcomeViewGroup <- true;
+  
+ }
+}
+
+abstract rule Class2View {
+	from
+		c: Views!Class
+	to
+		v: Views!View (
+			name <- c.name,
+			header <- c.name
+		)
+}
+
+rule CreatView extends Class2View  {
+ from
+		c: Views!Class
+ to
+		v: Views!CreateView (
+			elementGroups <- em,
+			layout <- l,
+			elementGroups <- c.properties -> select(x | x.type.oclIsTypeOf(Views!Class))
+		),
+		em: Views!ElementGroup (
+			layout <- ll,
+			header <- c.name + ' Information',
+			viewElements <- c.properties
+		),
+		l: Views!Layout (
+			alignment <- 'Horizontal'
+		),
+		ll: Views!Layout (
+			alignment <- 'Vertical'
+		)
+ do{
+  v.class <- c;
+  if(c.isUnreferenced() = c){ v.startView <- true;}
+ }
+}
+
+abstract rule Property2PropertyElement {
+	from
+		p: Views!Property
+	to
+		pe: Views!PropertyElement (
+			label <- p.name.firstToUpper(),
+			elementID <- thisModule.newId()
+		)
+}
+
+rule CreatDateTimePicker extends Property2PropertyElement {
+ from
+		p: Views!Property (
+			p.type.name.matches('DateTime')
+		)
+  
+ to
+		pe: Views!DateTimePicker (
+		)
+ do {
+      pe.property <- p;
+      pe.format <- 'dddd, MMMM Do YYYY, h:mm A' ;
+ }
+}
+
+rule CreatTextString extends Property2PropertyElement {
+ from
+		p: Views!Property (
+			p.type.name.matches('String') or p.type.name.matches('Integer') or p.type.
+					name.matches('Double')
+		)
+
+ to
+		pe: Views!Text (
+		)
+ do {
+      pe.property <- p;
+ 	  if(p.type.name.matches('Double')) {pe.format <- ('/^[0-9]+(\\.[0-9]+)?$'); }
+      if(p.type.name.matches('String')) {pe.format <- '^[a-zA-Z -]+$'; }
+      if(p.type.name.matches('Integer')) {pe.format <- '^[0-9]+$'; }
+ } 
+}
+
+rule CreatSelection extends Property2PropertyElement {
+ from
+		p: Views!Property (
+			p.type.oclIsTypeOf(Views!Enumeration)
+		)
+ to
+		pe: Views!Selection (
+			selectionItems <- si
+		),
+		si: Views!EnumerationLiteralItem (
+			value <- 'a'
+		)
+ do {
+      pe.property <- p;
+ }
+}
