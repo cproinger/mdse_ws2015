@@ -56,6 +56,13 @@
       <layout alignment="Horizontal"/>
       <elementGroups header="Staff Information">
         <layout/>
+      </elementGroups>
+    </views>
+    <views xsi:type="views:CreateView" name="Professor" header="Professor">
+      <class href="instituteDomainModel.xmi#//@domainModelElements.3"/>
+      <layout alignment="Horizontal"/>
+      <elementGroups header="Professor Information">
+        <layout/>
         <viewElements xsi:type="views:Text" label="Firstname" elementID="10" format="^[a-zA-Z -]+$">
           <property href="instituteDomainModel.xmi#//@domainModelElements.2/@properties.0"/>
         </viewElements>
@@ -65,13 +72,6 @@
         <viewElements xsi:type="views:Text" label="Email" elementID="12" format="^[a-zA-Z -]+$">
           <property href="instituteDomainModel.xmi#//@domainModelElements.2/@properties.2"/>
         </viewElements>
-      </elementGroups>
-    </views>
-    <views xsi:type="views:CreateView" name="Professor" header="Professor">
-      <class href="instituteDomainModel.xmi#//@domainModelElements.3"/>
-      <layout alignment="Horizontal"/>
-      <elementGroups header="Professor Information">
-        <layout/>
         <viewElements xsi:type="views:Text" label="HomeUniversity" elementID="13" format="^[a-zA-Z -]+$">
           <property href="instituteDomainModel.xmi#//@domainModelElements.3/@properties.0"/>
         </viewElements>

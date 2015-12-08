@@ -21,6 +21,19 @@ helper context Views!Class def: isUnreferenced(): Boolean =
 	Views!Class.allInstances().asSet() -> symetricDifference(Views!Association.
 			allInstances() -> asSet()) -> asSequence() -> first();
 
+helper context Views!Class def: allProperties(): Sequence(Views!Property) = 
+	--let superProps : Sequence(Views!Property) = 
+	--	(self.superClass.oclIsUndefined() ? Sequence{} : self.superClass.allProperties())
+	--in
+	if(self.superClass.oclIsUndefined()) then
+		self.properties.asSequence()
+	else
+		Sequence{
+			self.superClass.allProperties(),
+			self.properties
+		}->flatten()
+	endif;
+
 rule DomainModel2ViewModel {
 	from
 		dm: Views!DomainModel
@@ -60,7 +73,7 @@ rule CreatView extends Class2View  {
 		em: Views!ElementGroup (
 			layout <- ll,
 			header <- c.name + ' Information',
-			viewElements <- c.properties
+			viewElements <- c.allProperties()
 		),
 		l: Views!Layout (
 			alignment <- 'Horizontal'
@@ -148,9 +161,4 @@ lazy rule newEnumerationLiteral2EnumerationLiteralItem {
 		)
 }
 
-rule NewEnumLiteralItems (e: Views!Enumeration) {
-	do {
-		
-	}
-}
 
