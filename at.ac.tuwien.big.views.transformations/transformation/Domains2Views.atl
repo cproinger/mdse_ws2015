@@ -17,9 +17,15 @@ helper context String def: firstToUpper(): String =
 		self.toUpper()
 	endif;
 
-helper context Views!Class def: isUnreferenced(): Boolean =
-	Views!Class.allInstances().asSet() -> symetricDifference(Views!Association.
-			allInstances() -> asSet()) -> asSequence() -> first();
+helper context Views!Class def: useAsStartView() : Boolean = 
+	self = Views!Class.allInstances().asSequence() -> select(
+		c | 
+		Views!Association.allInstances().asSet() 
+			-> collect(a | a.associationEnds) 
+			-> flatten()
+			-> collect(e | e.type)
+		-> includes(c) = false
+	) -> first();
 
 helper context Views!Class def: allProperties(): Sequence(Views!Property) = 
 	--let superProps : Sequence(Views!Property) = 
@@ -83,7 +89,7 @@ rule CreatView extends Class2View  {
 		)
  do{
   v.class <- c;
-  if(c.isUnreferenced() = c){ v.startView <- true;}
+  v.startView <- c.useAsStartView();
   for(a in (Views!Association.allInstances() -> select(a | a.associationEnds -> select(e | e <> a.navigableEnd) -> first().type = c))) {
   	v.elementGroups <- thisModule.newAssociationElementGroup(a);
   }
