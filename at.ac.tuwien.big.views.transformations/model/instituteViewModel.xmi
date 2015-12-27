@@ -6,12 +6,8 @@
       <layout alignment="Horizontal"/>
       <elementGroups header="Institute Information">
         <layout/>
-        <viewElements xsi:type="views:Text" label="Number" elementID="5" format="^[0-9]+$">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.0/@properties.0"/>
-        </viewElements>
-        <viewElements xsi:type="views:Text" label="Name" elementID="6" format="^[a-zA-Z -]+$">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.0/@properties.1"/>
-        </viewElements>
+        <viewElements xsi:type="views:Text" label="Number" elementID="5" format="^[0-9]+$"/>
+        <viewElements xsi:type="views:Text" label="Name" elementID="6" format="^[a-zA-Z -]+$"/>
       </elementGroups>
       <elementGroups header="Courses">
         <layout/>
@@ -34,7 +30,6 @@
       <elementGroups header="Course Information">
         <layout/>
         <viewElements xsi:type="views:Selection" label="Type" elementID="16">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.0"/>
           <selectionItems xsi:type="views:EnumerationLiteralItem" value="Lecture">
             <enumerationLiteral href="instituteDomainModel.xmi#//@domainModelElements.4/@literals.0"/>
           </selectionItems>
@@ -42,30 +37,16 @@
             <enumerationLiteral href="instituteDomainModel.xmi#//@domainModelElements.4/@literals.1"/>
           </selectionItems>
         </viewElements>
-        <viewElements xsi:type="views:Text" label="Title" elementID="7" format="^[a-zA-Z -]+$">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.1"/>
-        </viewElements>
-        <viewElements xsi:type="views:Text" label="Credits" elementID="8" format="/^[0-9]+(\.[0-9]+)?$">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.2"/>
-        </viewElements>
-        <viewElements xsi:type="views:Text" label="Description" elementID="9" format="^[a-zA-Z -]+$">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.3"/>
-        </viewElements>
-        <viewElements xsi:type="views:DateTimePicker" label="Date" elementID="3" format="dddd, MMMM Do YYYY, h:mm A">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.4"/>
-        </viewElements>
-        <viewElements xsi:type="views:DateTimePicker" label="Time" elementID="4" format="dddd, MMMM Do YYYY, h:mm A">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.5"/>
-        </viewElements>
-        <viewElements xsi:type="views:Text" label="Topic" elementID="10" format="^[a-zA-Z -]+$">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.6"/>
-        </viewElements>
-        <viewElements xsi:type="views:Text" label="Keywords" elementID="11" format="^[a-zA-Z -]+$">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.1/@properties.7"/>
-        </viewElements>
+        <viewElements xsi:type="views:Text" label="Title" elementID="7" format="^[a-zA-Z -]+$"/>
+        <viewElements xsi:type="views:Text" label="Credits" elementID="8" format="/^[0-9]+(\.[0-9]+)?$"/>
+        <viewElements xsi:type="views:Text" label="Description" elementID="9" format="^[a-zA-Z -]+$"/>
+        <viewElements xsi:type="views:DateTimePicker" label="Date" elementID="3" format="dddd, MMMM Do YYYY, h:mm A"/>
+        <viewElements xsi:type="views:DateTimePicker" label="Time" elementID="4" format="dddd, MMMM Do YYYY, h:mm A"/>
+        <viewElements xsi:type="views:Text" label="Topic" elementID="10" format="^[a-zA-Z -]+$"/>
+        <viewElements xsi:type="views:Text" label="Keywords" elementID="11" format="^[a-zA-Z -]+$"/>
       </elementGroups>
     </views>
-    <views xsi:type="views:CreateView" name="Staff" header="Staff">
+    <views xsi:type="views:CreateView" name="Staff" header="Staff" startView="true">
       <class href="instituteDomainModel.xmi#//@domainModelElements.2"/>
       <layout alignment="Horizontal"/>
       <elementGroups header="Staff Information">
@@ -77,18 +58,10 @@
       <layout alignment="Horizontal"/>
       <elementGroups header="Professor Information">
         <layout/>
-        <viewElements xsi:type="views:Text" label="Firstname" elementID="12" format="^[a-zA-Z -]+$">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.2/@properties.0"/>
-        </viewElements>
-        <viewElements xsi:type="views:Text" label="Lastname" elementID="13" format="^[a-zA-Z -]+$">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.2/@properties.1"/>
-        </viewElements>
-        <viewElements xsi:type="views:Text" label="Email" elementID="14" format="^[a-zA-Z -]+$">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.2/@properties.2"/>
-        </viewElements>
-        <viewElements xsi:type="views:Text" label="HomeUniversity" elementID="15" format="^[a-zA-Z -]+$">
-          <property href="instituteDomainModel.xmi#//@domainModelElements.3/@properties.0"/>
-        </viewElements>
+        <viewElements xsi:type="views:Text" label="Firstname" elementID="12" format="^[a-zA-Z -]+$"/>
+        <viewElements xsi:type="views:Text" label="Lastname" elementID="13" format="^[a-zA-Z -]+$"/>
+        <viewElements xsi:type="views:Text" label="Email" elementID="14" format="^[a-zA-Z -]+$"/>
+        <viewElements xsi:type="views:Text" label="HomeUniversity" elementID="15" format="^[a-zA-Z -]+$"/>
       </elementGroups>
     </views>
   </viewGroups>
