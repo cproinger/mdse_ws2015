@@ -33,6 +33,9 @@ import at.ac.tuwien.big.views.ComparisonCondition
 import at.ac.tuwien.big.views.CompositeCondition
 import at.ac.tuwien.big.views.ComparisonConditionType
 import org.eclipse.xtend2.lib.StringConcatenation
+import at.ac.tuwien.big.views.Enumeration
+import at.ac.tuwien.big.views.SelectionItem
+import at.ac.tuwien.big.views.ConditionalElement
 
 class View2HTMLGenerator implements IGenerator {
 	
@@ -60,10 +63,7 @@ class View2HTMLGenerator implements IGenerator {
 						</nav>
 						«FOR vg : viewModel.viewGroups»
 							«FOR v : vg.views»
-								<div class="container" id="«v.safeName»">
-									<h2>«v.class_.safeName»</h2>
-									«v.content»
-								</div>
+								«v.container»
   							«ENDFOR»
   						«ENDFOR»
 «««					//add HTML Elements here
@@ -155,16 +155,6 @@ class View2HTMLGenerator implements IGenerator {
 		return c.id.name
 	}
 	
-	def dispatch content(ClassIndexView v) {
-		'''
-		<h3>List of all current «v.class_.lcName»s</h3>
-		<ul>
-			<li data-ng-repeat="«v.class_.lcName» in «v.class_.lcName»s">{{«v.class_.lcName».«v.class_.idname»}}
-			</li>
-		</ul>
-		'''
-	}
-	
 	def toGroupHtml(ElementGroup eg) {
 		'''
 		<h4>«eg.header»</h4>
@@ -182,7 +172,8 @@ class View2HTMLGenerator implements IGenerator {
 		val propName = pe.property.lcName;
 		'''
  		«pe.toConcreteInputHtml» class="form-control" «IF pe.isLongText» rows="4"«ENDIF» id="«pe.elementID»" «pe.toInputHtmlName»
- 			data-ng-model="new«clazz.lcName».«propName»" «IF pe.property.isMandatory»required«ENDIF»«pe.toPatternHtml» 
+ 			data-ng-model="new«clazz.lcName».«propName»" «IF pe.property.isMandatory»required«ENDIF»«pe.toPatternHtml»
+ 		«pe.conditionAttribute» 
  		«pe.toInputContentHtml»
 		'''
 	}
@@ -232,18 +223,27 @@ class View2HTMLGenerator implements IGenerator {
 			>
 				<option value="" disabled selected>Select your option</option>
 				«FOR s : sel.selectionItems»
-				<option value="«s.value»">«s.value»</option>
+				<option value="«sel.getOptionValue(s)»">«s.value»</option>
 				«ENDFOR»
 			</select>	
 			'''
 		} else
 			return 
-			'''«IF pe.condition != null»«pe.condition.toConditionHtml()»«ENDIF»
+			'''
 			«IF pe.isLongText»></textarea>«ELSE»/>«ENDIF»
 			«IF pe instanceof DateTimePicker»
 			<span class="input-group-addon"><span class="glyphicon glyphicon-«(pe as DateTimePicker).pickerStyle»"></span></span>
 		</div>
 			«ENDIF»'''
+	}
+	
+	def getOptionValue(Selection sel, SelectionItem si) {
+		val t = sel.property.type
+		if(t instanceof Enumeration) {
+			return (t as Enumeration).literals.findFirst[el | el.name.equals(si.value)].value
+		} else {
+			return si.value
+		}
 	}
 	
 	def toConditionHtml(Condition c) {
@@ -256,15 +256,26 @@ class View2HTMLGenerator implements IGenerator {
 	}
 	
 	def toConditionHtmlAttribute(VisibilityConditionType vct) {
-		return "data-ng-" + vct.toString.toLowerCase
+		//enable -> enabled, disable -> disabled
+		return "data-ng-" + vct.toString.toLowerCase.replace("ble", "bled")
 	}
 	
-	def dispatch toConditionAttributeValue(ComparisonCondition cc) {
+	def dispatch String toConditionAttributeValue(ComparisonCondition cc) {
 		val clazz = (cc.property.eContainer.eContainer as View).class_
 		return "new" + clazz.lcName + "." + cc.property.property.lcName + cc.comparisonType.asString + "'" + cc.comparisonValue + "'"
 	}
-	def dispatch toConditionAttributeValue(CompositeCondition cc) {
-		return ""
+	
+	def dispatch String toConditionAttributeValue(CompositeCondition cc) {
+		var String sComp = null
+		switch(cc.compositionType) {
+			case AND: 
+				sComp = " && "
+			case OR: 
+				sComp = " || "
+			default: 
+				throw new IllegalArgumentException("unkown compositionType " + cc.compositionType)
+		}
+		return cc.composedConditions.map[c | c.toConditionAttributeValue].join(sComp)
 	}
 	
 	def asString(ComparisonConditionType t) {
@@ -354,7 +365,7 @@ class View2HTMLGenerator implements IGenerator {
 	def dispatch toAssociationHtml(Table ae) {
 		val clazz = ae.assocClass;
 		'''
-		<table class="table table-striped" id="«ae.elementID»">
+		<table class="table table-striped" id="«ae.elementID»" «ae.conditionAttribute»>
 		 	<thead><tr>
 		 		«FOR c : ae.columns»
 		 			<th>«c.label»</th>
@@ -374,9 +385,10 @@ class View2HTMLGenerator implements IGenerator {
 	}
 	
 	def dispatch toAssociationHtml(List ae ) {
+		//TODO 
 		val clazz = ae.assocClass;
 		'''
-		<ul id="«ae.elementID»"><li data-ng-repeat="«clazz.lcName» in «clazz.lcName»s">
+		<ul id="«ae.elementID»" «ae.conditionAttribute»><li data-ng-repeat="«clazz.lcName» in «clazz.lcName»s">
 				{{«clazz.lcName».«clazz.idname» }}	
 				<a href="" data-ng-click="navigationProfessor('UpdateProfessor'); updateProfessor(professor.id)">udpate</a>
 				</li></ul>
@@ -400,43 +412,121 @@ class View2HTMLGenerator implements IGenerator {
 		</button>
 		'''
 	}
-	
-	def dispatch content(CreateView v) {
-		return createAndUpdateContent(v)
+
+	def dispatch container(CreateView v) {
+		return createAndUpdateContainer(v)
 	}
 	
-	def dispatch content(UpdateView v) {
-		return createAndUpdateContent(v)
+	def dispatch container(UpdateView v) {
+		return createAndUpdateContainer(v)
 	}
 	
-	def createAndUpdateContent(ClassOperationView v) {
-		'''
-		<form name="«v.safeName»Form" novalidate>
-			 <p>«v.description»</p>
-			 <div class="panel-group">
-			 «IF v.layout.alignment == LayoutStyle.HORIZONTAL»
-			 	<div class="row">
-			 «ENDIF»
-			 	«FOR eg : v.elementGroups»
-			 		<div class="elementgroup«IF v.layout.alignment == LayoutStyle.HORIZONTAL» col-sm-6«ENDIF»">
-			 			«eg.toGroupHtml»
-			 		</div>
-			 	«ENDFOR»
-			 «IF v.layout.alignment == LayoutStyle.HORIZONTAL»
-			 	</div>
-			 «ENDIF»
-			 </div>
-			 «v.saveButton»
-		</form>
-		'''
+	def getConditionAttribute(ConditionalElement eg) {
+		if(eg.condition != null)
+			return eg.condition.toConditionHtml
+		else 
+			return ""
+	}
+	
 		
+	def dispatch container(ClassIndexView v) {
+		'''
+		<div class="container" id="«v.safeName»">
+			<h2>«v.header»</h2>
+			<h3>«v.description»</h3>
+			<ul>
+				<li data-ng-repeat="«v.class_.lcName» in «v.class_.lcName»s">
+					{{«v.class_.lcName».«v.class_.idname»}}
+					«FOR l : v.link.filter[l | !(l.targetView instanceof CreateView)]»
+«««					TODO
+					<a href="" data-toggle="modal" data-target="#modalShowCourse" data-ng-click="getCourse(course.id)">show</a>
+					«ENDFOR»
+				</li>
+				«FOR l : v.link.filter[l | (l.targetView instanceof CreateView)]»
+«««					TODO
+				<addbutton target="«l»"/>
+				«ENDFOR»
+			</ul>
+		</div>
+		'''
 	}
 	
-	def dispatch content(ReadView v) {
-		''''''
+	def dispatch container(ReadView v) {
+		v.modalContainer
 	}
 
-	def dispatch content(DeleteView v) {
-		''''''
+	def dispatch container(DeleteView v) {
+		v.modalContainer
+	}
+	
+		
+	def createAndUpdateContainer(ClassOperationView v) {
+		'''
+		<div class="container" id="«v.safeName»">
+			<h2>«v.class_.safeName»</h2>
+			<form name="«v.safeName»Form" novalidate>
+				 <p>«v.description»</p>
+				 <div class="panel-group">
+				 «IF v.layout.alignment == LayoutStyle.HORIZONTAL»
+				 	<div class="row">
+				 «ENDIF»
+				 	«FOR eg : v.elementGroups»
+				 		<div class="elementgroup«IF v.layout.alignment == LayoutStyle.HORIZONTAL» col-sm-6«ENDIF»" «eg.getConditionAttribute»>
+				 			«eg.toGroupHtml»
+				 		</div>
+				 	«ENDFOR»
+				 «IF v.layout.alignment == LayoutStyle.HORIZONTAL»
+				 	</div>
+				 «ENDIF»
+				 </div>
+				 «v.saveButton»
+			</form>
+		</div>
+		'''
+	}
+	
+	def modalContainer(ClassOperationView v) {
+		'''
+		<div class="modal fade" id="modal«v.safeName»">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">«v.header»</h4>
+					</div>
+					<div class="modal-body">
+						<p>«v.description»</p>
+						<h5>«v.name»</h5>
+						«FOR eg : v.elementGroups»
+							«FOR pe : eg.viewElements.filter[ve | ve instanceof PropertyElement]»
+							<p>«pe.label»: {{«v.class_.lcName».«(pe as PropertyElement).property.name»}}</p>
+							«ENDFOR»
+						«ENDFOR»
+					</div>
+					<div class="modal-footer">
+						«v.modalButtons»
+					</div>
+				</div>
+			</div>
+		</div>
+		'''
+	}
+	
+	def dispatch modalButtons(CreateView v) {''''''}
+	def dispatch modalButtons(ClassIndexView v) {''''''}
+	
+	def dispatch modalButtons(ReadView v) {
+		'''
+		<button class="btn btn-default" data-dismiss="modal">Close</button>
+		'''
+	}
+	
+	def dispatch modalButtons(DeleteView v) {
+		'''
+		<button class="btn btn-default" data-dismiss="modal"
+			data-ng-click="delete«v.class_.safeName»(«v.class_.lcName».id)">
+			Delete
+		</button>
+		<button class="btn btn-default" data-dismiss="modal">Cancel</button>
+		'''	
 	}
 }

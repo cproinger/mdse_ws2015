@@ -308,8 +308,7 @@ view.addWelcomePage('CreateInstitute');
  		 	  		    </div>
  		 	  		   </div>
  		 	  		 </div>
- 		 	  <div class="elementgroup"
- 		 	  		data-ng-show="newcourse.type=='LE' ">
+ 		 	  <div class="elementgroup"	data-ng-show="newcourse.type=='LE' ">
  		 	  		<h4>Lecture</h4>
  		 	  		<div class="panel-body">
  		 	  			<div class="form-group">
@@ -324,8 +323,7 @@ view.addWelcomePage('CreateInstitute');
  		 	  		    </div>
  		 	  		   </div>
  		 	  	</div>
- 		 	  <div class="elementgroup" 
- 		 	  		data-ng-show="newcourse.type=='TH' ">
+ 		 	  <div class="elementgroup" data-ng-show="newcourse.type=='TH' ">
  		 	  		<h4>Thesis</h4>
  		 	  		<div class="panel-body">
  		 	  			<div class="form-group">
@@ -359,8 +357,11 @@ view.addWelcomePage('CreateInstitute');
 	       <p>Title: {{ course.title }}</p>
           </div>
           <div class="modal-footer">
-           <button class="btn btn-default" data-dismiss="modal" data-ng-click="deleteCourse(course.id)">Delete</button>
-           	                        <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+           <button class="btn btn-default" data-dismiss="modal" 
+           		data-ng-click="deleteCourse(course.id)">
+           		Delete
+           	</button>
+           	<button class="btn btn-default" data-dismiss="modal">Cancel</button>
           </div>
          </div>
   	    </div>
@@ -369,11 +370,12 @@ view.addWelcomePage('CreateInstitute');
  		 <h2>Courses</h2>
  		 <h3>List of all current courses</h3>
     		  <ul>
- 		   <li data-ng-repeat="course in courses">{{ course.title }}
- 			 <a href="" data-toggle="modal" data-target="#modalShowCourse" data-ng-click="getCourse(course.id)">show</a>
+ 		   <li data-ng-repeat="course in courses">
+ 		   		{{ course.title }}
+			    <a href="" data-toggle="modal" data-target="#modalShowCourse" data-ng-click="getCourse(course.id)">show</a>
  		   </li>
  		  </ul>
-    		 </div> 
+       </div> 
 	   <div class="modal fade" id="modalShowCourse">
   	    <div class="modal-dialog">
          <div class="modal-content">
