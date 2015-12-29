@@ -1,30 +1,37 @@
 package at.ac.tuwien.big.views.gen
 
+import at.ac.tuwien.big.views.AssociationElement
+import at.ac.tuwien.big.views.Class
+import at.ac.tuwien.big.views.ClassIndexView
+import at.ac.tuwien.big.views.ClassOperationView
+import at.ac.tuwien.big.views.CreateView
+import at.ac.tuwien.big.views.DateTimePicker
+import at.ac.tuwien.big.views.DeleteView
+import at.ac.tuwien.big.views.ElementGroup
+import at.ac.tuwien.big.views.LayoutStyle
+import at.ac.tuwien.big.views.List
+import at.ac.tuwien.big.views.NamedElement
+import at.ac.tuwien.big.views.Property
+import at.ac.tuwien.big.views.PropertyElement
+import at.ac.tuwien.big.views.ReadView
+import at.ac.tuwien.big.views.Table
+import at.ac.tuwien.big.views.Text
+import at.ac.tuwien.big.views.UpdateView
+import at.ac.tuwien.big.views.ViewModel
 import java.io.File
+import java.util.ArrayList
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import at.ac.tuwien.big.views.ViewModel
-import java.util.ArrayList
 import at.ac.tuwien.big.views.View
-import at.ac.tuwien.big.views.CreateView
-import at.ac.tuwien.big.views.ClassIndexView
-import at.ac.tuwien.big.views.ClassOperationView
-import at.ac.tuwien.big.views.NamedElement
-import at.ac.tuwien.big.views.ReadView
-import at.ac.tuwien.big.views.UpdateView
-import at.ac.tuwien.big.views.DeleteView
-import javax.swing.GroupLayout.Alignment
-import at.ac.tuwien.big.views.LayoutStyle
-import at.ac.tuwien.big.views.ElementGroup
+import at.ac.tuwien.big.views.Selection
 import at.ac.tuwien.big.views.ViewElement
-import at.ac.tuwien.big.views.PropertyElement
-import at.ac.tuwien.big.views.AssociationElement
-import at.ac.tuwien.big.views.Text
-import at.ac.tuwien.big.views.DateTimePicker
-import at.ac.tuwien.big.views.Property
-import at.ac.tuwien.big.views.Table
-import at.ac.tuwien.big.views.List
+import at.ac.tuwien.big.views.Condition
+import at.ac.tuwien.big.views.VisibilityCondition
+import at.ac.tuwien.big.views.VisibilityConditionType
+import at.ac.tuwien.big.views.ComparisonCondition
+import at.ac.tuwien.big.views.CompositeCondition
+import at.ac.tuwien.big.views.ComparisonConditionType
 
 class View2HTMLGenerator implements IGenerator {
 	
@@ -128,6 +135,13 @@ class View2HTMLGenerator implements IGenerator {
 	def lcName(NamedElement e) {
 		return e.safeName.toLowerCase;
 	}
+	def varName(Class clazz) {
+		var Class c = clazz;
+		while(c.superClass != null) {
+			c = c.superClass;
+		}
+		return c.lcName;
+	}
 	
 	def dispatch getNavName(ClassIndexView v) {
 		return v.class_.safeName + "s"
@@ -136,7 +150,7 @@ class View2HTMLGenerator implements IGenerator {
 		return v.class_.safeName
 	}
 	
-	def idname(at.ac.tuwien.big.views.Class c) {
+	def idname(Class c) {
 		return c.id.name
 	}
 	
@@ -152,33 +166,108 @@ class View2HTMLGenerator implements IGenerator {
 	
 	def toGroupHtml(ElementGroup eg) {
 		'''
-		«IF eg.layout == LayoutStyle.HORIZONTAL»
-		<div class="elementgroup col-sm-6">
-		«ELSE»
-		<div class="elementgroup">
-		«ENDIF»
-			<h4>«eg.header»</h4>
-			<div class="panel-body">«IF eg.layout == LayoutStyle.HORIZONTAL»<div class="form-inline" role="form">«ENDIF»
-				«FOR e : eg.viewElements»
-					«e.toPropHtml»
-				«ENDFOR»
-			«IF eg.layout == LayoutStyle.HORIZONTAL»</div>«ENDIF»</div>
-		</div>
+		<h4>«eg.header»</h4>
+		<div class="panel-body">«IF eg.layout == LayoutStyle.HORIZONTAL»<div class="form-inline" role="form">«ENDIF»
+			«FOR e : eg.viewElements»
+				«e.toViewElementHtml»
+			«ENDFOR»
+		«IF eg.layout == LayoutStyle.HORIZONTAL»</div>«ENDIF»</div>
 		'''
 	}
 	
-	def dispatch toInputHtml(PropertyElement pe) {
-		val clazz = pe.property.eContainer as at.ac.tuwien.big.views.Class;
+	def toInputHtml(PropertyElement pe) {
+		val container = pe.eContainer.eContainer as View;
+		val clazz = container.class_;
+		val sName = container.safeName;
+		val propName = pe.property.lcName;
 		'''
- 		<input type="text" class="form-control" id="«pe.elementID»" name="«pe.property.name»" 
- 			data-ng-model="new«clazz.lcName».«pe.property.name»" «IF pe.property.isMandatory»required«ENDIF» «pe.format» 
- 		/>
- 		<span class="CreateInstituteSpan" style="color:red" 
- 			data-ng-show="CreateInstituteForm.«pe.property.name».$dirty && CreateInstituteForm.«pe.property.name».$invalid">
- 			<span data-ng-show="CreateInstituteForm.«pe.property.name».$error.required">Input is mandatory.</span>
- 			<span data-ng-show="CreateInstituteForm.«pe.property.name».$error.pattern">Input doesn't match expected pattern.</span>
+ 		<«pe.toConcreteInputHtml» class="form-control" «IF pe instanceof Text && (pe as Text).long» rows="4"«ENDIF» id="«pe.elementID»" «pe.toInputHtmlName»
+ 			data-ng-model="new«clazz.lcName».«propName»" «IF pe.property.isMandatory»required«ENDIF»«pe.toPatternHtml» 
+ 		«pe.toInputContentHtml»
+ 		<span class="«sName»Span" style="color:red" 
+ 			data-ng-show="«sName»Form.«propName».$dirty && «sName»Form.«propName».$invalid">
+ 			«IF pe.property.isMandatory»
+ 			<span data-ng-show="«sName»Form.«propName».$error.required">Input is mandatory.</span>
+ 			«ENDIF»
+ 			«IF pe.format != null»
+ 			<span data-ng-show="«sName»Form.«propName».$error.pattern">Input doesn't match expected pattern.</span>
+ 			«ENDIF»
  		</span>
 		'''
+	}
+	
+	def toConcreteInputHtml(PropertyElement pe) {
+		var s = '''input type="text"'''
+		if(pe instanceof Text) {
+			if(pe.long)
+				s = "textarea"
+		} else if(pe instanceof Selection) {
+			s = "select data-ng-option"
+		}
+		return s
+	}
+	
+	def toInputHtmlName(PropertyElement pe) {
+		if(pe instanceof Selection)
+			return ''''''
+		else
+		 	return ''' name="«pe.property.lcName»"''' 
+	}
+	
+	def toInputContentHtml(PropertyElement pe) {
+		val Condition c = pe.condition
+		if(pe instanceof Selection) {
+			val Selection sel = pe as Selection
+			return 
+			'''
+			>
+				<option value="" disabled selected>Select your option</option>
+				«FOR s : sel.selectionItems»
+				<option value="«s.value»">«s.value»</option>
+				«ENDFOR»
+			</select>	
+			'''
+		} else
+			return 
+			'''«IF pe.condition != null»«pe.condition.toConditionHtml()»«ENDIF»
+			«IF pe instanceof Text && (pe as Text).long»></textarea>«ELSE»/>«ENDIF»'''
+	}
+	
+	def toConditionHtml(Condition c) {
+		if(!(c instanceof VisibilityCondition))
+			return ''''''
+		else {
+			val VisibilityCondition vc = c as VisibilityCondition
+			return ''' «vc.type.toConditionHtmlAttribute»="«vc.toConditionAttributeValue()»"'''
+		}
+	}
+	
+	def toConditionHtmlAttribute(VisibilityConditionType vct) {
+		return "data-ng-" + vct.toString.toLowerCase
+	}
+	
+	def dispatch toConditionAttributeValue(ComparisonCondition cc) {
+		val clazz = (cc.property.eContainer.eContainer as View).class_
+		return "new" + clazz.lcName + "." + cc.property.property.lcName + cc.comparisonType.asString + "'" + cc.comparisonValue + "'"
+	}
+	def dispatch toConditionAttributeValue(CompositeCondition cc) {
+		return ""
+	}
+	
+	def asString(ComparisonConditionType t) {
+		switch(t) {
+			case EQUAL: return "=="
+			case GREATER: return ">"
+			case LESS: return "<"
+		}
+		throw new IllegalArgumentException("unknown type " + t);
+	}
+	
+	def toPatternHtml(PropertyElement pe) {
+		if(pe instanceof Selection)
+			return ''''''
+		else
+		 	return ''' data-ng-pattern="/«pe.format»/"'''
 	}
 	
 	def isMandatory(Property p) {
@@ -186,33 +275,39 @@ class View2HTMLGenerator implements IGenerator {
 	}
 	
 	def format(PropertyElement t) {
+		var String format
 		if(t instanceof Text) {
-			val x = t as Text; 
-			return '''data-ng-pattern="/«x.format»/"'''
+			val x = t as Text
+			format = x.format 
 		} else if(t instanceof DateTimePicker) {
 			val x = t as DateTimePicker
-			return '''data-ng-pattern="/«x.format»/"'''
-		} else
-			return ''''''
+			format = x.format
+		}
+		return format;
 	}
 	
-	def dispatch toPropHtml(PropertyElement ve) {
+	def toViewElementHtml(ViewElement ve) {
 		'''
-			<div class="form-group">
-				<label for="«ve.elementID»">«ve.label»«IF ve.property.isMandatory»<span>*</span>«ENDIF»:</label>
-				«ve.toInputHtml»
-			</div>
+		<div class="form-group">
+			«ve.toConcretePropHtml»
+		</div>
+		'''	
+	}
+	
+	def dispatch toConcretePropHtml(PropertyElement ve) {
+		'''
+		<label for="«ve.elementID»">«ve.label»«IF ve.property.isMandatory»<span>*</span>«ENDIF»:</label>
+		«ve.toInputHtml»
 		'''
 	}
-	def dispatch toPropHtml(AssociationElement ae) {
+	
+	def dispatch toConcretePropHtml(AssociationElement ae) {
 		'''
-			<div class="form-group">
-				<div >
-				<h5>«ae.label»</h5>
-				«ae.toAssociationHtml»
-				<button value="Create«ae.assocClass.name»" class="btn btn-primary btn-sm">Add</button>
-				</div>
-			</div>
+		<div >
+		<h5>«ae.label»</h5>
+		«ae.toAssociationHtml»
+		<button value="Create«ae.assocClass.name»" class="btn btn-primary btn-sm">Add</button>
+		</div>
 		'''
 	}
 	
@@ -249,7 +344,7 @@ class View2HTMLGenerator implements IGenerator {
 	}
 	
 	def assocClass(AssociationElement ae) {
-		return ae.association.navigableEnd.type as at.ac.tuwien.big.views.Class;
+		return ae.association.navigableEnd.type as Class;
 	}
 	
 	def saveButton(ClassOperationView v) {
@@ -259,8 +354,8 @@ class View2HTMLGenerator implements IGenerator {
 			return '''''';
 		
 		'''
-		<button value="«model.welcomePage»" class="btn btn-primary btn-sm"
-			data-ng-disabled="«v.name»Form.$invalid"
+		<button value="«model.welcomePage.safeName»" class="btn btn-primary btn-sm"
+			data-ng-disabled="«v.safeName»Form.$invalid"
 			data-ng-click="save«v.class_.safeName»()">
 			Save
 		</button>
@@ -270,19 +365,21 @@ class View2HTMLGenerator implements IGenerator {
 	def dispatch content(CreateView v) {
 		'''
 		<form name="«v.safeName»Form" novalidate>
-			 <p>This is a form for creating «v.class_.lcName»s.</p>
+			 <p>«v.description»</p>
 			 <div class="panel-group">
 			 «IF v.layout.alignment == LayoutStyle.HORIZONTAL»
 			 	<div class="row">
 			 «ENDIF»
 			 	«FOR eg : v.elementGroups»
-			 		«eg.toGroupHtml»
+			 		<div class="elementgroup«IF v.layout.alignment == LayoutStyle.HORIZONTAL» col-sm-6«ENDIF»">
+			 			«eg.toGroupHtml»
+			 		</div>
 			 	«ENDFOR»
 			 «IF v.layout.alignment == LayoutStyle.HORIZONTAL»
 			 	</div>
 			 «ENDIF»
-			 	«v.saveButton»
 			 </div>
+			 «v.saveButton»
 		</form>
 		'''
 	}
