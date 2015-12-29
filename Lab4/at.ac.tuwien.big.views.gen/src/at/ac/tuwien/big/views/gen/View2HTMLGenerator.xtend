@@ -32,6 +32,7 @@ import at.ac.tuwien.big.views.VisibilityConditionType
 import at.ac.tuwien.big.views.ComparisonCondition
 import at.ac.tuwien.big.views.CompositeCondition
 import at.ac.tuwien.big.views.ComparisonConditionType
+import org.eclipse.xtend2.lib.StringConcatenation
 
 class View2HTMLGenerator implements IGenerator {
 	
@@ -178,33 +179,41 @@ class View2HTMLGenerator implements IGenerator {
 	def toInputHtml(PropertyElement pe) {
 		val container = pe.eContainer.eContainer as View;
 		val clazz = container.class_;
-		val sName = container.safeName;
 		val propName = pe.property.lcName;
 		'''
- 		<«pe.toConcreteInputHtml» class="form-control" «IF pe instanceof Text && (pe as Text).long» rows="4"«ENDIF» id="«pe.elementID»" «pe.toInputHtmlName»
+ 		«pe.toConcreteInputHtml» class="form-control" «IF pe.isLongText» rows="4"«ENDIF» id="«pe.elementID»" «pe.toInputHtmlName»
  			data-ng-model="new«clazz.lcName».«propName»" «IF pe.property.isMandatory»required«ENDIF»«pe.toPatternHtml» 
  		«pe.toInputContentHtml»
- 		<span class="«sName»Span" style="color:red" 
- 			data-ng-show="«sName»Form.«propName».$dirty && «sName»Form.«propName».$invalid">
- 			«IF pe.property.isMandatory»
- 			<span data-ng-show="«sName»Form.«propName».$error.required">Input is mandatory.</span>
- 			«ENDIF»
- 			«IF pe.format != null»
- 			<span data-ng-show="«sName»Form.«propName».$error.pattern">Input doesn't match expected pattern.</span>
- 			«ENDIF»
- 		</span>
 		'''
 	}
 	
+//	def dispatch toInputField(Text pe) {
+//		'''
+//		«IF pe.isLong»<textarea«ELSE»<input type="text"«ENDIF» class="form-control" «IF pe.isLong»rows="4" id="«pe.elementID»" name="«pe.property.lcName»"
+//			data-ng-model="new«clazz.lcName».«propName»" «IF pe.property.isMandatory»required«ENDIF»«pe.toPatternHtml» 
+//		'''
+//	}
+	
 	def toConcreteInputHtml(PropertyElement pe) {
-		var s = '''input type="text"'''
-		if(pe instanceof Text) {
-			if(pe.long)
-				s = "textarea"
+		var s = '''<input type="text"'''
+		if(pe.isLongText) {
+			s = "<textarea"
+		} else if(pe instanceof DateTimePicker) {
+			s = '''			
+			<div class="input-group date" id="picker«pe.elementID»" style="«(pe as DateTimePicker).pickerStyle»">
+			«s»'''
 		} else if(pe instanceof Selection) {
-			s = "select data-ng-option"
+			s = "<select data-ng-option"
 		}
 		return s
+	}
+	
+	def getPickerStyle(DateTimePicker dtp) {
+		val typeLcName = dtp.property.type.lcName
+		switch(dtp.property.type.lcName) {
+			case "date": return "calendar"
+			default: return typeLcName
+		}
 	}
 	
 	def toInputHtmlName(PropertyElement pe) {
@@ -230,7 +239,11 @@ class View2HTMLGenerator implements IGenerator {
 		} else
 			return 
 			'''«IF pe.condition != null»«pe.condition.toConditionHtml()»«ENDIF»
-			«IF pe instanceof Text && (pe as Text).long»></textarea>«ELSE»/>«ENDIF»'''
+			«IF pe.isLongText»></textarea>«ELSE»/>«ENDIF»
+			«IF pe instanceof DateTimePicker»
+			<span class="input-group-addon"><span class="glyphicon glyphicon-«(pe as DateTimePicker).pickerStyle»"></span></span>
+		</div>
+			«ENDIF»'''
 	}
 	
 	def toConditionHtml(Condition c) {
@@ -274,6 +287,10 @@ class View2HTMLGenerator implements IGenerator {
 		return p.lowerBound == 1 && p.upperBound == 1;
 	}
 	
+	def isLongText(PropertyElement pe) {
+		return pe instanceof Text && (pe as Text).long;
+	}
+	
 	def format(PropertyElement t) {
 		var String format
 		if(t instanceof Text) {
@@ -295,9 +312,32 @@ class View2HTMLGenerator implements IGenerator {
 	}
 	
 	def dispatch toConcretePropHtml(PropertyElement ve) {
+		val container = ve.eContainer.eContainer as View;
+		val clazz = container.class_;
+		val sName = container.safeName;
+		val propName = ve.property.lcName;
 		'''
+		«IF ve instanceof DateTimePicker»
+		<div class="row">
+			<div class="col-xs-6 col-sm-12">
+				<div class="form-group">
+		«ENDIF»
 		<label for="«ve.elementID»">«ve.label»«IF ve.property.isMandatory»<span>*</span>«ENDIF»:</label>
 		«ve.toInputHtml»
+		«IF ve instanceof DateTimePicker»
+				</div>
+			</div>
+		</div>
+		«ENDIF»
+		<span class="«sName»Span" style="color:red" 
+			data-ng-show="«sName»Form.«propName».$dirty && «sName»Form.«propName».$invalid">
+ 			«IF ve.property.isMandatory»
+				<span data-ng-show="«sName»Form.«propName».$error.required">Input is mandatory.</span>
+ 			«ENDIF»
+ 			«IF ve.format != null»
+				<span data-ng-show="«sName»Form.«propName».$error.pattern">Input doesn't match expected pattern.</span>
+ 			«ENDIF»
+		</span>
 		'''
 	}
 	
@@ -348,7 +388,6 @@ class View2HTMLGenerator implements IGenerator {
 	}
 	
 	def saveButton(ClassOperationView v) {
-		// TODO if startView of welcomeGroup -> no save button
 		val model = v.eContainer.eContainer as ViewModel;
 		if(v instanceof DeleteView || v instanceof  ReadView || v == model.welcomePage)
 			return '''''';
@@ -363,6 +402,14 @@ class View2HTMLGenerator implements IGenerator {
 	}
 	
 	def dispatch content(CreateView v) {
+		return createAndUpdateContent(v)
+	}
+	
+	def dispatch content(UpdateView v) {
+		return createAndUpdateContent(v)
+	}
+	
+	def createAndUpdateContent(ClassOperationView v) {
 		'''
 		<form name="«v.safeName»Form" novalidate>
 			 <p>«v.description»</p>
@@ -382,14 +429,13 @@ class View2HTMLGenerator implements IGenerator {
 			 «v.saveButton»
 		</form>
 		'''
+		
 	}
 	
 	def dispatch content(ReadView v) {
 		''''''
 	}
-	def dispatch content(UpdateView v) {
-		''''''
-	}
+
 	def dispatch content(DeleteView v) {
 		''''''
 	}

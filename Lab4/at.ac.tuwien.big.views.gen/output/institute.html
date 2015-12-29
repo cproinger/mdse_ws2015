@@ -50,8 +50,8 @@
 			 							/>
 			 				<span class="CreateInstituteSpan" style="color:red" 
 			 					data-ng-show="CreateInstituteForm.number.$dirty && CreateInstituteForm.number.$invalid">
-			 					<span data-ng-show="CreateInstituteForm.number.$error.required">Input is mandatory.</span>
-			 					<span data-ng-show="CreateInstituteForm.number.$error.pattern">Input doesn't match expected pattern.</span>
+			 				<span data-ng-show="CreateInstituteForm.number.$error.required">Input is mandatory.</span>
+			 				<span data-ng-show="CreateInstituteForm.number.$error.pattern">Input doesn't match expected pattern.</span>
 			 				</span>
 			 			</div>
 			 			<div class="form-group">
@@ -61,8 +61,8 @@
 			 							/>
 			 				<span class="CreateInstituteSpan" style="color:red" 
 			 					data-ng-show="CreateInstituteForm.name.$dirty && CreateInstituteForm.name.$invalid">
-			 					<span data-ng-show="CreateInstituteForm.name.$error.required">Input is mandatory.</span>
-			 					<span data-ng-show="CreateInstituteForm.name.$error.pattern">Input doesn't match expected pattern.</span>
+			 				<span data-ng-show="CreateInstituteForm.name.$error.required">Input is mandatory.</span>
+			 				<span data-ng-show="CreateInstituteForm.name.$error.pattern">Input doesn't match expected pattern.</span>
 			 				</span>
 			 			</div>
 			 			<div class="form-group">
@@ -116,7 +116,7 @@
 			 							/>
 			 				<span class="CreateProfessorSpan" style="color:red" 
 			 					data-ng-show="CreateProfessorForm.firstname.$dirty && CreateProfessorForm.firstname.$invalid">
-			 					<span data-ng-show="CreateProfessorForm.firstname.$error.required">Input is mandatory.</span>
+			 				<span data-ng-show="CreateProfessorForm.firstname.$error.required">Input is mandatory.</span>
 			 				</span>
 			 			</div>
 			 			<div class="form-group">
@@ -126,7 +126,7 @@
 			 							/>
 			 				<span class="CreateProfessorSpan" style="color:red" 
 			 					data-ng-show="CreateProfessorForm.lastname.$dirty && CreateProfessorForm.lastname.$invalid">
-			 					<span data-ng-show="CreateProfessorForm.lastname.$error.required">Input is mandatory.</span>
+			 				<span data-ng-show="CreateProfessorForm.lastname.$error.required">Input is mandatory.</span>
 			 				</span>
 			 			</div>
 			 			<div class="form-group">
@@ -136,8 +136,8 @@
 			 							/>
 			 				<span class="CreateProfessorSpan" style="color:red" 
 			 					data-ng-show="CreateProfessorForm.email.$dirty && CreateProfessorForm.email.$invalid">
-			 					<span data-ng-show="CreateProfessorForm.email.$error.required">Input is mandatory.</span>
-			 					<span data-ng-show="CreateProfessorForm.email.$error.pattern">Input doesn't match expected pattern.</span>
+			 				<span data-ng-show="CreateProfessorForm.email.$error.required">Input is mandatory.</span>
+			 				<span data-ng-show="CreateProfessorForm.email.$error.pattern">Input doesn't match expected pattern.</span>
 			 				</span>
 			 			</div>
 			 		</div>
@@ -156,7 +156,7 @@
 			 				</select>	
 			 				<span class="CreateProfessorSpan" style="color:red" 
 			 					data-ng-show="CreateProfessorForm.visitingprofessor.$dirty && CreateProfessorForm.visitingprofessor.$invalid">
-			 					<span data-ng-show="CreateProfessorForm.visitingprofessor.$error.required">Input is mandatory.</span>
+			 				<span data-ng-show="CreateProfessorForm.visitingprofessor.$error.required">Input is mandatory.</span>
 			 				</span>
 			 			</div>
 			 			<div class="form-group">
@@ -182,6 +182,32 @@
 	</div>
 	<div class="container" id="UpdateProfessor">
 		<h2>Professor</h2>
+		<form name="UpdateProfessorForm" novalidate>
+			 <p></p>
+			 <div class="panel-group">
+			 	<div class="elementgroup">
+			 		<h4>Update E-Mail Address</h4>
+			 		<div class="panel-body">
+			 			<div class="form-group">
+			 				<label for="10">E-Mail<span>*</span>:</label>
+			 				<input type="text" class="form-control"  id="10"  name="email"
+			 					data-ng-model="newprofessor.email" required data-ng-pattern="//" 
+			 							/>
+			 				<span class="UpdateProfessorSpan" style="color:red" 
+			 					data-ng-show="UpdateProfessorForm.email.$dirty && UpdateProfessorForm.email.$invalid">
+			 				<span data-ng-show="UpdateProfessorForm.email.$error.required">Input is mandatory.</span>
+			 				<span data-ng-show="UpdateProfessorForm.email.$error.pattern">Input doesn't match expected pattern.</span>
+			 				</span>
+			 			</div>
+			 		</div>
+			 	</div>
+			 </div>
+			 <button value="CreateInstitute" class="btn btn-primary btn-sm"
+			 	data-ng-disabled="UpdateProfessorForm.$invalid"
+			 	data-ng-click="saveProfessor()">
+			 	Save
+			 </button>
+		</form>
 	</div>
 	<div class="container" id="CreateCourse">
 		<h2>Course</h2>
@@ -202,7 +228,7 @@
 			 				</select>	
 			 				<span class="CreateCourseSpan" style="color:red" 
 			 					data-ng-show="CreateCourseForm.type.$dirty && CreateCourseForm.type.$invalid">
-			 					<span data-ng-show="CreateCourseForm.type.$error.required">Input is mandatory.</span>
+			 				<span data-ng-show="CreateCourseForm.type.$error.required">Input is mandatory.</span>
 			 				</span>
 			 			</div>
 			 			<div class="form-group">
@@ -212,8 +238,8 @@
 			 							/>
 			 				<span class="CreateCourseSpan" style="color:red" 
 			 					data-ng-show="CreateCourseForm.title.$dirty && CreateCourseForm.title.$invalid">
-			 					<span data-ng-show="CreateCourseForm.title.$error.required">Input is mandatory.</span>
-			 					<span data-ng-show="CreateCourseForm.title.$error.pattern">Input doesn't match expected pattern.</span>
+			 				<span data-ng-show="CreateCourseForm.title.$error.required">Input is mandatory.</span>
+			 				<span data-ng-show="CreateCourseForm.title.$error.pattern">Input doesn't match expected pattern.</span>
 			 				</span>
 			 			</div>
 			 			<div class="form-group">
@@ -223,8 +249,8 @@
 			 							/>
 			 				<span class="CreateCourseSpan" style="color:red" 
 			 					data-ng-show="CreateCourseForm.credits.$dirty && CreateCourseForm.credits.$invalid">
-			 					<span data-ng-show="CreateCourseForm.credits.$error.required">Input is mandatory.</span>
-			 					<span data-ng-show="CreateCourseForm.credits.$error.pattern">Input doesn't match expected pattern.</span>
+			 				<span data-ng-show="CreateCourseForm.credits.$error.required">Input is mandatory.</span>
+			 				<span data-ng-show="CreateCourseForm.credits.$error.pattern">Input doesn't match expected pattern.</span>
 			 				</span>
 			 			</div>
 			 			<div class="form-group">
@@ -234,7 +260,7 @@
 			 							></textarea>
 			 				<span class="CreateCourseSpan" style="color:red" 
 			 					data-ng-show="CreateCourseForm.description.$dirty && CreateCourseForm.description.$invalid">
-			 					<span data-ng-show="CreateCourseForm.description.$error.pattern">Input doesn't match expected pattern.</span>
+			 				<span data-ng-show="CreateCourseForm.description.$error.pattern">Input doesn't match expected pattern.</span>
 			 				</span>
 			 			</div>
 			 		</div>
@@ -243,23 +269,41 @@
 			 		<h4>First Meeting</h4>
 			 		<div class="panel-body">
 			 			<div class="form-group">
+			 				<div class="row">
+			 					<div class="col-xs-6 col-sm-12">
+			 						<div class="form-group">
 			 				<label for="15">Date:</label>
+			 				<div class="input-group date" id="picker15" style="calendar">
 			 				<input type="text" class="form-control"  id="15"  name="date"
 			 					data-ng-model="newcourse.date"  data-ng-pattern="/dddd, MMMM Do YYYY/" 
 			 							/>
+			 							<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+			 						</div>
+			 						</div>
+			 					</div>
+			 				</div>
 			 				<span class="CreateCourseSpan" style="color:red" 
 			 					data-ng-show="CreateCourseForm.date.$dirty && CreateCourseForm.date.$invalid">
-			 					<span data-ng-show="CreateCourseForm.date.$error.pattern">Input doesn't match expected pattern.</span>
+			 				<span data-ng-show="CreateCourseForm.date.$error.pattern">Input doesn't match expected pattern.</span>
 			 				</span>
 			 			</div>
 			 			<div class="form-group">
+			 				<div class="row">
+			 					<div class="col-xs-6 col-sm-12">
+			 						<div class="form-group">
 			 				<label for="16">Time:</label>
+			 				<div class="input-group date" id="picker16" style="time">
 			 				<input type="text" class="form-control"  id="16"  name="time"
 			 					data-ng-model="newcourse.time"  data-ng-pattern="/h:mm A/" 
 			 							/>
+			 							<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+			 						</div>
+			 						</div>
+			 					</div>
+			 				</div>
 			 				<span class="CreateCourseSpan" style="color:red" 
 			 					data-ng-show="CreateCourseForm.time.$dirty && CreateCourseForm.time.$invalid">
-			 					<span data-ng-show="CreateCourseForm.time.$error.pattern">Input doesn't match expected pattern.</span>
+			 				<span data-ng-show="CreateCourseForm.time.$error.pattern">Input doesn't match expected pattern.</span>
 			 				</span>
 			 			</div>
 			 		</div>
@@ -274,7 +318,7 @@
 			 							></textarea>
 			 				<span class="CreateCourseSpan" style="color:red" 
 			 					data-ng-show="CreateCourseForm.topic.$dirty && CreateCourseForm.topic.$invalid">
-			 					<span data-ng-show="CreateCourseForm.topic.$error.pattern">Input doesn't match expected pattern.</span>
+			 				<span data-ng-show="CreateCourseForm.topic.$error.pattern">Input doesn't match expected pattern.</span>
 			 				</span>
 			 			</div>
 			 		</div>
