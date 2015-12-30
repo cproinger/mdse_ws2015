@@ -4,38 +4,40 @@ import at.ac.tuwien.big.views.AssociationElement
 import at.ac.tuwien.big.views.Class
 import at.ac.tuwien.big.views.ClassIndexView
 import at.ac.tuwien.big.views.ClassOperationView
+import at.ac.tuwien.big.views.ComparisonCondition
+import at.ac.tuwien.big.views.ComparisonConditionType
+import at.ac.tuwien.big.views.CompositeCondition
+import at.ac.tuwien.big.views.Condition
+import at.ac.tuwien.big.views.ConditionalElement
 import at.ac.tuwien.big.views.CreateView
 import at.ac.tuwien.big.views.DateTimePicker
 import at.ac.tuwien.big.views.DeleteView
 import at.ac.tuwien.big.views.ElementGroup
+import at.ac.tuwien.big.views.Enumeration
 import at.ac.tuwien.big.views.LayoutStyle
+import at.ac.tuwien.big.views.Link
+import at.ac.tuwien.big.views.LinkableElement
 import at.ac.tuwien.big.views.List
 import at.ac.tuwien.big.views.NamedElement
 import at.ac.tuwien.big.views.Property
 import at.ac.tuwien.big.views.PropertyElement
 import at.ac.tuwien.big.views.ReadView
+import at.ac.tuwien.big.views.Selection
+import at.ac.tuwien.big.views.SelectionItem
 import at.ac.tuwien.big.views.Table
 import at.ac.tuwien.big.views.Text
 import at.ac.tuwien.big.views.UpdateView
+import at.ac.tuwien.big.views.View
+import at.ac.tuwien.big.views.ViewElement
 import at.ac.tuwien.big.views.ViewModel
+import at.ac.tuwien.big.views.VisibilityCondition
+import at.ac.tuwien.big.views.VisibilityConditionType
 import java.io.File
 import java.util.ArrayList
 import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.xtend2.lib.StringConcatenation
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import at.ac.tuwien.big.views.View
-import at.ac.tuwien.big.views.Selection
-import at.ac.tuwien.big.views.ViewElement
-import at.ac.tuwien.big.views.Condition
-import at.ac.tuwien.big.views.VisibilityCondition
-import at.ac.tuwien.big.views.VisibilityConditionType
-import at.ac.tuwien.big.views.ComparisonCondition
-import at.ac.tuwien.big.views.CompositeCondition
-import at.ac.tuwien.big.views.ComparisonConditionType
-import org.eclipse.xtend2.lib.StringConcatenation
-import at.ac.tuwien.big.views.Enumeration
-import at.ac.tuwien.big.views.SelectionItem
-import at.ac.tuwien.big.views.ConditionalElement
 
 class View2HTMLGenerator implements IGenerator {
 	
@@ -127,11 +129,14 @@ class View2HTMLGenerator implements IGenerator {
 	}
 	
 	def getName(String st){
-		return st.toLowerCase.replaceAll("\\W", "")
+		return st.toLowerCase.safeName
+	}
+	def getSafeName(String st) {
+		return st.replaceAll("\\W", "")
 	}
 
 	def safeName(NamedElement str) {
-		return str.name.replaceAll("\\W", "");
+		return str.name.safeName
 	}
 	def lcName(NamedElement e) {
 		return e.safeName.toLowerCase;
@@ -317,12 +322,12 @@ class View2HTMLGenerator implements IGenerator {
 	def toViewElementHtml(ViewElement ve) {
 		'''
 		<div class="form-group">
-			«ve.toConcretePropHtml»
+			«ve.toConcreteViewElementHtml»
 		</div>
 		'''	
 	}
 	
-	def dispatch toConcretePropHtml(PropertyElement ve) {
+	def dispatch toConcreteViewElementHtml(PropertyElement ve) {
 		val container = ve.eContainer.eContainer as View;
 		val clazz = container.class_;
 		val sName = container.safeName;
@@ -352,12 +357,12 @@ class View2HTMLGenerator implements IGenerator {
 		'''
 	}
 	
-	def dispatch toConcretePropHtml(AssociationElement ae) {
+	def dispatch toConcreteViewElementHtml(AssociationElement ae) {
 		'''
 		<div >
 		<h5>«ae.label»</h5>
 		«ae.toAssociationHtml»
-		<button value="Create«ae.assocClass.name»" class="btn btn-primary btn-sm">Add</button>
+		«ae.toAddButtons»
 		</div>
 		'''
 	}
@@ -378,19 +383,18 @@ class View2HTMLGenerator implements IGenerator {
 				«FOR c : ae.columns»
 				<td>{{ «clazz.lcName».«c.property.name» }}</td>
 				«ENDFOR»
-				<td><a href="" data-toggle="modal" data-target="#modalDeleteCourse" data-ng-click="getCourse(course.id)">delete</a></td>
+				<td>«ae.toLinksHtml»</td>
 			</tr></tbody>		
 		</table>
 		'''
 	}
 	
 	def dispatch toAssociationHtml(List ae ) {
-		//TODO 
 		val clazz = ae.assocClass;
 		'''
 		<ul id="«ae.elementID»" «ae.conditionAttribute»><li data-ng-repeat="«clazz.lcName» in «clazz.lcName»s">
 				{{«clazz.lcName».«clazz.idname» }}	
-				<a href="" data-ng-click="navigationProfessor('UpdateProfessor'); updateProfessor(professor.id)">udpate</a>
+				«ae.toLinksHtml»
 				</li></ul>
 		'''
 	}
@@ -437,19 +441,48 @@ class View2HTMLGenerator implements IGenerator {
 			<ul>
 				<li data-ng-repeat="«v.class_.lcName» in «v.class_.lcName»s">
 					{{«v.class_.lcName».«v.class_.idname»}}
-					«FOR l : v.link.filter[l | !(l.targetView instanceof CreateView)]»
-«««					TODO
-					<a href="" data-toggle="modal" data-target="#modalShowCourse" data-ng-click="getCourse(course.id)">show</a>
-					«ENDFOR»
+					«v.toLinksHtml»
 				</li>
-				«FOR l : v.link.filter[l | (l.targetView instanceof CreateView)]»
-«««					TODO
-				<addbutton target="«l»"/>
-				«ENDFOR»
 			</ul>
+			«v.toAddButtons»
 		</div>
 		'''
 	}
+	
+	def toAddButtons(LinkableElement v) {
+		'''
+		«FOR l : v.link.filter[l | (l.targetView instanceof CreateView)]»
+			<button value="«l.targetView.safeName»" class="btn btn-primary btn-sm">Add</button>
+		«ENDFOR»
+		'''
+	}
+	
+	def toLinksHtml(LinkableElement v) {
+		'''
+		«FOR l : v.link.filter[l | !(l.targetView instanceof CreateView)]»
+			«l.toLinkHtml»
+		«ENDFOR»
+		'''
+	}
+	
+	def toLinkHtml(Link l) {
+		'''<a href="" «l.targetView.linkAttributesAndContent»</a>'''
+	}
+
+	def dispatch getLinkAttributesAndContent(ReadView v) {
+		'''«v.modalDataToggle»show''' 
+	}
+	def dispatch getLinkAttributesAndContent(DeleteView v) {
+		'''«v.modalDataToggle»delete'''
+	}
+	def dispatch getLinkAttributesAndContent(UpdateView v) {
+		'''data-ng-click="navigation«v.header.safeName»('«v.name»'); update«v.class_.safeName»(«v.class_.lcName».id)">udpate'''
+	}
+	
+	def getModalDataToggle(ClassOperationView v) {
+		'''data-toggle="modal" data-target="#modal«v.safeName»" data-ng-click="get«v.class_.safeName»(«v.class_.lcName».id)">'''
+	}
+	
 	
 	def dispatch container(ReadView v) {
 		v.modalContainer

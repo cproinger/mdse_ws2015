@@ -70,7 +70,7 @@
 			 				<h5>Professors</h5>
 			 				<ul id="03" ><li data-ng-repeat="professor in professors">
 			 						{{professor.email }}	
-			 						<a href="" data-ng-click="navigationProfessor('UpdateProfessor'); updateProfessor(professor.id)">udpate</a>
+			 						<a href="" data-ng-click="navigationProfessor('Update Professor'); updateProfessor(professor.id)">udpate</a>
 			 						</li></ul>
 			 				<button value="CreateProfessor" class="btn btn-primary btn-sm">Add</button>
 			 				</div>
@@ -89,7 +89,8 @@
 			 						<td>{{ course.type }}</td>
 			 						<td>{{ course.title }}</td>
 			 						<td>{{ course.credits }}</td>
-			 						<td><a href="" data-toggle="modal" data-target="#modalDeleteCourse" data-ng-click="getCourse(course.id)">delete</a></td>
+			 						<td><a href="" data-toggle="modal" data-target="#modalDeleteCourse" data-ng-click="getCourse(course.id)">delete</a>
+			 						</td>
 			 					</tr></tbody>		
 			 				</table>
 			 				<button value="CreateCourse" class="btn btn-primary btn-sm">Add</button>
